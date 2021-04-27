@@ -1,0 +1,48 @@
+Total number of states: 240
+Solving optimization problem with 8 machines with inter-machine bandwidth of 100.00 GB/s
+[[0.017456000000000003 0.025424000000000002 0.029653000000000002 ...
+  0.5902839999999999 0.5902839999999999 0.590698]
+ [None 0.007968 0.012197 ... 0.5728279999999999 0.5728279999999999
+  0.5732419999999999]
+ [None None 0.004229 ... 0.5648599999999999 0.5648599999999999
+  0.5652739999999999]
+ ...
+ [None None None ... None 0.0 0.00041400000000002546]
+ [None None None ... None None 0.00041400000000002546]
+ [None None None ... None None None]]
+[[0.0021821646400000004 0.0031781668800000005 0.0037067918800000005 ...
+  0.07419689055999999 0.07419689055999999 0.07422294144]
+ [None 0.0009960022399999999 0.0015246272399999999 ...
+  0.07201472591999998 0.07201472591999998 0.07210233341999998]
+ [None None 0.000528625 ... 0.07101872367999999 0.07101872367999999
+  0.07110633118]
+ ...
+ [None None None ... None 0.0 8.760750000000318e-05]
+ [None None None ... None None 8.760750000000318e-05]
+ [None None None ... None None None]]
+======================================
+Level 1
+======================================
+-------------------------------------
+Number of machines used: 4...
+Split between layers 93 and 94...
+Split before antichain ['node59', 'node64']...
+Compute time = 0.073381, Data-parallel communication time = 0.000672, Pipeline-parallel communication time = 0.001285...
+-------------------------------------
+Number of machines used: 4...
+Compute time = 0.074190, Data-parallel communication time = 0.000033...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 94) 0.29675999999999997 4
+(94, 240) 0.293938 4
+
+Total number of stages: 2
+
+Time taken by single-stage pipeline: 0.590698
+Time per stage in pipeline: 0.07422294144
+Throughput increase (compared to single machine): 7.9584288703716455
+[Note that single-machine and (8)-machine DP might not fit given memory constraints]
+Throughput increase of (8)-machine DP compared to single machine: 7.951834035721557
+Throughput increase (compared to (8)-machine DP): 1.0008293476222545

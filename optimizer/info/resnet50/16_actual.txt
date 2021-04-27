@@ -1,0 +1,45 @@
+Total number of states: 240
+Solving optimization problem with 16 machines with inter-machine bandwidth of 1.80 GB/s
+[[0.017456000000000003 0.025424000000000002 0.029653000000000002 ...
+  0.590284 0.590284 0.5906980000000001]
+ [None 0.007968 0.012197 ... 0.572828 0.572828 0.573242]
+ [None None 0.004229 ... 0.56486 0.56486 0.565274]
+ ...
+ [None None None ... None 0.0 0.00041400000000002546]
+ [None None None ... None None 0.00041400000000002546]
+ [None None None ... None None None]]
+[[0.0010959000000000001 0.0015939666666666668 0.0018582791666666668 ...
+  0.04855024833333333 0.04855024833333333 0.04946872833333334]
+ [None 0.0004980666666666667 0.0007623791666666667 ...
+  0.04804061666666667 0.04804061666666667 0.049133679166666666]
+ [None None 0.0002643125 ... 0.04754255 0.04754255 0.0486356125]
+ ...
+ [None None None ... None 0.0 0.0010930625000000016]
+ [None None None ... None None 0.0010930625000000016]
+ [None None None ... None None None]]
+======================================
+Level 1
+======================================
+-------------------------------------
+Number of machines used: 8...
+Split between layers 119 and 120...
+Split before antichain ['node79', 'node88', 'node80']...
+Compute time = 0.026933, Data-parallel communication time = 0.020492, Pipeline-parallel communication time = 0.042817...
+-------------------------------------
+Number of machines used: 8...
+Compute time = 0.046852, Data-parallel communication time = 0.002364...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 120) 0.37481700000000007 8
+(120, 240) 0.215881 8
+
+Total number of stages: 2
+
+Time taken by single-stage pipeline: 0.5906980000000001
+Time per stage in pipeline: 0.04946872833333334
+Throughput increase (compared to single machine): 11.940836562842716
+[Note that single-machine and (16)-machine DP might not fit given memory constraints]
+Throughput increase of (16)-machine DP compared to single machine: 11.759963149203504
+Throughput increase (compared to (16)-machine DP): 1.0153804405119637

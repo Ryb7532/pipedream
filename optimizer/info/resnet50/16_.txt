@@ -1,0 +1,41 @@
+Total number of states: 240
+Solving optimization problem with 16 machines with inter-machine bandwidth of 100.00 GB/s
+[[0.017456000000000003 0.025424000000000002 0.029653000000000002 ...
+  0.590284 0.5902840000000001 0.5906980000000002]
+ [None 0.007968 0.012197 ... 0.572828 0.5728280000000001
+  0.5732420000000001]
+ [None None 0.004229 ... 0.56486 0.5648600000000001 0.5652740000000002]
+ ...
+ [None None None ... None 1.1102230246251565e-16 0.0004140000000001365]
+ [None None None ... None None 0.00041400000000002546]
+ [None None None ... None None None]]
+[[0.0010910882000000001 0.0015890894 0.0018534019 ... 0.0371131378
+  0.03711313780000001 0.03715822217500001]
+ [None 0.0004980011999999999 0.0007623136999999999 ... 0.0360220496
+  0.03602204960000001 0.036067133975000006]
+ [None None 0.0002643125 ... 0.0355240484 0.03552404840000001
+  0.03556913277500001]
+ ...
+ [None None None ... None 6.938893903907228e-18 4.5084375000008535e-05]
+ [None None None ... None None 4.5084375000001596e-05]
+ [None None None ... None None None]]
+======================================
+Level 1
+======================================
+-------------------------------------
+Number of machines used: 16...
+Compute time = 0.036893, Data-parallel communication time = 0.000220...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 240) 0.5906980000000002 16
+
+Total number of stages: 1
+
+Time taken by single-stage pipeline: 0.5906980000000002
+Time per stage in pipeline: 0.03715822217500001
+Throughput increase (compared to single machine): 15.896831587314766
+[Note that single-machine and (16)-machine DP might not fit given memory constraints]
+Throughput increase of (16)-machine DP compared to single machine: 15.896831587314766
+Throughput increase (compared to (16)-machine DP): 1.0

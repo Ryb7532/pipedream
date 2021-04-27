@@ -1,0 +1,46 @@
+node2 -- Conv2d(3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2)) -- forward_compute_time=41.138, backward_compute_time=15.114, activation_size=396492800.0, parameter_size=93184.000 -- stage_id=0
+node3 -- ReLU(inplace) -- forward_compute_time=1.734, backward_compute_time=2.174, activation_size=396492800.0, parameter_size=0.000 -- stage_id=0
+node4 -- MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False) -- forward_compute_time=2.036, backward_compute_time=6.503, activation_size=95551488.0, parameter_size=0.000 -- stage_id=0
+node5 -- Conv2d(64, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2)) -- forward_compute_time=8.274, backward_compute_time=16.234, activation_size=286654464.0, parameter_size=1229568.000 -- stage_id=0
+node6 -- ReLU(inplace) -- forward_compute_time=1.260, backward_compute_time=1.488, activation_size=286654464.0, parameter_size=0.000 -- stage_id=0
+node7 -- MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False) -- forward_compute_time=2.699, backward_compute_time=4.963, activation_size=66453504.0, parameter_size=0.000 -- stage_id=0
+node8 -- Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)) -- forward_compute_time=7.052, backward_compute_time=17.967, activation_size=132907008.0, parameter_size=2655744.000 -- stage_id=1
+node9 -- ReLU(inplace) -- forward_compute_time=0.614, backward_compute_time=0.705, activation_size=132907008.0, parameter_size=0.000 -- stage_id=1
+node10 -- Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)) -- forward_compute_time=12.415, backward_compute_time=20.714, activation_size=88604672.0, parameter_size=3539968.000 -- stage_id=1
+node11 -- ReLU(inplace) -- forward_compute_time=0.740, backward_compute_time=0.491, activation_size=88604672.0, parameter_size=0.000 -- stage_id=1
+node12 -- Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)) -- forward_compute_time=13.031, backward_compute_time=14.979, activation_size=88604672.0, parameter_size=2360320.000 -- stage_id=1
+node13 -- ReLU(inplace) -- forward_compute_time=0.443, backward_compute_time=0.503, activation_size=88604672.0, parameter_size=0.000 -- stage_id=1
+node14 -- MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False) -- forward_compute_time=1.742, backward_compute_time=1.732, activation_size=18874368.0, parameter_size=0.000 -- stage_id=1
+node15 -- Size(0) -- forward_compute_time=0.000, backward_compute_time=0.000, activation_size=4.0, parameter_size=0.000 -- stage_id=1
+node16 -- View(9216) -- forward_compute_time=0.000, backward_compute_time=0.000, activation_size=18874368.0, parameter_size=0.000 -- stage_id=1
+node17 -- Dropout(p=0.5) -- forward_compute_time=0.161, backward_compute_time=0.905, activation_size=18874368.0, parameter_size=0.000 -- stage_id=1
+node18 -- Linear(in_features=9216, out_features=4096, bias=True) -- forward_compute_time=4.603, backward_compute_time=8.776, activation_size=8388608.0, parameter_size=151011328.000 -- stage_id=1
+node19 -- ReLU(inplace) -- forward_compute_time=0.092, backward_compute_time=0.085, activation_size=8388608.0, parameter_size=0.000 -- stage_id=1
+node20 -- Dropout(p=0.5) -- forward_compute_time=0.097, backward_compute_time=0.402, activation_size=8388608.0, parameter_size=0.000 -- stage_id=1
+node21 -- Linear(in_features=4096, out_features=4096, bias=True) -- forward_compute_time=2.183, backward_compute_time=3.942, activation_size=8388608.0, parameter_size=67125248.000 -- stage_id=1
+node22 -- ReLU(inplace) -- forward_compute_time=0.375, backward_compute_time=1.338, activation_size=8388608.0, parameter_size=0.000 -- stage_id=1
+node23 -- Linear(in_features=4096, out_features=1000, bias=True) -- forward_compute_time=0.639, backward_compute_time=1.941, activation_size=2048000.0, parameter_size=16388000.000 -- stage_id=1
+node1 -- Input0 -- forward_compute_time=0.000, backward_compute_time=0.000, activation_size=0.0, parameter_size=0.000 -- stage_id=0
+	node1 -- node2
+	node2 -- node3
+	node3 -- node4
+	node4 -- node5
+	node5 -- node6
+	node6 -- node7
+	node7 -- node8
+	node8 -- node9
+	node9 -- node10
+	node10 -- node11
+	node11 -- node12
+	node12 -- node13
+	node13 -- node14
+	node14 -- node15
+	node14 -- node16
+	node15 -- node16
+	node16 -- node17
+	node17 -- node18
+	node18 -- node19
+	node19 -- node20
+	node20 -- node21
+	node21 -- node22
+	node22 -- node23

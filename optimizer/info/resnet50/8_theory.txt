@@ -1,0 +1,72 @@
+Total number of states: 240
+Solving optimization problem with 4 machines with inter-machine bandwidth of 40.00 GB/s
+[[0.017456000000000003 0.025424000000000002 0.029653000000000002 ...
+  0.5902839999999999 0.5902839999999999 0.590698]
+ [None 0.007968 0.012197 ... 0.5728279999999999 0.5728279999999999
+  0.5732419999999999]
+ [None None 0.004229 ... 0.5648599999999999 0.5648599999999999
+  0.5652739999999999]
+ ...
+ [None None None ... None 0.0 0.00041400000000002546]
+ [None None None ... None None 0.00041400000000002546]
+ [None None None ... None None None]]
+Solving optimization problem with 2 machines with inter-machine bandwidth of 1.25 GB/s
+[[0.004364705600000001 0.006356715200000001 0.007413965200000001 ...
+  0.14900299839999998 0.14900299839999998 0.14901633039999998]
+ [None 0.0019920095999999997 0.0030492595999999997 ...
+  0.14496939679999998 0.14496939679999998 0.14503304559999994]
+ [None None 0.00105725 ... 0.14297738719999997 0.14297738719999997
+  0.14319103279999998]
+ ...
+ [None None None ... None 0.0 0.0002571750000000064]
+ [None None None ... None None 0.0002571750000000064]
+ [None None None ... None None None]]
+[[0.0021898792000000005 0.0031859864 0.0037146114 ... 0.09330792479999998
+  0.09330792479999998 0.09495379079999999]
+ [None 0.0009961071999999998 0.0015247321999999998 ...
+  0.09128359759999999 0.09128359759999999 0.09295462199999997]
+ [None None 0.000528625 ... 0.09028749039999999 0.09028749039999999
+  0.09203351319999999]
+ ...
+ [None None None ... None 0.0 0.001767787500000003]
+ [None None None ... None None 0.001767787500000003]
+ [None None None ... None None None]]
+======================================
+Level 2
+======================================
+-------------------------------------
+Number of machines used: 2...
+Compute time = 0.295142, Data-parallel communication time = 0.075226...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 240) 0.590698 2
+
+Total number of stages: 1
+======================================
+Level 1
+======================================
+-------------------------------------
+Number of machines used: 2...
+Split between layers 94 and 95...
+Split before antichain ['node59', 'node65']...
+Compute time = 0.146235, Data-parallel communication time = 0.002241, Pipeline-parallel communication time = 0.006423...
+-------------------------------------
+Number of machines used: 2...
+Compute time = 0.148906, Data-parallel communication time = 0.000110...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 95) 0.29781299999999994 2
+(95, 240) 0.292885 2
+
+Total number of stages: 2
+
+Time taken by single-stage pipeline: 0.590698
+Time per stage in pipeline: 0.09495379079999999
+Throughput increase (compared to single machine): 6.220899608359817
+[Note that single-machine and (4,2)-machine DP might not fit given memory constraints]
+Throughput increase of (4,2)-machine DP compared to single machine: 6.202122623439386
+Throughput increase (compared to (4,2)-machine DP): 1.0030275094609493

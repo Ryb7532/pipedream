@@ -1,0 +1,48 @@
+Total number of states: 40
+Solving optimization problem with 16 machines with inter-machine bandwidth of 100.00 GB/s
+[[0.036556 0.044406 0.135175 ... 0.4676840000000001 0.4679820000000001
+  0.4692040000000001]
+ [None 0.007850000000000003 0.09861899999999998 ... 0.4311280000000001
+  0.43142600000000014 0.43264800000000014]
+ [None None 0.09076899999999999 ... 0.4232780000000001 0.4235760000000001
+  0.4247980000000001]
+ ...
+ [None None None ... None 0.00029800000000002047 0.0015200000000000213]
+ [None None None ... None None 0.0012220000000000009]
+ [None None None ... None None None]]
+[[0.0022847668 0.0027753918 0.008448800499999999 ... 0.029345973161244442
+  0.029345973161244442 0.029914066360888895]
+ [None 0.0004906250000000002 0.006164033699999999 ... 0.02820417580000001
+  0.02822280080000001 0.02833758517500001]
+ [None None 0.005673408699999999 ... 0.027713550800000007
+  0.02773217580000001 0.027846960175000008]
+ ...
+ [None None None ... None 1.862500000000128e-05 0.00013340937500000134]
+ [None None None ... None None 0.00011478437500000005]
+ [None None None ... None None None]]
+======================================
+Level 1
+======================================
+-------------------------------------
+Number of machines used: 1...
+Split between layers 26 and 27...
+Split before antichain ['node29']...
+Compute time = 0.021116, Data-parallel communication time = 0.000000, Pipeline-parallel communication time = 0.000514...
+-------------------------------------
+Number of machines used: 15...
+Compute time = 0.029791, Data-parallel communication time = 0.000123...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 27) 0.4468660000000001 15
+(27, 40) 0.022338000000000025 1
+
+Total number of stages: 2
+
+Time taken by single-stage pipeline: 0.4692040000000001
+Time per stage in pipeline: 0.029914066360888895
+Throughput increase (compared to single machine): 15.685062483295827
+[Note that single-machine and (16)-machine DP might not fit given memory constraints]
+Throughput increase of (16)-machine DP compared to single machine: 15.322271796204838
+Throughput increase (compared to (16)-machine DP): 1.0236773431457369

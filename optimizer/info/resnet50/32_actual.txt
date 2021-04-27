@@ -1,0 +1,46 @@
+Total number of states: 240
+Solving optimization problem with 32 machines with inter-machine bandwidth of 1.80 GB/s
+[[0.017456000000000003 0.025424000000000002 0.029653000000000002 ...
+  0.590284 0.590284 0.5906980000000001]
+ [None 0.007968 0.012197 ... 0.572828 0.572828 0.573242]
+ [None None 0.004229 ... 0.56486 0.56486 0.565274]
+ ...
+ [None None None ... None 0.0 0.00041400000000002546]
+ [None None None ... None None 0.00041400000000002546]
+ [None None None ... None None None]]
+[[0.0005480316666666668 0.0007970661111111112 0.0009292223611111112 ...
+  0.024572791666666663 0.024572791666666663 0.02512086666666667]
+ [None 0.00024903444444444444 0.00038119069444444444 ...
+  0.024224289444444443 0.024224289444444443 0.02478860715277778]
+ [None None 0.00013215625 ... 0.023975255 0.023975255
+  0.024539572708333336]
+ ...
+ [None None None ... None 0.0 0.0005643177083333341]
+ [None None None ... None None 0.0005643177083333341]
+ [None None None ... None None None]]
+======================================
+Level 1
+======================================
+-------------------------------------
+Number of machines used: 16...
+Split between layers 123 and 124...
+Split before antichain ['node79', 'node88', 'node84']...
+Compute time = 0.013173, Data-parallel communication time = 0.010842, Pipeline-parallel communication time = 0.023192...
+-------------------------------------
+Number of machines used: 16...
+Compute time = 0.023720, Data-parallel communication time = 0.001401...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 124) 0.379512 16
+(124, 240) 0.21118600000000004 16
+
+Total number of stages: 2
+
+Time taken by single-stage pipeline: 0.5906980000000001
+Time per stage in pipeline: 0.02512086666666667
+Throughput increase (compared to single machine): 23.514236504579195
+[Note that single-machine and (32)-machine DP might not fit given memory constraints]
+Throughput increase of (32)-machine DP compared to single machine: 23.313984313762745
+Throughput increase (compared to (32)-machine DP): 1.0085893594214281

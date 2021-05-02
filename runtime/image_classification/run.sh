@@ -14,7 +14,7 @@ parallel=("hybrid" "dp" "dp_intra" "mp")
 read idx
 para=${parallel[$idx]}
 
-backend=gloo
+backend=nccl
 no_input_pipelining=""
 if [ $idx = "0" ];then
     backend=gloo
@@ -97,12 +97,12 @@ mpicxx -o cpp/$file "cpp/${file}.cpp"
 echo "#!/bin/sh
 #$ -cwd
 #$ -l f_node=${nodes}
-#$ -l h_rt=00:30:00
+#$ -l h_rt=00:10:00
 #$ -N ${file}
 #$ -v GPU_COMPUTE_MODE=0
 
 . /etc/profile.d/modules.sh
-module load python/3.6.5 cuda/10.1.105 openmpi cudnn nccl
+module load python/3.6.5 cuda/10.1.105 openmpi cudnn/7.4 nccl/2.4.2
 
 MASTER_ADDR=\$(hostname -i | awk '{print \$1}')
 

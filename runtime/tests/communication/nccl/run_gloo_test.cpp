@@ -19,18 +19,15 @@ int main(int argc, char *argv[])
   MPI_Comm_size(MPI_COMM_WORLD, &size);
 
 
-  string cmd = "python all_to_all.py --backend gloo --master_addr ";
+  string cmd = "python gloo_communication_handler.py --master_addr ";
   cmd += (string)argv[1];
   cmd += " --rank ";
-  ostringstream stm1, stm2;
-  stm1 << rank;
-  cmd += stm1.str();
-  cmd += " --world_size ";
-  stm2 << size;
-  cmd += stm2.str();
+  ostringstream stm;
+  stm << rank;
+  cmd += stm.str();
+  cmd += " --master_port 8888";
 
   cout << "run in Node:" << rank << endl;
-  MPI_Barrier(MPI_COMM_WORLD);
   int result = system(cmd.c_str());
 
   MPI_Barrier(MPI_COMM_WORLD);

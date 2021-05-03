@@ -1,0 +1,87 @@
+world size: 2
+run in Node:0
+run in Node:1
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 100: 0.19 MB/s
+Bandwidth for tensor size 100: 0.19 MB/s
+Bandwidth for tensor size 1000: 1.91 MB/s
+Bandwidth for tensor size 1000: 1.91 MB/s
+Bandwidth for tensor size 10000: 18.74 MB/s
+Bandwidth for tensor size 10000: 18.73 MB/s
+Bandwidth for tensor size 100000: 180.65 MB/s
+Bandwidth for tensor size 100000: 180.61 MB/s
+Bandwidth for tensor size 1000000: 1299.94 MB/s
+Bandwidth for tensor size 1000000: 1299.79 MB/s
+Bandwidth for tensor size 10000000: 3167.58 MB/s
+Bandwidth for tensor size 10000000: 3167.70 MB/s
+Bandwidth for tensor size 100000000: 4066.92 MB/s
+Bandwidth for tensor size 100000000: 4066.95 MB/s
+done!
+world size: 3
+run in Node:0
+run in Node:2
+run in Node:1
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 100: 0.25 MB/s
+Bandwidth for tensor size 100: 0.25 MB/s
+Bandwidth for tensor size 100: 0.25 MB/s
+Bandwidth for tensor size 1000: 2.47 MB/s
+Bandwidth for tensor size 1000: 2.47 MB/s
+Bandwidth for tensor size 1000: 2.47 MB/s
+Bandwidth for tensor size 10000: 24.23 MB/s
+Bandwidth for tensor size 10000: 24.22 MB/s
+Bandwidth for tensor size 10000: 24.22 MB/s
+Bandwidth for tensor size 100000: 231.61 MB/s
+Bandwidth for tensor size 100000: 231.55 MB/s
+Bandwidth for tensor size 100000: 231.57 MB/s
+Bandwidth for tensor size 1000000: 1493.47 MB/s
+Bandwidth for tensor size 1000000: 1493.24 MB/s
+Bandwidth for tensor size 1000000: 1493.29 MB/s
+Bandwidth for tensor size 10000000: 3435.07 MB/s
+Bandwidth for tensor size 10000000: 3435.14 MB/s
+Bandwidth for tensor size 10000000: 3435.16 MB/s
+Bandwidth for tensor size 100000000: 4382.10 MB/s
+Bandwidth for tensor size 100000000: 4382.06 MB/s
+Bandwidth for tensor size 100000000: 4381.92 MB/s
+done!
+world size: 4
+run in Node:0
+run in Node:2
+run in Node:3
+run in Node:1
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 10: 0.01 MB/s
+Bandwidth for tensor size 100: 0.27 MB/s
+Bandwidth for tensor size 100: 0.27 MB/s
+Bandwidth for tensor size 100: 0.27 MB/s
+Bandwidth for tensor size 100: 0.27 MB/s
+Bandwidth for tensor size 1000: 2.80 MB/s
+Bandwidth for tensor size 1000: 2.80 MB/s
+Bandwidth for tensor size 1000: 2.80 MB/s
+Bandwidth for tensor size 1000: 2.80 MB/s
+Bandwidth for tensor size 10000: 27.17 MB/s
+Bandwidth for tensor size 10000: 27.17 MB/s
+Bandwidth for tensor size 10000: 27.17 MB/s
+Bandwidth for tensor size 10000: 27.17 MB/s
+Bandwidth for tensor size 100000: 255.03 MB/s
+Bandwidth for tensor size 100000: 255.02 MB/s
+Bandwidth for tensor size 100000: 255.01 MB/s
+Bandwidth for tensor size 100000: 255.01 MB/s
+Bandwidth for tensor size 1000000: 1593.74 MB/s
+Bandwidth for tensor size 1000000: 1593.62 MB/s
+Bandwidth for tensor size 1000000: 1593.55 MB/s
+Bandwidth for tensor size 1000000: 1593.53 MB/s
+Bandwidth for tensor size 10000000: 3581.77 MB/s
+Bandwidth for tensor size 10000000: 3581.55 MB/s
+Bandwidth for tensor size 10000000: 3581.49 MB/s
+Bandwidth for tensor size 10000000: 3581.55 MB/s
+Bandwidth for tensor size 100000000: 4513.08 MB/s
+Bandwidth for tensor size 100000000: 4513.11 MB/s
+Bandwidth for tensor size 100000000: 4513.03 MB/s
+Bandwidth for tensor size 100000000: 4513.04 MB/s
+done!

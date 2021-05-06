@@ -10,12 +10,14 @@ import torch.distributed as dist
 
 NUM_TRIALS = 20
 
-def all_reduce_helper(tensor, group, multiplier, num_iterations):
-    dist.barrier()
+def all_reduce_helper(tensor, group, multiplier, num_iterations, local_rank):
+    dist.barrier(group=group)
+    torch.cuda.synchronize()
     start_time = time.time()
     for i in range(num_iterations):
         dist.all_reduce(tensor=tensor, group=group)
-    dist.barrier()
+    dist.barrier(group=group)
+    torch.cuda.synchronize()
     size = tensor.size()[0]
     bandwidth = (size * 4. * NUM_TRIALS * multiplier) / ((time.time() - start_time) * 10**6)
     print("Bandwidth for tensor size %s: %.2f MB/s" % (size, bandwidth))
@@ -45,9 +47,10 @@ if __name__ == '__main__':
     os.environ['MASTER_PORT'] = str(args.master_port)
     dist.init_process_group(args.backend, rank=args.rank, world_size=args.world_size)
 
-    tensor_sizes = [10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000]
+    tensor_sizes = [10,]# 100, 1000, 10000, 100000, 1000000, 10000000, 100000000]
 
     groups = []
+#    group = dist.new_group(list(range(args.world_size)))
     for tag in range(len(tensor_sizes)):
         group = dist.new_group(list(range(args.world_size)))
         groups.append(group)
@@ -56,4 +59,4 @@ if __name__ == '__main__':
     for tag, tensor_size in enumerate(tensor_sizes):
         group = groups[tag]
         tensor = torch.tensor(range(tensor_size), dtype=torch.float32).cuda(args.local_rank)
-        all_reduce_helper(tensor, group, multiplier, NUM_TRIALS)
+        all_reduce_helper(tensor, group, multiplier, NUM_TRIALS, args.rank)

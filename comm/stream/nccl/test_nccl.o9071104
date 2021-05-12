@@ -1,0 +1,51 @@
+Local rank: 1
+Local rank: 0
+r5i2n5:13232:13232 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.4.237<0> [1]ib1:10.0.4.238<0> [2]ib2:10.0.4.239<0> [3]ib3:10.0.4.240<0>
+r5i2n5:13232:13232 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r5i2n5:13232:13232 [0] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.4.237<0>
+NCCL version 2.4.2+cuda9.2
+r5i2n5:13233:13233 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.4.237<0> [1]ib1:10.0.4.238<0> [2]ib2:10.0.4.239<0> [3]ib3:10.0.4.240<0>
+r5i2n5:13233:13233 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r5i2n5:13233:13233 [1] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.4.237<0>
+r5i2n5:13232:13385 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r5i2n5:13232:13385 [0] NCCL INFO comm 0x2aabd0001ae0 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r5i2n5:13233:13386 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r5i2n5:13233:13386 [1] NCCL INFO comm 0x2aabc8001ae0 rank 1 nranks 2 cudaDev 1 nvmlDev 1
+r5i2n5:13232:13385 [0] NCCL INFO Channel 00 :    0   1
+r5i2n5:13232:13385 [0] NCCL INFO Channel 01 :    0   1
+r5i2n5:13233:13386 [1] NCCL INFO Ring 00 : 1[1] -> 0[0] via P2P/IPC
+r5i2n5:13232:13385 [0] NCCL INFO Ring 00 : 0[0] -> 1[1] via P2P/IPC
+r5i2n5:13233:13386 [1] NCCL INFO Ring 01 : 1[1] -> 0[0] via P2P/IPC
+r5i2n5:13232:13385 [0] NCCL INFO Ring 01 : 0[0] -> 1[1] via P2P/IPC
+r5i2n5:13232:13385 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r5i2n5:13233:13386 [1] NCCL INFO comm 0x2aabc8001ae0 rank 1 nranks 2 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r5i2n5:13232:13385 [0] NCCL INFO comm 0x2aabd0001ae0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r5i2n5:13232:13232 [0] NCCL INFO Launch mode Parallel
+Finished initializing process group; backend: nccl, rank: 1, world_size: 2
+Send ranks:  {}
+Receive ranks:  {'out0': [0]}
+Setting up process groups for broadcasts...
+[tensor([[0, 1]], device='cuda:1', dtype=torch.int32), tensor([[0, 0]], device='cuda:1', dtype=torch.int32)]
+create group (in rank 1): 0, 1
+Finished initializing process group; backend: nccl, rank: 0, world_size: 2
+Send ranks:  {'out0': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+[tensor([[0, 1]], device='cuda:0', dtype=torch.int32), tensor([[0, 0]], device='cuda:0', dtype=torch.int32)]
+create group (in rank 0): 0, 1
+r5i2n5:13232:13392 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r5i2n5:13232:13394 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r5i2n5:13232:13392 [0] NCCL INFO comm 0x2aabd80014c0 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r5i2n5:13232:13394 [0] NCCL INFO comm 0x2aabe0000db0 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r5i2n5:13233:13395 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r5i2n5:13233:13395 [1] NCCL INFO comm 0x2aabd00014c0 rank 1 nranks 2 cudaDev 1 nvmlDev 1
+r5i2n5:13232:13394 [0] NCCL INFO Channel 00 :    0   1
+r5i2n5:13232:13394 [0] NCCL INFO Channel 01 :    0   1
+r5i2n5:13233:13395 [1] NCCL INFO Ring 00 : 1[1] -> 0[0] via P2P/IPC
+r5i2n5:13232:13394 [0] NCCL INFO Ring 00 : 0[0] -> 1[1] via P2P/IPC
+r5i2n5:13233:13395 [1] NCCL INFO Ring 01 : 1[1] -> 0[0] via P2P/IPC
+r5i2n5:13232:13394 [0] NCCL INFO Ring 01 : 0[0] -> 1[1] via P2P/IPC
+r5i2n5:13232:13394 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r5i2n5:13232:13394 [0] NCCL INFO comm 0x2aabe0000db0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r5i2n5:13232:13388 [0] NCCL INFO Launch mode Parallel
+r5i2n5:13233:13395 [1] NCCL INFO comm 0x2aabd00014c0 rank 1 nranks 2 cudaDev 1 nvmlDev 1 - Init COMPLETE

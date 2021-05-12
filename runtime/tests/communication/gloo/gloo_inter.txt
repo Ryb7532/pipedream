@@ -1,0 +1,18 @@
+Time to receive 4e-05 MB: 0.020 seconds
+Throughput: 0.000 GB/s
+Time to receive 0.0004 MB: 0.000 seconds
+Throughput: 0.002 GB/s
+Time to receive 0.004 MB: 0.000 seconds
+Throughput: 0.017 GB/s
+Time to receive 0.04 MB: 0.000 seconds
+Throughput: 0.156 GB/s
+Time to receive 0.4 MB: 0.001 seconds
+Throughput: 0.766 GB/s
+Time to receive 4.0 MB: 0.003 seconds
+Throughput: 1.443 GB/s
+Time to receive 40.0 MB: 0.029 seconds
+Throughput: 1.388 GB/s
+Time to receive 400.0 MB: 0.296 seconds
+Throughput: 1.351 GB/s
+Time to receive 3200.0 MB: 2.360 seconds
+Throughput: 1.356 GB/s

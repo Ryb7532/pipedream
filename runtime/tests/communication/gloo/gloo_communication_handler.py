@@ -7,9 +7,9 @@ import torch
 
 import sys
 sys.path.append("../../..")
-import communication_ as communication
+import communication
 
-NUM_TRIALS = 20
+NUM_TRIALS = 100
 
 
 if __name__ == '__main__':
@@ -31,7 +31,7 @@ if __name__ == '__main__':
         num_ranks_in_server = 2
     local_rank = args.rank
     torch.cuda.set_device(local_rank)
-    print("Local rank: %d" % local_rank)
+    print("Local rank: %d" % local_rank, flush=True)
 
     comm_handler = communication.CommunicationHandler(
         master_addr=args.master_addr,
@@ -63,8 +63,8 @@ if __name__ == '__main__':
         tensor_shapes[tensor_name] = (tensor_size,)
 
     # Populate fields for ack.
-    tensor_tags["ack"] = tag + 1
-    tensor_shapes["ack"] = (1,)
+    #tensor_tags["ack"] = tag + 1
+    #tensor_shapes["ack"] = (1,)
 
     ranks_in_previous_stage = [] if args.rank == 0 else [0]
     ranks_in_next_stage = [1] if args.rank == 0 else []
@@ -81,7 +81,7 @@ if __name__ == '__main__':
         ranks_in_next_stage=ranks_in_next_stage)
     comm_handler.set_tensor_shapes(tensor_shapes)
     comm_handler.start_helper_threads(num_iterations=NUM_TRIALS,
-                                      forward_only=True)
+                                      forward_only=True, epoch=0)
 
     for i, tensor_size in enumerate(tensor_sizes):
         tensor_name = "out%d" % i
@@ -95,10 +95,6 @@ if __name__ == '__main__':
                                   forward_minibatch_id=j,
                                   backward_minibatch_id=j,
                                   backward=False)
-                comm_handler.recv(tensor_name,
-                                  forward_minibatch_id=j,
-                                  backward_minibatch_id=j,
-                                  backward=True)
         else:
             torch.distributed.barrier()
             start_time = time.time()
@@ -107,17 +103,13 @@ if __name__ == '__main__':
                                            forward_minibatch_id=j,
                                            backward_minibatch_id=j,
                                            backward=False)
-                comm_handler.send(tensor_name, tensor,
-                                  forward_minibatch_id=j,
-                                  backward_minibatch_id=j,
-                                  backward=True)
         torch.distributed.barrier()
         average_time = (time.time() - start_time) / NUM_TRIALS
         if args.rank == 1:  # Only time recvs since sends are asynchronous.
             print("Time to receive %s MB: %.3f seconds" % (
-                (tensor_size * 4 * 2) / 10**6,
+                (tensor_size * 4.) / 10**6,
                 average_time))
-            throughput = (tensor_size * 4 * 2) / average_time
+            throughput = (tensor_size * 4.) / average_time
             print("Throughput: %.3f GB/s" % (throughput / 10**9))
 
     # Send and receive acks to flush the ack helper threads.

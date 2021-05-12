@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
   ostringstream stm;
   stm << rank;
   cmd += stm.str();
-  cmd += " --master_port 8888";
+  cmd += " --master_port 8888 --broadcast";
 
   cout << "run in Node:" << rank << endl;
   int result = system(cmd.c_str());

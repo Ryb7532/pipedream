@@ -31,7 +31,7 @@ if __name__ == '__main__':
         num_ranks_in_server = 2
     local_rank = args.rank
     torch.cuda.set_device(local_rank)
-    print("Local rank: %d" % local_rank)
+    print("Local rank: %d" % local_rank, flush=True)
 
     comm_handler = communication.CommunicationHandler(
         master_addr=args.master_addr,
@@ -47,12 +47,16 @@ if __name__ == '__main__':
     tensor_sizes = [10, 100, 1000, 10000, 100000, 1000000, 10000000,
                     100000000, 800000000]
 
-    receive_ranks = {}
-    send_ranks = {}
-    tensor_tags = {}
-    training_tensor_dtypes = {}
-    tensor_shapes = {}
+    ranks_in_previous_stage = [] if args.rank == 0 else [0]
+    ranks_in_next_stage = [1] if args.rank == 0 else []
+
     for tag, tensor_size in enumerate(tensor_sizes):
+        receive_ranks = {}
+        send_ranks = {}
+        tensor_tags = {}
+        training_tensor_dtypes = {}
+        tensor_shapes = {}
+
         tensor_name = "out%d" % tag
         if args.rank == 1:
             receive_ranks[tensor_name] = [0]
@@ -62,29 +66,24 @@ if __name__ == '__main__':
         training_tensor_dtypes[tensor_name] = torch.float32
         tensor_shapes[tensor_name] = (tensor_size,)
 
-    # Populate fields for ack.
-    tensor_tags["ack"] = tag + 1
-    tensor_shapes["ack"] = (1,)
+        # Populate fields for ack.
+        #tensor_tags["ack"] = tag + 1
+        #tensor_shapes["ack"] = (1,)
 
-    ranks_in_previous_stage = [] if args.rank == 0 else [0]
-    ranks_in_next_stage = [1] if args.rank == 0 else []
-
-    comm_handler.initialize(
-        receive_ranks=receive_ranks,
-        send_ranks=send_ranks,
-        tensor_tags=tensor_tags,
-        target_tensor_names=[],
-        training_tensor_dtypes=training_tensor_dtypes,
-        rank_in_stage=0,
-        num_ranks_in_stage=1,
-        ranks_in_previous_stage=ranks_in_previous_stage,
-        ranks_in_next_stage=ranks_in_next_stage)
-    comm_handler.set_tensor_shapes(tensor_shapes)
-    comm_handler.start_helper_threads(num_iterations=NUM_TRIALS,
+        comm_handler.initialize(
+            receive_ranks=receive_ranks,
+            send_ranks=send_ranks,
+            tensor_tags=tensor_tags,
+            target_tensor_names=[],
+            training_tensor_dtypes=training_tensor_dtypes,
+            rank_in_stage=0,
+            num_ranks_in_stage=1,
+            ranks_in_previous_stage=ranks_in_previous_stage,
+            ranks_in_next_stage=ranks_in_next_stage)
+        comm_handler.set_tensor_shapes(tensor_shapes)
+        comm_handler.start_helper_threads(num_iterations=NUM_TRIALS,
                                       forward_only=False, epoch=0)
 
-    for i, tensor_size in enumerate(tensor_sizes):
-        tensor_name = "out%d" % i
         if args.rank == 0:
             tensor = torch.tensor(range(tensor_size),
                                   dtype=torch.float32).cuda(local_rank)
@@ -115,23 +114,23 @@ if __name__ == '__main__':
         average_time = (time.time() - start_time) / NUM_TRIALS
         if args.rank == 1:  # Only time recvs since sends are asynchronous.
             print("Time to receive %s MB: %.3f seconds" % (
-                (tensor_size * 4 * 2) / 10**6,
+                (tensor_size * 4. * 2.) / 10**6,
                 average_time))
-            throughput = (tensor_size * 4 * 2) / average_time
+            throughput = (tensor_size * 4. * 2.) / average_time
             print("Throughput: %.3f GB/s" % (throughput / 10**9))
 
-    # Send and receive acks to flush the ack helper threads.
-    #ack_tensor = torch.zeros((1,), dtype=torch.int64).cuda()
-    #for j in range(NUM_TRIALS):
-    #    if args.rank == 1:
-    #         comm_handler.send("ack", ack_tensor,
-    #                           forward_minibatch_id=j,
-    #                           backward_minibatch_id=j,
-    #                           backward=True)
-    #    else:
-    #        comm_handler.recv("ack",
-    #                          forward_minibatch_id=j,
-    #                          backward_minibatch_id=j,
-    #                          backward=True)
+            # Send and receive acks to flush the ack helper threads.
+            #ack_tensor = torch.zeros((1,), dtype=torch.int64).cuda()
+            #for j in range(NUM_TRIALS):
+            #    if args.rank == 1:
+            #         comm_handler.send("ack", ack_tensor,
+            #                           forward_minibatch_id=j,
+            #                           backward_minibatch_id=j,
+            #                           backward=True)
+            #    else:
+            #        comm_handler.recv("ack",
+            #                          forward_minibatch_id=j,
+            #                          backward_minibatch_id=j,
+            #                          backward=True)
 
-    comm_handler.wait()
+        comm_handler.wait()

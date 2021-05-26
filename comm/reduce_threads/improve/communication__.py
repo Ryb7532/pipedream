@@ -539,17 +539,17 @@ def _recv_async(tensor_name, src_rank, tensor_shape=None, dtype=torch.float32,
 
     if sub_process_group is not None:
         # Receive tensor shape.
-        received_tensor_shape = torch.zeros(len(tensor_shape),
-                                            dtype=torch.int)
-        dist.broadcast(tensor=received_tensor_shape,
-                       src=src_rank,
-                       group=sub_process_group)
-        received_tensor_shape = list(map(lambda x: int(x),
-                                         received_tensor_shape))
+#        received_tensor_shape = torch.zeros(len(tensor_shape),
+#                                            dtype=torch.int).cuda()
+#        dist.broadcast(tensor=received_tensor_shape,
+#                       src=src_rank,
+#                       group=sub_process_group)
+#        received_tensor_shape = list(map(lambda x: int(x),
+#                                         received_tensor_shape))
 
         # Receive tensor.
-        tensor = torch.zeros(received_tensor_shape, dtype=dtype).cuda()
-#        tensor = torch.zeros(tensor_shape, dtype=dtype).cuda()
+#        tensor = torch.zeros(received_tensor_shape, dtype=dtype).cuda()
+        tensor = torch.zeros(tensor_shape, dtype=dtype).cuda()
         work = dist.broadcast(tensor=tensor,
                        src=src_rank,
                        group=sub_process_group,
@@ -586,9 +586,9 @@ def _send_async(tensor, tensor_name, src_rank, dst_rank, tag, sub_process_group=
         assert tensor.is_cuda
 
         # Send tensor shape.
-        tensor_shape = torch.tensor(tensor.shape, dtype=torch.int)
-        dist.broadcast(tensor=tensor_shape, src=src_rank,
-                      group=sub_process_group)
+#        tensor_shape = torch.tensor(tensor.shape, dtype=torch.int).cuda()
+#        dist.broadcast(tensor=tensor_shape, src=src_rank,
+#                      group=sub_process_group)
 
         # Send tensor.
         contiguous_tensor = tensor.detach().clone().contiguous()

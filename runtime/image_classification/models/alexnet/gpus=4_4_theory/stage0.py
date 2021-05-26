@@ -13,6 +13,7 @@ class Stage0(torch.nn.Module):
         self.layer8 = torch.nn.Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
         self.layer9 = torch.nn.ReLU(inplace=True)
         self.layer10 = torch.nn.Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        self.layer11 = torch.nn.ReLU(inplace=True)
 
     
 
@@ -27,4 +28,5 @@ class Stage0(torch.nn.Module):
         out8 = self.layer8(out7)
         out9 = self.layer9(out8)
         out10 = self.layer10(out9)
-        return out10
+        out11 = self.layer11(out10)
+        return out11

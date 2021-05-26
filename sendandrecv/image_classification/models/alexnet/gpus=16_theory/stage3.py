@@ -5,7 +5,10 @@ class Stage3(torch.nn.Module):
     def __init__(self):
         super(Stage3, self).__init__()
         self.layer1 = torch.nn.ReLU(inplace=True)
-        self.layer2 = torch.nn.Linear(in_features=4096, out_features=1000, bias=True)
+        self.layer2 = torch.nn.Dropout(p=0.5)
+        self.layer3 = torch.nn.Linear(in_features=4096, out_features=4096, bias=True)
+        self.layer4 = torch.nn.ReLU(inplace=True)
+        self.layer5 = torch.nn.Linear(in_features=4096, out_features=1000, bias=True)
 
     
 
@@ -13,4 +16,7 @@ class Stage3(torch.nn.Module):
         out0 = input0.clone()
         out1 = self.layer1(out0)
         out2 = self.layer2(out1)
-        return out2
+        out3 = self.layer3(out2)
+        out4 = self.layer4(out3)
+        out5 = self.layer5(out4)
+        return out5

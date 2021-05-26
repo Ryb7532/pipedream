@@ -8,7 +8,7 @@ digraph {
 	node8 [label="Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n[forward_compute_time=3.730,backward_compute_time=9.255,activation_size=66453504.0,parameter_size=2655744.0]" color=lightblue style=filled]
 	node9 [label="ReLU(inplace)\n[forward_compute_time=0.326,backward_compute_time=0.361,activation_size=66453504.0,parameter_size=0.0]" color=lightblue style=filled]
 	node10 [label="Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n[forward_compute_time=4.358,backward_compute_time=10.550,activation_size=44302336.0,parameter_size=3539968.0]" color=lightblue style=filled]
-	node11 [label="ReLU(inplace)\n[forward_compute_time=0.234,backward_compute_time=0.254,activation_size=44302336.0,parameter_size=0.0]" color=green style=filled]
+	node11 [label="ReLU(inplace)\n[forward_compute_time=0.234,backward_compute_time=0.254,activation_size=44302336.0,parameter_size=0.0]" color=lightblue style=filled]
 	node12 [label="Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n[forward_compute_time=3.161,backward_compute_time=7.586,activation_size=44302336.0,parameter_size=2360320.0]" color=green style=filled]
 	node13 [label="ReLU(inplace)\n[forward_compute_time=0.235,backward_compute_time=0.262,activation_size=44302336.0,parameter_size=0.0]" color=green style=filled]
 	node14 [label="MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)\n[forward_compute_time=0.591,backward_compute_time=0.884,activation_size=9437184.0,parameter_size=0.0]" color=green style=filled]

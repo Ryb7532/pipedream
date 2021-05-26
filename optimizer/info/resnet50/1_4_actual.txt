@@ -1,0 +1,28 @@
+Total number of states: 240
+Solving optimization problem with 4 machines with inter-machine bandwidth of 1.80 GB/s
+======================================
+Level 1
+======================================
+-------------------------------------
+Number of machines used: 1...
+Split between layers 158 and 159...
+Split before antichain ['node111', 'node113']...
+Compute time = 0.052547, Data-parallel communication time = 0.000000, Pipeline-parallel communication time = 0.035681...
+-------------------------------------
+Number of machines used: 3...
+Compute time = 0.042190, Data-parallel communication time = 0.010773...
+-------------------------------------
+Number of machines in budget not used: 0...
+
+(Split start, split end) / compute time taken per stage / replication factor per stage:
+(0, 159) 0.12657000000000007 3
+(159, 240) 0.05294099999999985 1
+
+Total number of stages: 2
+
+Time taken by single-stage pipeline: 0.17951099999999992
+Time per stage in pipeline: 0.052963112098765454
+Throughput increase (compared to single machine): 3.3893589875392585
+[Note that single-machine and (4)-machine DP might not fit given memory constraints]
+Throughput increase of (4)-machine DP compared to single machine: 2.052192146122674
+Throughput increase (compared to (4)-machine DP): 1.651579747999217

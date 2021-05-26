@@ -62,6 +62,8 @@ class Stage0(torch.nn.Module):
         self.layer62 = torch.nn.ReLU(inplace=True)
         self.layer63 = torch.nn.Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
         self.layer64 = torch.nn.BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        self.layer65 = torch.nn.ReLU(inplace=True)
+        self.layer66 = torch.nn.Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
         self._initialize_weights()
 
     def _initialize_weights(self):
@@ -142,4 +144,6 @@ class Stage0(torch.nn.Module):
         out62 = self.layer62(out61)
         out63 = self.layer63(out62)
         out64 = self.layer64(out63)
-        return (out59, out64)
+        out65 = self.layer65(out64)
+        out66 = self.layer66(out65)
+        return (out59, out66)

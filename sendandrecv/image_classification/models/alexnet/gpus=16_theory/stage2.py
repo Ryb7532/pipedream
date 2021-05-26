@@ -4,7 +4,7 @@ import torch
 class Stage2(torch.nn.Module):
     def __init__(self):
         super(Stage2, self).__init__()
-        self.layer1 = torch.nn.Linear(in_features=4096, out_features=4096, bias=True)
+        self.layer1 = torch.nn.Linear(in_features=9216, out_features=4096, bias=True)
 
     
 

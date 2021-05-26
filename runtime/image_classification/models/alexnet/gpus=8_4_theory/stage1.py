@@ -10,8 +10,6 @@ class Stage1(torch.nn.Module):
         self.layer4 = torch.nn.MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
         self.layer7 = torch.nn.Dropout(p=0.5)
         self.layer8 = torch.nn.Linear(in_features=9216, out_features=4096, bias=True)
-        self.layer9 = torch.nn.ReLU(inplace=True)
-        self.layer10 = torch.nn.Dropout(p=0.5)
 
     
 
@@ -25,6 +23,4 @@ class Stage1(torch.nn.Module):
         out6 = out4.view(out5, 9216)
         out7 = self.layer7(out6)
         out8 = self.layer8(out7)
-        out9 = self.layer9(out8)
-        out10 = self.layer10(out9)
-        return out10
+        return out8

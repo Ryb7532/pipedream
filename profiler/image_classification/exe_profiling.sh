@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 printf "which model?\n"
 read model
 if [ "$model" = "" ]; then
@@ -24,6 +23,16 @@ if [ "$bs" = "" ]; then
 fi
 
 
-
 data_dir="--data_dir /gs/hs1/tga-sssml/17B13541/images/imagenet"
-time CUDA_VISIBLE_DEVICES=0 python main.py -a $model -b $bs $data_dir -s
+echo "#!/bin/sh
+#$ -cwd
+#$ -l s_gpu=1
+#$ -l h_rt=00:10:00
+#$ -N ${model}_${bs}
+#$ -v GPU_COMPUTE_MODE=0
+. /etc/profile.d/modules.sh
+module load python/3.6.5 cuda/10.1.105 openmpi cudnn/7.4 nccl/2.4.2 texlive
+CUDA_VISIBLE_DEVICES=0 python main.py -a ${model} -b ${bs} -s
+" > job.sh
+
+qsub job.sh

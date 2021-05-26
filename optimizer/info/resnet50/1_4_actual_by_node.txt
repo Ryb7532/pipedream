@@ -1,0 +1,2 @@
+Total number of states: 240
+Solving optimization problem with 4 machines with inter-machine bandwidth of 1.80 GB/s

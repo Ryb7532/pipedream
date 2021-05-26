@@ -1,0 +1,536 @@
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 287, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_previous_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    main()
+  File "main_with_runtime.py", line 332, in main
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 287, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_previous_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 287, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_previous_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 287, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_previous_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 287, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_previous_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    num_iterations=num_iterations)
+  File "../communication.py", line 287, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_previous_stage == 0
+AssertionError
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 260, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_next_stage == 0
+AssertionError
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 235, in main
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 373, in train
+    r.train(n)
+  File "../runtime.py", line 364, in train
+    num_iterations, forward_only=False, epoch=self.epoch)
+  File "../communication.py", line 337, in start_helper_threads
+    num_iterations=num_iterations)
+  File "../communication.py", line 287, in schedule_for_helper_threads
+    assert num_iterations % self.num_ranks_in_previous_stage == 0
+AssertionError
+    macrobatch=macrobatch,
+  File "../optimizer.py", line 41, in __init__
+    master_parameters, **optimizer_args)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+    super(SGD, self).__init__(params, defaults)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 235, in main
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+    macrobatch=macrobatch,
+  File "../optimizer.py", line 41, in __init__
+    master_parameters, **optimizer_args)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+    super(SGD, self).__init__(params, defaults)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 464, in send_and_recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.7.201]:61132
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 484, in send_and_recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.7.201]:34722
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 484, in send_and_recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.7.201]:43436
+
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=7', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=31', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=19', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=3', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=11', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=15', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=23', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=27', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.6.73']' returned non-zero exit status 1.

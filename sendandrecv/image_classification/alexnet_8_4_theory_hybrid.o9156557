@@ -1,0 +1,275 @@
+mpirun -x LD_LIBRARY_PATH -x PATH -n 8 -npernode 1 --bind-to none ./cpp/alexnet_8_4_theory_hybrid 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 0 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 5 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 7 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 6 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 1 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 3 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 2 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+./python.sh -m launch --nnodes 8 --node_rank 4 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 6 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 1 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 7 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 3 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 5 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 2 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 0 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+Invoking python3 -m launch --nnodes 8 --node_rank 4 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=8_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=8_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.6.73
+1621916174.271979 : Rank 23 : start 
+1621916174.276902 : Rank 22 : start 
+1621916174.277006 : Rank 21 : start 
+1621916174.279788 : Rank 20 : start 
+1621916174.287016 : Rank 17 : start 
+1621916174.287178 : Rank 18 : start 
+1621916174.289075 : Rank 16 : start 
+1621916174.291732 : Rank 8 : start 
+1621916174.290041 : Rank 19 : start 
+1621916174.293289 : Rank 9 : start 
+1621916174.294785 : Rank 10 : start 
+1621916174.296659 : Rank 5 : start 
+1621916174.296695 : Rank 7 : start 
+1621916174.296763 : Rank 6 : start 
+1621916174.297811 : Rank 11 : start 
+1621916174.301293 : Rank 4 : start 
+1621916174.303437 : Rank 14 : start 
+1621916174.305729 : Rank 13 : start 
+1621916174.306761 : Rank 12 : start 
+1621916174.307644 : Rank 15 : start 
+1621916174.316287 : Rank 27 : start 
+1621916174.316382 : Rank 24 : start 
+1621916174.322124 : Rank 26 : start 
+1621916174.329317 : Rank 25 : start 
+1621916174.336438 : Rank 1 : start 
+1621916174.336762 : Rank 2 : start 
+1621916174.337075 : Rank 0 : start 
+1621916174.337120 : Rank 3 : start 
+1621916174.435930 : Rank 29 : start 
+1621916174.436613 : Rank 31 : start 
+1621916174.437440 : Rank 30 : start 
+1621916174.438442 : Rank 28 : start 
+Finished initializing process group; backend: gloo, rank: 0, world_size: 32
+Finished initializing process group; backend: gloo, rank: 1, world_size: 32
+Finished initializing process group; backend: gloo, rank: 2, world_size: 32
+Finished initializing process group; backend: gloo, rank: 3, world_size: 32
+Finished initializing process group; backend: gloo, rank: 10, world_size: 32
+Finished initializing process group; backend: gloo, rank: 4, world_size: 32
+Finished initializing process group; backend: gloo, rank: 5, world_size: 32
+Finished initializing process group; backend: gloo, rank: 6, world_size: 32
+Finished initializing process group; backend: gloo, rank: 7, world_size: 32
+Finished initializing process group; backend: gloo, rank: 8, world_size: 32
+Finished initializing process group; backend: gloo, rank: 9, world_size: 32
+Finished initializing process group; backend: gloo, rank: 11, world_size: 32
+Finished initializing process group; backend: gloo, rank: 12, world_size: 32
+Finished initializing process group; backend: gloo, rank: 13, world_size: 32
+Finished initializing process group; backend: gloo, rank: 14, world_size: 32
+Finished initializing process group; backend: gloo, rank: 15, world_size: 32
+Finished initializing process group; backend: gloo, rank: 16, world_size: 32
+Finished initializing process group; backend: gloo, rank: 17, world_size: 32
+Finished initializing process group; backend: gloo, rank: 18, world_size: 32
+Finished initializing process group; backend: gloo, rank: 19, world_size: 32
+Finished initializing process group; backend: gloo, rank: 20, world_size: 32
+Finished initializing process group; backend: gloo, rank: 21, world_size: 32
+Finished initializing process group; backend: gloo, rank: 22, world_size: 32
+Finished initializing process group; backend: gloo, rank: 23, world_size: 32
+Finished initializing process group; backend: gloo, rank: 24, world_size: 32
+Finished initializing process group; backend: gloo, rank: 25, world_size: 32
+Finished initializing process group; backend: gloo, rank: 26, world_size: 32
+Finished initializing process group; backend: gloo, rank: 27, world_size: 32
+Finished initializing process group; backend: gloo, rank: 30, world_size: 32
+Finished initializing process group; backend: gloo, rank: 28, world_size: 32
+Send ranks:  {'out4': [31], 'target': [31]}
+Receive ranks:  {'out3': [29], 'target': [29]}
+Setting up process groups for broadcasts...
+Send ranks:  {'out2': [29], 'target': [29]}
+Receive ranks:  {'out1': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Setting up process groups for broadcasts...
+Finished initializing process group; backend: gloo, rank: 29, world_size: 32
+Finished initializing process group; backend: gloo, rank: 31, world_size: 32
+Send ranks:  {}
+Receive ranks:  {'out4': [30], 'target': [30]}
+Setting up process groups for broadcasts...
+Send ranks:  {'out3': [30], 'target': [30]}
+Receive ranks:  {'out2': [28], 'target': [28]}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=21, module_size=741632.000
+Send ranks:  {'out0': [21, 22, 23, 24, 25, 26, 27], 'target': [21, 22, 23, 24, 25, 26, 27]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=7, module_size=151274496.000
+Send ranks:  {'out1': [28], 'target': [28]}
+Receive ranks:  {'out0': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'target': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=7, module_size=151274496.000
+Send ranks:  {'out1': [28], 'target': [28]}
+Receive ranks:  {'out0': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'target': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=7, module_size=151274496.000
+Replicating stage: ranks=7, module_size=151274496.000
+Replicating stage: ranks=7, module_size=151274496.000
+Send ranks:  {'out1': [28], 'target': [28]}
+Send ranks:  {'out1': [28], 'target': [28]}
+Receive ranks:  {'out0': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'target': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+Setting up process groups for broadcasts...
+Receive ranks:  {'out0': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'target': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+Setting up process groups for broadcasts...
+Send ranks:  {'out1': [28], 'target': [28]}
+Receive ranks:  {'out0': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'target': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+Setting up process groups for broadcasts...
+Replicating stage: ranks=7, module_size=151274496.000
+Replicating stage: ranks=7, module_size=151274496.000
+Send ranks:  {'out1': [28], 'target': [28]}
+Send ranks:  {'out1': [28], 'target': [28]}
+Receive ranks:  {'out0': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'target': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+Setting up process groups for broadcasts...
+Receive ranks:  {'out0': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 'target': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+Setting up process groups for broadcasts...
+Initialize_time (Rank 0 ): 10.455783 seconds
+1621916184.792897 : Rank 0 : _epoch : epoch 0
+Initialize_time (Rank 1 ): 10.471559 seconds
+1621916184.808031 : Rank 1 : _epoch : epoch 0
+Initialize_time (Rank 2 ): 10.484320 seconds
+1621916184.821132 : Rank 2 : _epoch : epoch 0
+Initialize_time (Rank 3 ): 10.492198 seconds
+1621916184.829373 : Rank 3 : _epoch : epoch 0
+Initialize_time (Rank 4 ): 10.538793 seconds
+1621916184.840124 : Rank 4 : _epoch : epoch 0
+Initialize_time (Rank 5 ): 10.553303 seconds
+1621916184.850002 : Rank 5 : _epoch : epoch 0
+Initialize_time (Rank 6 ): 10.563210 seconds
+1621916184.860022 : Rank 6 : _epoch : epoch 0
+Initialize_time (Rank 7 ): 10.573952 seconds
+1621916184.870704 : Rank 7 : _epoch : epoch 0
+Initialize_time (Rank 8 ): 10.590373 seconds
+1621916184.882142 : Rank 8 : _epoch : epoch 0
+Initialize_time (Rank 9 ): 10.601758 seconds
+1621916184.895096 : Rank 9 : _epoch : epoch 0
+Initialize_time (Rank 21 ): 10.629415 seconds
+1621916184.906461 : Rank 21 : _epoch : epoch 0
+Initialize_time (Rank 11 ): 10.613038 seconds
+1621916184.910897 : Rank 11 : _epoch : epoch 0
+Initialize_time (Rank 10 ): 10.616582 seconds
+1621916184.911414 : Rank 10 : _epoch : epoch 0
+Initialize_time (Rank 12 ): 10.613663 seconds
+1621916184.920464 : Rank 12 : _epoch : epoch 0
+Initialize_time (Rank 13 ): 10.623410 seconds
+1621916184.929176 : Rank 13 : _epoch : epoch 0
+Initialize_time (Rank 22 ): 10.657156 seconds
+1621916184.934113 : Rank 22 : _epoch : epoch 0
+Initialize_time (Rank 14 ): 10.635700 seconds
+1621916184.939187 : Rank 14 : _epoch : epoch 0
+Initialize_time (Rank 15 ): 10.641954 seconds
+1621916184.949653 : Rank 15 : _epoch : epoch 0
+Initialize_time (Rank 23 ): 10.683395 seconds
+1621916184.955417 : Rank 23 : _epoch : epoch 0
+Initialize_time (Rank 16 ): 10.671462 seconds
+1621916184.960574 : Rank 16 : _epoch : epoch 0
+Initialize_time (Rank 24 ): 10.653542 seconds
+1621916184.969970 : Rank 24 : _epoch : epoch 0
+Initialize_time (Rank 17 ): 10.684889 seconds
+1621916184.971943 : Rank 17 : _epoch : epoch 0
+Initialize_time (Rank 18 ): 10.693487 seconds
+1621916184.980709 : Rank 18 : _epoch : epoch 0
+Initialize_time (Rank 25 ): 10.654687 seconds
+1621916184.984043 : Rank 25 : _epoch : epoch 0
+Initialize_time (Rank 19 ): 10.702613 seconds
+1621916184.992706 : Rank 19 : _epoch : epoch 0
+Initialize_time (Rank 26 ): 10.676363 seconds
+1621916184.998537 : Rank 26 : _epoch : epoch 0
+Initialize_time (Rank 20 ): 10.719335 seconds
+1621916184.999168 : Rank 20 : _epoch : epoch 0
+Initialize_time (Rank 27 ): 10.696575 seconds
+1621916185.012915 : Rank 27 : _epoch : epoch 0
+Initialize_time (Rank 29 ): 10.590855 seconds
+1621916185.026831 : Rank 29 : _epoch : epoch 0
+1621916185.030282 : Rank 29 : receive_forward : epoch 0 :  iter 0
+Initialize_time (Rank 31 ): 10.595874 seconds
+1621916185.032524 : Rank 31 : _epoch : epoch 0
+1621916185.035214 : Rank 31 : receive_forward : epoch 0 :  iter 0
+Rank 1 : 18.769 seconds
+Rank 4 : 18.822 seconds
+Rank 7 : 18.822 seconds
+Rank 0 : 18.931 seconds
+Rank 2 : 18.960 seconds
+Rank 3 : 18.969 seconds
+Rank 5 : 19.014 seconds
+Rank 6 : 19.037 seconds

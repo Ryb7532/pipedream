@@ -282,7 +282,7 @@ def main(all_num_machines, profile_filename, network_bandwidths, memory_size,
     for num_machines, network_bandwidth in zip(all_num_machines, network_bandwidths):
         print("Solving optimization problem with %d machines with inter-machine bandwidth of %.2f GB/s" % (num_machines, network_bandwidth / 10**9))
         import numpy as np
-        print(np.array(compute_times))
+#        print(np.array(compute_times))
         A = compute_partitioning(compute_times, activation_sizes, parameter_sizes,
                                  output_activation_sizes, all_predecessor_ids,
                                  num_machines, num_machines_in_machine,
@@ -294,7 +294,7 @@ def main(all_num_machines, profile_filename, network_bandwidths, memory_size,
                 compute_times[i][j] = A[i][j][-1][0]
         counter += 1
         all_As.append(A)
-    print(np.array(compute_times))
+#    print(np.array(compute_times))
 
     splits = [(0, len(states))]
     i = len(all_As) - 1

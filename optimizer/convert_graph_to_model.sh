@@ -2,7 +2,7 @@
 
 #printf "which model?\n"
 #read model
-model=alexnet
+model=vgg16
 
 printf "how many GPUs?\n"
 read gpus
@@ -25,4 +25,5 @@ read file
 python convert_graph_to_model.py -f partitioned/$model/gpus=$gpus.txt -n ${model}Partitioned -a $model -o gpus=$file --stage_to_num_ranks $stnr
 cp -r gpus=$file ../runtime/image_classification/models/$model/.
 cp -r gpus=$file ../improve/image_classification/models/$model/.
-mv gpus=$file ../sendandrecv/image_classification/models/$model/.
+cp -r gpus=$file ../sendandrecv/image_classification/models/$model/.
+rm -rf gpus=$file

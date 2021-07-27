@@ -6,4 +6,4 @@ grep " : " $@ >> timeline.txt
 mv timeline.txt $HOME/t3workspace/profile/timeline.txt
 
 cd $HOME/t3workspace/profile/
-./div.sh
+./div_.sh

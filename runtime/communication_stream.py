@@ -308,6 +308,7 @@ class CommunicationHandler(object):
         """
         Start helper communication threads, one for each queue.
         """
+        stream = torch.cuda.Stream(device=self.local_rank, priority=-1)
         if forward_only:
             self.set_counter(self.num_forward_threads)
         else:
@@ -333,7 +334,7 @@ class CommunicationHandler(object):
                     self.start_helper_thread(
                         self.send_helper_thread_args,
                         send_helper_thread,
-                        [input_name, i, True,
+                        [input_name, i, True, stream,
                          backward_schedules[i],
                          epoch])
                 self.start_helper_thread(
@@ -341,7 +342,7 @@ class CommunicationHandler(object):
                     recv_helper_thread,
                     [input_name, i,
                     self.training_tensor_dtypes[input_name],
-                    False,
+                    False, stream,
                     backward_schedules[i],
                     epoch])
 
@@ -353,7 +354,7 @@ class CommunicationHandler(object):
                 self.start_helper_thread(
                     self.send_helper_thread_args,
                     send_helper_thread,
-                    [output_name, i, False,
+                    [output_name, i, False, stream,
                     forward_schedules[i],
                     epoch])
                 if not forward_only:
@@ -362,7 +363,7 @@ class CommunicationHandler(object):
                         recv_helper_thread,
                         [output_name, i,
                          self.training_tensor_dtypes[output_name],
-                         True,
+                         True, stream,
                          forward_schedules[i],
                          epoch])
 
@@ -373,7 +374,7 @@ class CommunicationHandler(object):
                         self.recv_helper_thread_args,
                         recv_helper_thread,
                         [target_tensor_name, i, torch.int64,
-                        False,
+                        False, stream,
                         backward_schedules[i],
                         epoch])
 
@@ -382,7 +383,7 @@ class CommunicationHandler(object):
                     self.start_helper_thread(
                         self.send_helper_thread_args,
                         send_helper_thread,
-                        [target_tensor_name, i, False,
+                        [target_tensor_name, i, False, stream,
                         forward_schedules[i],
                         epoch])
 
@@ -399,7 +400,7 @@ class CommunicationHandler(object):
         return
 
     def recv_helper_thread_args(self, tensor_name, index, dtype,
-                                backward, schedule, epoch):
+                                backward, stream, schedule, epoch):
         if backward:
             src_rank = self.ranks_in_next_stage[index]
         else:
@@ -422,10 +423,10 @@ class CommunicationHandler(object):
 
         return (queue, self.counter, self.local_rank, tensor_name,
                 src_rank, tag, tensor_shape, dtype, sub_process_group,
-                schedule, epoch)
+                stream, schedule, epoch)
 
     def send_helper_thread_args(self, tensor_name, index,
-                                backward, schedule, epoch):
+                                backward, stream, schedule, epoch):
         if backward:
             dst_rank = self.ranks_in_previous_stage[index]
         else:
@@ -446,7 +447,7 @@ class CommunicationHandler(object):
         assert sub_process_group
 
         return (queue, self.counter, self.local_rank, tensor_name, self.rank,
-                dst_rank, tag, sub_process_group, schedule, epoch)
+                dst_rank, tag, sub_process_group, stream, schedule, epoch)
 
     def recv(self, tensor_name, forward_minibatch_id,
              backward_minibatch_id, backward=False):
@@ -474,44 +475,46 @@ class CommunicationHandler(object):
 
 def recv_helper_thread(queue, counter, local_rank, tensor_name,
                        src_rank, tag, tensor_shape, dtype,
-                       sub_process_group, schedule, epoch):
+                       sub_process_group, stream, schedule, epoch):
     if not schedule:
         counter.decrement()
         return
 
     torch.cuda.set_device(local_rank)
     # This method is to be executed from a helper daemon thread.
-    for i in schedule:
-        tensor = _recv(
-            tensor_name, src_rank, tensor_shape=tensor_shape,
-            dtype=dtype, tag=tag,
-            sub_process_group=sub_process_group)
-        torch.cuda.synchronize()
-        print("%.6lf : Rank %d : _recv : epoch %d : iter %d : from %d : %s" % (time.time(), local_rank, epoch, i, src_rank, tensor_name))
-        queue.add(tensor)
+    with torch.cuda.stream(stream):
+        for i in schedule:
+            tensor = _recv(
+                tensor_name, src_rank, tensor_shape=tensor_shape,
+                dtype=dtype, tag=tag,
+                sub_process_group=sub_process_group)
+            stream.synchronize()
+            print("%.6lf : Rank %d : _recv : epoch %d : iter %d : from %d : %s" % (time.time(), local_rank, epoch, i, src_rank, tensor_name))
+            queue.add(tensor)
     counter.decrement()
 
 def send_helper_thread(queue, counter, local_rank, tensor_name,
                        src_rank, dst_rank, tag,
-                       sub_process_group, schedule, epoch):
+                       sub_process_group, stream, schedule, epoch):
     if not schedule:
         counter.decrement()
         return
 
     torch.cuda.set_device(local_rank)
     # This method is to be executed from a helper daemon thread.
-    for i in schedule:
-        tensor = queue.remove()
-        size = tensor.element_size() * tensor.nelement()
-        torch.cuda.synchronize()
-        start = time.time()
-        print("%.6lf : Rank %d : _send : epoch %d : iter %d : to %d : %.2lf bytes : %s" % (start, src_rank, epoch, i, dst_rank, size, tensor_name))
-        _send(tensor, tensor_name, src_rank, dst_rank,
-              tag=tag,
-              sub_process_group=sub_process_group)
-        torch.cuda.synchronize()
-        end = time.time()
-        print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, src_rank, epoch, i, dst_rank, tensor_name))
+    with torch.cuda.stream(stream):
+        for i in schedule:
+            tensor = queue.remove()
+            size = tensor.element_size() * tensor.nelement()
+            stream.synchronize()
+            start = time.time()
+            print("%.6lf : Rank %d : _send : epoch %d : iter %d : to %d : %.2lf bytes : %s" % (start, src_rank, epoch, i, dst_rank, size, tensor_name))
+            _send(tensor, tensor_name, src_rank, dst_rank,
+                  tag=tag,
+                  sub_process_group=sub_process_group)
+            torch.cuda.synchronize()
+            end = time.time()
+            print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, src_rank, epoch, i, dst_rank, tensor_name))
     counter.decrement()
 
 def _recv(tensor_name, src_rank, tensor_shape=None, dtype=torch.float32,

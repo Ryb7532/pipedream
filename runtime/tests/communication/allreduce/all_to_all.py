@@ -16,7 +16,6 @@ def all_reduce_helper(tensor, group, multiplier, num_iterations, local_rank):
     start_time = time.time()
     for i in range(num_iterations):
         dist.all_reduce(tensor=tensor, group=group)
-    dist.barrier(group=group)
     torch.cuda.synchronize()
     size = tensor.size()[0]
     bandwidth = (size * 4. * NUM_TRIALS * multiplier) / ((time.time() - start_time) * 10**6)

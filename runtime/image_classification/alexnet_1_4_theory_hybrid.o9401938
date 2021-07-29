@@ -1,0 +1,16 @@
+mpirun -x LD_LIBRARY_PATH -x PATH -n 1 -npernode 1 --bind-to none ./cpp/alexnet_1_4_theory_hybrid 10.0.7.197
+./python.sh -m launch --nnodes 1 --node_rank 0 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=1_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=1_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.7.197
+Invoking python3 -m launch --nnodes 1 --node_rank 0 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend gloo -m models.alexnet.gpus=1_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=1_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.7.197
+1625378946.313873 : Rank 2 : start 
+1625378946.315493 : Rank 3 : start 
+1625378946.315495 : Rank 1 : start 
+1625378946.315636 : Rank 0 : start 
+[0, 1, 1]
+{0: [0, 1, 2], 1: [3]}
+[0, 1, 1]
+{0: [0, 1, 2], 1: [3]}
+[0, 1, 1]
+{0: [0, 1, 2], 1: [3]}
+[0, 1, 1]
+{0: [0, 1, 2], 1: [3]}
+Rank 0 : 15.189 seconds

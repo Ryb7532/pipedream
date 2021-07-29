@@ -7,7 +7,7 @@ import time
 import torch
 import torch.distributed as dist
 
-import communication
+import communication_stream as communication
 import runtime_utilities
 
 IMAGE_CLASSIFICATION = "image_classification"
@@ -293,6 +293,7 @@ class StageRuntime:
             self.model_parameters = None
 
         self.epoch = -1
+        self.stream = torch.cuda.current_stream()
 
     @property
     def target(self):
@@ -494,7 +495,7 @@ class StageRuntime:
     def run_forward(self, recompute_step=False):
         """Run forward pass.
         """
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_1 = time.time()
         print("%.6lf : Rank %d : receive_forward : epoch %d :  iter %d" % (t_1, self.rank, self.epoch, self.forward_minibatch_id))
 
@@ -502,14 +503,14 @@ class StageRuntime:
         self.receive_tensors_forward()
         tensors = self.tensors[-1]
 
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_2 = time.time()
         print("%.6lf : Rank %d : run_forward : epoch %d : iter %d" % (t_2, self.rank, self.epoch, self.forward_minibatch_id))
 
         # Run forward pass.
         self._run_forward(tensors)
 
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_3 = time.time()
         print("%.6lf : Rank %d : send_forward : epoch %d : iter %d" % (t_3, self.rank, self.epoch, self.forward_minibatch_id))
 
@@ -520,7 +521,7 @@ class StageRuntime:
         #    self.forward_stats.print_stats()
         #self.forward_stats.reset_stats()
 
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_4 = time.time()
         print("%.6lf : Rank %d : end_forward : epoch %d : iter %d" % (t_4, self.rank, self.epoch, self.forward_minibatch_id))
         self.forward_minibatch_id += self.num_ranks_in_stage
@@ -574,14 +575,14 @@ class StageRuntime:
             self.loss = 1
 
     def run_backward(self):
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_1 = time.time()
         print("%.6lf : Rank %d : receive_backward : epoch %d : iter %d" % (t_1, self.rank, self.epoch, self.backward_minibatch_id))
 
         # Receive input gradients needed for backward pass.
         self.receive_tensors_backward()
 
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_2 = time.time()
         print("%.6lf : Rank %d : run_backward : epoch %d : iter %d" % (t_2, self.rank, self.epoch, self.backward_minibatch_id))
 
@@ -653,7 +654,7 @@ class StageRuntime:
             if input_name != "input0" and input_name != "input1" and input_name != "input2" and input_name != "input":
                 self.gradients[input_name] = input_gradients[input_name]
 
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_3 = time.time()
         print("%.6lf : Rank %d : send_backward : epoch %d : iter %d" % (t_3, self.rank, self.epoch, self.backward_minibatch_id))
 
@@ -664,7 +665,7 @@ class StageRuntime:
         #    self.backward_stats.print_stats()
         #self.backward_stats.reset_stats()
 
-        torch.cuda.synchronize()
+        self.stream.synchronize()
         t_4 = time.time()
         print("%.6lf : Rank %d : end_backward : epoch %d : iter %d" % (t_4, self.rank, self.epoch, self.backward_minibatch_id))
         self.backward_minibatch_id += self.num_ranks_in_stage

@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
   ostringstream stm;
   stm << rank;
   cmd += stm.str();
-  cmd += " --broadcast";
+  //cmd += " --broadcast";
 
   cout << "run in Node:" << rank << endl;
   int result = system(cmd.c_str());

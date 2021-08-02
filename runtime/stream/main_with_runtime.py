@@ -256,7 +256,7 @@ def main():
             )
     else:
         if args.synthetic_data:
-            train_dataset = SyntheticDataset((3, 224, 224), 106496)
+            train_dataset = SyntheticDataset((3, 224, 224), 122880)
         else:
             traindir = os.path.join(args.data_dir, 'train')
             train_dataset = datasets.ImageFolder(

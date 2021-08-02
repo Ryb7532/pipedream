@@ -488,7 +488,7 @@ def recv_helper_thread(recv_queues, counter, local_rank, tensor_names,
                         dtype=dtypes[tensor_name], tag=tags[tensor_name],
                         sub_process_group=sub_process_group)
                 q.put((tensor, work))
-            for tensor_name in recv_list:
+#            for tensor_name in recv_list:
                 tensor, work = q.get()
                 work.wait()
                 stream.synchronize()
@@ -518,7 +518,7 @@ def send_helper_thread(send_queues, counter, local_rank, tensor_names,
                         tag=tags[tensor_name],
                         sub_process_group=sub_process_group)
                 q.put(work)
-            for tensor_name in send_list:
+#            for tensor_name in send_list:
                 work = q.get()
                 work.wait()
                 stream.synchronize()

@@ -586,6 +586,7 @@ class StageRuntime:
         dst_rank = self.ranks_in_previous_stage[backward_minibatch_id % \
             self.num_ranks_in_previous_stage]
         pg = self.process_groups[dst_rank][self.rank]
+        q = []
         for input_name in self.receive_ranks:
             if input_name in self.target_tensor_names:
                 continue
@@ -597,16 +598,26 @@ class StageRuntime:
             torch.cuda.synchronize()
             start = time.time()
             print("%.6lf : Rank %d : _send : epoch %d : iter %d : to %d : %.2lf bytes : %s" % (start, self.rank, self.epoch, backward_minibatch_id, dst_rank, size, input_name))
-            dist.broadcast(tensor=tensor.contiguous(),
+            work = dist.broadcast(tensor=tensor.contiguous(),
                 src=self.rank,
-                group=pg)
-            torch.cuda.synchronize()
-            end = time.time()
-            print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, self.rank, self.epoch, backward_minibatch_id, dst_rank, input_name))
+                group=pg,
+                async_op=True)
+            q.append((work,input_name))
         self.backward_id['send'] += self.num_ranks_in_stage
-        torch.cuda.synchronize()
-        t = time.time()
-        print("%.6lf : Rank %d : send_backward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, backward_minibatch_id))
+        return (q,backward_minibatch_id)
+
+    def wait_send_tensors_backward(self,send_list):
+        for (queue,backward_minibatch_id) in send_list:
+            dst_rank = self.ranks_in_previous_stage[backward_minibatch_id % \
+                self.num_ranks_in_previous_stage]
+            for (work,input_name) in queue:
+                work.wait()
+                torch.cuda.synchronize()
+                end = time.time()
+                print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, self.rank, self.epoch, backward_minibatch_id, dst_rank, input_name))
+            torch.cuda.synchronize()
+            t = time.time()
+            print("%.6lf : Rank %d : send_backward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, backward_minibatch_id))
 
     def run_forward(self):
         self.receive_tensors_forward()
@@ -906,10 +917,10 @@ def train(train_loader, r, optimizer, epoch):
         gradients = {}
 
         # receive forward
-        tensors = []
+        work_list = []
         for _ in range(3):
-            tensors += [r.receive_tensors_forward()]
-        r.wait_receive_tensors_forward(tensors)
+            work_list += [r.receive_tensors_forward()]
+        r.wait_receive_tensors_forward(work_list)
         ##
 
         for _ in range(num_warmup_minibatches):
@@ -917,10 +928,10 @@ def train(train_loader, r, optimizer, epoch):
             r.forward_id['run'] += 2
 
             # receive forward
-            tensors = []
+            work_list = []
             for _ in range(3):
-                tensors += [r.receive_tensors_forward()]
-            r.wait_receive_tensors_forward(tensors)
+                work_list += [r.receive_tensors_forward()]
+            r.wait_receive_tensors_forward(work_list)
             ##
 
         for _ in range(n//3-num_warmup_minibatches-1):
@@ -934,14 +945,8 @@ def train(train_loader, r, optimizer, epoch):
             optimizer.load_new_params()
             optimizer.step()
 
-            # receive forward
-            tensors = []
-            for _ in range(3):
-                tensors += [r.receive_tensors_forward()]
-            r.wait_receive_tensors_forward(tensors)
-            ##
-
             # send backward
+            work_list = []
             for input_name in r.receive_ranks:
                 if input_name in r.target_tensor_names:
                     continue
@@ -952,8 +957,50 @@ def train(train_loader, r, optimizer, epoch):
                     if input_name in r.target_tensor_names:
                         continue
                     gradient[input_name] = gradients[input_name][i]
-                r.send_tensors_backward(gradient)
+                work_list += [r.send_tensors_backward(gradient)]
+            r.wait_send_tensors_backward(work_list)
             ##
+
+            # receive forward
+            work_list = []
+            for _ in range(3):
+                work_list += [r.receive_tensors_forward()]
+            r.wait_receive_tensors_forward(work_list)
+            ##
+
+        # for _ in range(n//3-num_warmup_minibatches-1):
+        #     r._run_forward(r.tensors[-1])
+        #     r.forward_id['run'] += 2
+
+        #     optimizer.zero_grad()
+        #     optimizer.load_old_params()
+        #     r._run_backward()
+        #     r.backward_id['run'] += 2
+        #     optimizer.load_new_params()
+        #     optimizer.step()
+
+        #     # receive forward
+        #     work_list = []
+        #     for _ in range(3):
+        #         work_list += [r.receive_tensors_forward()]
+        #     r.wait_receive_tensors_forward(work_list)
+        #     ##
+
+        #     # send backward
+        #     work_list = []
+        #     for input_name in r.receive_ranks:
+        #         if input_name in r.target_tensor_names:
+        #             continue
+        #         gradients[input_name] = torch.chunk(r.gradients[input_name],3)
+        #     for i in range(3):
+        #         gradient = {}
+        #         for input_name in r.receive_ranks:
+        #             if input_name in r.target_tensor_names:
+        #                 continue
+        #             gradient[input_name] = gradients[input_name][i]
+        #         work_list += [r.send_tensors_backward(gradient)]
+        #     r.wait_send_tensors_backward(work_list)
+        #     ##
 
         r._run_forward(r.tensors[-1])
         r.forward_id['run'] += 2
@@ -967,6 +1014,7 @@ def train(train_loader, r, optimizer, epoch):
             optimizer.step()
 
             # send backward
+            work_list = []
             for input_name in r.receive_ranks:
                 if input_name in r.target_tensor_names:
                     continue
@@ -977,18 +1025,25 @@ def train(train_loader, r, optimizer, epoch):
                     if input_name in r.target_tensor_names:
                         continue
                     gradient[input_name] = gradients[input_name][i]
-                r.send_tensors_backward(gradient)
+                work_list += [r.send_tensors_backward(gradient)]
+            r.wait_send_tensors_backward(work_list)
             ##
     else:
         for _ in range(num_warmup_minibatches):
             r.run_forward()
 
         for _ in range(n - num_warmup_minibatches):
-            r.run_forward()
+            # r.run_forward()
+            r.receive_tensors_forward()
+            r._run_forward(r.tensors[-1])
+
+            r.receive_tensors_backward()
+            r.send_tensors_forward()
 
             optimizer.zero_grad()
             optimizer.load_old_params()
-            r.run_backward()
+            # r.run_backward()
+            r._run_backward()
             optimizer.load_new_params()
             optimizer.step()
 

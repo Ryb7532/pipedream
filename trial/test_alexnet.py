@@ -208,12 +208,17 @@ class StageRuntime:
                  enable_recompute=False):
         self.tensors = []
         self.gradients = {}
+        self.recv_for = []
+        self.send_for = []
+        self.recv_back = []
+        self.send_back = []
         self.distributed_backend = distributed_backend
         self.fp16 = fp16
         self.loss_scale = loss_scale
         self.training_tensor_shapes = training_tensor_shapes
         self.training_tensor_dtypes = training_tensor_dtypes
         self.target_tensor_names = target_tensor_names
+        self.stream = torch.cuda.Stream(device=local_rank, priority=-1)
 
         self.initialize(model, inputs_module_destinations, configuration_maps,
                         master_addr, rank, local_rank)
@@ -467,163 +472,210 @@ class StageRuntime:
             self.loader_iter = None
 
     def receive_tensors_forward(self):
-        forward_minibatch_id = self.forward_id['recv']
-        torch.cuda.synchronize()
-        t_1 = time.time()
-        print("%.6lf : Rank %d : receive_forward : epoch %d :  iter %d" % (t_1, self.rank, self.epoch, forward_minibatch_id))
-        if self.loader_iter is not None:
-            self.tensors.append({})
-            input = next(self.loader_iter)
-            (input, target) = input
-            if self.fp16:
-                input = input.half()
-            self.tensors[-1]["input0"] = input.cuda(non_blocking=True)
-            self.tensors[-1]["target"] = target.cuda(non_blocking=True)
-            self.forward_id['recv'] += self.num_ranks_in_stage
-            torch.cuda.synchronize()
-            t = time.time()
-            print("%.6lf : Rank %d : receive_forward__ : epoch %d :  iter %d" % (t, self.rank, self.epoch, forward_minibatch_id))
-        else:
-            src_rank = self.ranks_in_previous_stage[forward_minibatch_id % \
-                self.num_ranks_in_previous_stage]
-            pg = self.process_groups[src_rank][self.rank]
-            q = []
+        with torch.cuda.stream(self.stream):
+            forward_minibatch_id = self.forward_id['recv']
+            if self.loader_iter is not None:
+                self.stream.synchronize()
+                t_1 = time.time()
+                print("%.6lf : Rank %d : receive_forward : epoch %d :  iter %d" % (t_1, self.rank, self.epoch, forward_minibatch_id))
+                self.tensors.append({})
+                input = next(self.loader_iter)
+                (input, target) = input
+                if self.fp16:
+                    input = input.half()
+                self.tensors[-1]["input0"] = input.cuda(non_blocking=True)
+                self.tensors[-1]["target"] = target.cuda(non_blocking=True)
+                self.forward_id['recv'] += self.num_ranks_in_stage
+                self.stream.synchronize()
+                t = time.time()
+                print("%.6lf : Rank %d : receive_forward__ : epoch %d :  iter %d" % (t, self.rank, self.epoch, forward_minibatch_id))
+            else:
+                src_rank = self.ranks_in_previous_stage[forward_minibatch_id % \
+                    self.num_ranks_in_previous_stage]
+                pg = self.process_groups[src_rank][self.rank]
+                q = []
+                for input_name in self.receive_ranks:
+                    tensor_shape = self.tensor_shapes[input_name]
+                    dtype = self.training_tensor_dtypes[input_name]
+                    tensor = torch.zeros(tensor_shape, dtype=dtype).cuda()
+                    work = dist.broadcast(tensor=tensor,
+                        src=src_rank,
+                        group=pg,
+                        async_op=True)
+                    q.append((work,tensor,input_name))
+                self.forward_id['recv'] += self.num_ranks_in_stage
+                self.recv_for.append((q,forward_minibatch_id))
+
+    def wait_receive_tensors_forward(self):
+        if not self.recv_for:
+            return
+        with torch.cuda.stream(self.stream):
+            tensors = {}
             for input_name in self.receive_ranks:
-                tensor_shape = self.tensor_shapes[input_name]
-                dtype = self.training_tensor_dtypes[input_name]
+                tensors[input_name] = []
+            while self.recv_for:
+                (queue,forward_minibatch_id) = self.recv_for.pop(0)
+                src_rank = self.ranks_in_previous_stage[forward_minibatch_id % \
+                    self.num_ranks_in_previous_stage]
+                self.stream.synchronize()
+                t_1 = time.time()
+                print("%.6lf : Rank %d : receive_forward : epoch %d :  iter %d" % (t_1, self.rank, self.epoch, forward_minibatch_id))
+                for (work,tensor,input_name) in queue:
+                    work.wait()
+                    tensors[input_name] += [tensor]
+                    self.stream.synchronize()
+                    print("%.6lf : Rank %d : _recv : epoch %d : iter %d : from %d : %s" % (time.time(), self.rank, self.epoch, forward_minibatch_id, src_rank, input_name))
+                self.stream.synchronize()
+                t = time.time()
+                print("%.6lf : Rank %d : receive_forward__ : epoch %d :  iter %d" % (t, self.rank, self.epoch, forward_minibatch_id))
+            self.tensors.append({})
+            for input_name in self.receive_ranks:
+                self.tensors[-1][input_name] = torch.cat(tensors[input_name])
+
+    def send_tensors_forward(self, activations=None):
+        if self.num_ranks_in_next_stage == 0:
+            return
+        with torch.cuda.stream(self.stream):
+            forward_minibatch_id = self.forward_id['send']
+            dst_rank = self.ranks_in_next_stage[forward_minibatch_id % \
+                self.num_ranks_in_next_stage]
+            pg = self.process_groups[self.rank][dst_rank]
+            q = []
+            for output_name in self.send_ranks:
+                if activations is None:
+                    contiguous_tensor = self.tensors[-1][output_name].detach().clone()
+                else:
+                    contiguous_tensor = activations[output_name].detach().clone()
+                size = contiguous_tensor.element_size() * contiguous_tensor.nelement()
+                self.stream.synchronize()
+                start = time.time()
+                print("%.6lf : Rank %d : _send : epoch %d : iter %d : to %d : %.2lf bytes : %s" % (start, self.rank, self.epoch, forward_minibatch_id, dst_rank, size, output_name))
+                work = dist.broadcast(tensor=contiguous_tensor.contiguous(),
+                    src=self.rank,
+                    group=pg,
+                    async_op=True)
+                q.append((work,output_name))
+            self.forward_id['send'] += self.num_ranks_in_stage
+            self.send_for.append((q,forward_minibatch_id))
+
+    def wait_send_tensors_forward(self):
+        if not self.send_for:
+            return
+        with torch.cuda.stream(self.stream):
+            while self.send_for:
+                (queue,forward_minibatch_id) = self.send_for.pop(0)
+                dst_rank = self.ranks_in_next_stage[forward_minibatch_id % \
+                    self.num_ranks_in_next_stage]
+                self.stream.synchronize()
+                t_3 = time.time()
+                print("%.6lf : Rank %d : send_forward : epoch %d : iter %d" % (t_3, self.rank, self.epoch, forward_minibatch_id))
+                for (work,output_name) in queue:
+                    work.wait()
+                    self.stream.synchronize()
+                    end = time.time()
+                    print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, self.rank, self.epoch, forward_minibatch_id, dst_rank, output_name))
+                self.stream.synchronize()
+                t = time.time()
+                print("%.6lf : Rank %d : send_forward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, forward_minibatch_id))
+
+    def receive_tensors_backward(self):
+        if self.num_ranks_in_next_stage == 0:
+            return
+        with torch.cuda.stream(self.stream):
+            backward_minibatch_id = self.backward_id['recv']
+            src_rank = self.ranks_in_next_stage[backward_minibatch_id % \
+                self.num_ranks_in_next_stage]
+            pg = self.process_groups[self.rank][src_rank]
+            q = []
+            for output_name in self.send_ranks:
+                if output_name in self.target_tensor_names:
+                    continue
+                tensor_shape = self.tensor_shapes[output_name]
+                dtype = self.training_tensor_dtypes[output_name]
                 tensor = torch.zeros(tensor_shape, dtype=dtype).cuda()
                 work = dist.broadcast(tensor=tensor,
                     src=src_rank,
                     group=pg,
                     async_op=True)
-                q.append((work,tensor,input_name))
-            self.forward_id['recv'] += self.num_ranks_in_stage
-            return (q,forward_minibatch_id)
+                q.append((work,tensor,output_name))
+            self.backward_id['recv'] += self.num_ranks_in_stage
+            self.recv_back.append((q,backward_minibatch_id))
 
-    def wait_receive_tensors_forward(self,receive_list):
-        tensors = {}
-        for input_name in self.receive_ranks:
-            tensors[input_name] = []
-        for (queue,forward_minibatch_id) in receive_list:
-            src_rank = self.ranks_in_previous_stage[forward_minibatch_id % \
-                self.num_ranks_in_previous_stage]
-            for (work,tensor,input_name) in queue:
-                work.wait()
-                tensors[input_name] += [tensor]
-                torch.cuda.synchronize()
-                print("%.6lf : Rank %d : _recv : epoch %d : iter %d : from %d : %s" % (time.time(), self.rank, self.epoch, forward_minibatch_id, src_rank, input_name))
-            torch.cuda.synchronize()
-            t = time.time()
-            print("%.6lf : Rank %d : receive_forward__ : epoch %d :  iter %d" % (t, self.rank, self.epoch, forward_minibatch_id))
-        self.tensors.append({})
-        for input_name in self.receive_ranks:
-            self.tensors[-1][input_name] = torch.cat(tensors[input_name])
-
-    def send_tensors_forward(self, activations=None):
-        if self.num_ranks_in_next_stage == 0:
+    def wait_receive_tensors_backward(self):
+        if not self.recv_back:
             return
-        forward_minibatch_id = self.forward_id['send']
-        torch.cuda.synchronize()
-        t_3 = time.time()
-        print("%.6lf : Rank %d : send_forward : epoch %d : iter %d" % (t_3, self.rank, self.epoch, forward_minibatch_id))
-        dst_rank = self.ranks_in_next_stage[forward_minibatch_id % \
-            self.num_ranks_in_next_stage]
-        pg = self.process_groups[self.rank][dst_rank]
-        for output_name in self.send_ranks:
-            if activations is None:
-                contiguous_tensor = self.tensors[-1][output_name].detach().clone()
-            else:
-                contiguous_tensor = activations[output_name].detach().clone()
-            size = contiguous_tensor.element_size() * contiguous_tensor.nelement()
-            torch.cuda.synchronize()
-            start = time.time()
-            print("%.6lf : Rank %d : _send : epoch %d : iter %d : to %d : %.2lf bytes : %s" % (start, self.rank, self.epoch, forward_minibatch_id, dst_rank, size, output_name))
-            dist.broadcast(tensor=contiguous_tensor.contiguous(),
-                src=self.rank,
-                group=pg)
-            torch.cuda.synchronize()
-            end = time.time()
-            print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, self.rank, self.epoch, forward_minibatch_id, dst_rank, output_name))
-        self.forward_id['send'] += self.num_ranks_in_stage
-        torch.cuda.synchronize()
-        t = time.time()
-        print("%.6lf : Rank %d : send_forward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, forward_minibatch_id))
-
-    def receive_tensors_backward(self):
-        if self.num_ranks_in_next_stage == 0:
-            return
-        backward_minibatch_id = self.backward_id['recv']
-        torch.cuda.synchronize()
-        t_1 = time.time()
-        print("%.6lf : Rank %d : receive_backward : epoch %d : iter %d" % (t_1, self.rank, self.epoch, backward_minibatch_id))
-        src_rank = self.ranks_in_next_stage[backward_minibatch_id % \
-            self.num_ranks_in_next_stage]
-        pg = self.process_groups[self.rank][src_rank]
-        for output_name in self.send_ranks:
-            if output_name in self.target_tensor_names:
-                continue
-            tensor_shape = self.tensor_shapes[output_name]
-            dtype = self.training_tensor_dtypes[output_name]
-            tensor = torch.zeros(tensor_shape, dtype=dtype).cuda()
-            dist.broadcast(tensor=tensor,
-                src=src_rank,
-                group=pg)
-            self.gradients[output_name] = tensor
-            torch.cuda.synchronize()
-            print("%.6lf : Rank %d : _recv : epoch %d : iter %d : from %d : %s" % (time.time(), self.rank, self.epoch, backward_minibatch_id, src_rank, output_name))
-        self.backward_id['recv'] += self.num_ranks_in_stage
-        torch.cuda.synchronize()
-        t = time.time()
-        print("%.6lf : Rank %d : receive_backward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, backward_minibatch_id))
+        with torch.cuda.stream(self.stream):
+            while self.recv_back:
+                (queue,backward_minibatch_id) = self.recv_back.pop(0)
+                src_rank = self.ranks_in_next_stage[backward_minibatch_id % \
+                    self.num_ranks_in_next_stage]
+                self.stream.synchronize()
+                t_1 = time.time()
+                print("%.6lf : Rank %d : receive_backward : epoch %d : iter %d" % (t_1, self.rank, self.epoch, backward_minibatch_id))
+                for (work,tensor,output_name) in queue:
+                    work.wait()
+                    self.gradients[output_name] = tensor
+                    self.stream.synchronize()
+                    print("%.6lf : Rank %d : _recv : epoch %d : iter %d : from %d : %s" % (time.time(), self.rank, self.epoch, backward_minibatch_id, src_rank, output_name))
+                self.stream.synchronize()
+                t = time.time()
+                print("%.6lf : Rank %d : receive_backward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, backward_minibatch_id))
 
     def send_tensors_backward(self, gradients=None):
         if self.num_ranks_in_previous_stage == 0:
             return
-        backward_minibatch_id = self.backward_id['send']
-        torch.cuda.synchronize()
-        t_3 = time.time()
-        print("%.6lf : Rank %d : send_backward : epoch %d : iter %d" % (t_3, self.rank, self.epoch, backward_minibatch_id))
-        dst_rank = self.ranks_in_previous_stage[backward_minibatch_id % \
-            self.num_ranks_in_previous_stage]
-        pg = self.process_groups[dst_rank][self.rank]
-        q = []
-        for input_name in self.receive_ranks:
-            if input_name in self.target_tensor_names:
-                continue
-            if gradients is None:
-                tensor = self.gradients[input_name].detach().clone()
-            else:
-                tensor = gradients[input_name].detach().clone()
-            size = tensor.element_size() * tensor.nelement()
-            torch.cuda.synchronize()
-            start = time.time()
-            print("%.6lf : Rank %d : _send : epoch %d : iter %d : to %d : %.2lf bytes : %s" % (start, self.rank, self.epoch, backward_minibatch_id, dst_rank, size, input_name))
-            work = dist.broadcast(tensor=tensor.contiguous(),
-                src=self.rank,
-                group=pg,
-                async_op=True)
-            q.append((work,input_name))
-        self.backward_id['send'] += self.num_ranks_in_stage
-        return (q,backward_minibatch_id)
-
-    def wait_send_tensors_backward(self,send_list):
-        for (queue,backward_minibatch_id) in send_list:
+        with torch.cuda.stream(self.stream):
+            backward_minibatch_id = self.backward_id['send']
             dst_rank = self.ranks_in_previous_stage[backward_minibatch_id % \
                 self.num_ranks_in_previous_stage]
-            for (work,input_name) in queue:
-                work.wait()
-                torch.cuda.synchronize()
-                end = time.time()
-                print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, self.rank, self.epoch, backward_minibatch_id, dst_rank, input_name))
-            torch.cuda.synchronize()
-            t = time.time()
-            print("%.6lf : Rank %d : send_backward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, backward_minibatch_id))
+            pg = self.process_groups[dst_rank][self.rank]
+            q = []
+            for input_name in self.receive_ranks:
+                if input_name in self.target_tensor_names:
+                    continue
+                if gradients is None:
+                    tensor = self.gradients[input_name].detach().clone()
+                else:
+                    tensor = gradients[input_name].detach().clone()
+                size = tensor.element_size() * tensor.nelement()
+                self.stream.synchronize()
+                start = time.time()
+                print("%.6lf : Rank %d : _send : epoch %d : iter %d : to %d : %.2lf bytes : %s" % (start, self.rank, self.epoch, backward_minibatch_id, dst_rank, size, input_name))
+                work = dist.broadcast(tensor=tensor.contiguous(),
+                    src=self.rank,
+                    group=pg,
+                    async_op=True)
+                q.append((work,input_name))
+            self.backward_id['send'] += self.num_ranks_in_stage
+            self.send_back.append((q,backward_minibatch_id))
+
+    def wait_send_tensors_backward(self):
+        if not self.send_back:
+            return
+        with torch.cuda.stream(self.stream):
+            while self.send_back:
+                (queue,backward_minibatch_id) = self.send_back.pop(0)
+                dst_rank = self.ranks_in_previous_stage[backward_minibatch_id % \
+                    self.num_ranks_in_previous_stage]
+                self.stream.synchronize()
+                t_3 = time.time()
+                print("%.6lf : Rank %d : send_backward : epoch %d : iter %d" % (t_3, self.rank, self.epoch, backward_minibatch_id))
+                for (work,input_name) in queue:
+                    work.wait()
+                    self.stream.synchronize()
+                    end = time.time()
+                    print("%.6lf : Rank %d : comp_send : epoch %d : iter %d : to %d : %s" % (end, self.rank, self.epoch, backward_minibatch_id, dst_rank, input_name))
+                self.stream.synchronize()
+                t = time.time()
+                print("%.6lf : Rank %d : send_backward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, backward_minibatch_id))
 
     def run_forward(self):
         self.receive_tensors_forward()
+        self.wait_receive_tensors_forward()
         tensors = self.tensors[-1]
         self._run_forward(tensors)
         self.send_tensors_forward()
+        self.wait_send_tensors_forward()
 
     def _run_forward(self, tensors):
         forward_minibatch_id = self.forward_id['run']
@@ -662,20 +714,23 @@ class StageRuntime:
 
     def run_backward(self):
         self.receive_tensors_backward()
+        self.wait_receive_tensors_backward()
         self._run_backward()
         if self.group is not None:
-            num_replicas = self.num_ranks_in_stage
-            torch.cuda.synchronize()
-            start = time.time()
-            print("%.6lf : Rank %d : _sync_reduction " % (start, self.rank))
-            for module in self.modules():
-                for param in module.parameters():
-                    dist.all_reduce(param.grad.data, group=self.group, op=dist.ReduceOp.SUM)
-                    param.grad.data /= num_replicas
-            torch.cuda.synchronize()
-            end = time.time()
-            print("%.6lf : Rank %d : end_sync_reduction " % (end, self.rank))
+            with torch.cuda.stream(self.stream):
+                num_replicas = self.num_ranks_in_stage
+                self.stream.synchronize()
+                start = time.time()
+                print("%.6lf : Rank %d : _sync_reduction " % (start, self.rank))
+                for module in self.modules():
+                    for param in module.parameters():
+                        dist.all_reduce(param.grad.data, group=self.group, op=dist.ReduceOp.SUM)
+                        param.grad.data /= num_replicas
+                self.stream.synchronize()
+                end = time.time()
+                print("%.6lf : Rank %d : end_sync_reduction " % (end, self.rank))
         self.send_tensors_backward()
+        self.wait_send_tensors_backward()
 
     def _run_backward(self):
         backward_minibatch_id = self.backward_id['run']
@@ -917,10 +972,9 @@ def train(train_loader, r, optimizer, epoch):
         gradients = {}
 
         # receive forward
-        work_list = []
         for _ in range(3):
-            work_list += [r.receive_tensors_forward()]
-        r.wait_receive_tensors_forward(work_list)
+            r.receive_tensors_forward()
+        r.wait_receive_tensors_forward()
         ##
 
         for _ in range(num_warmup_minibatches):
@@ -928,10 +982,9 @@ def train(train_loader, r, optimizer, epoch):
             r.forward_id['run'] += 2
 
             # receive forward
-            work_list = []
             for _ in range(3):
-                work_list += [r.receive_tensors_forward()]
-            r.wait_receive_tensors_forward(work_list)
+                r.receive_tensors_forward()
+            r.wait_receive_tensors_forward()
             ##
 
         for _ in range(n//3-num_warmup_minibatches-1):
@@ -946,7 +999,6 @@ def train(train_loader, r, optimizer, epoch):
             optimizer.step()
 
             # send backward
-            work_list = []
             for input_name in r.receive_ranks:
                 if input_name in r.target_tensor_names:
                     continue
@@ -957,15 +1009,14 @@ def train(train_loader, r, optimizer, epoch):
                     if input_name in r.target_tensor_names:
                         continue
                     gradient[input_name] = gradients[input_name][i]
-                work_list += [r.send_tensors_backward(gradient)]
-            r.wait_send_tensors_backward(work_list)
+                r.send_tensors_backward(gradient)
+            r.wait_send_tensors_backward()
             ##
 
             # receive forward
-            work_list = []
             for _ in range(3):
-                work_list += [r.receive_tensors_forward()]
-            r.wait_receive_tensors_forward(work_list)
+                r.receive_tensors_forward()
+            r.wait_receive_tensors_forward()
             ##
 
         # for _ in range(n//3-num_warmup_minibatches-1):
@@ -980,14 +1031,12 @@ def train(train_loader, r, optimizer, epoch):
         #     optimizer.step()
 
         #     # receive forward
-        #     work_list = []
         #     for _ in range(3):
-        #         work_list += [r.receive_tensors_forward()]
-        #     r.wait_receive_tensors_forward(work_list)
+        #         r.receive_tensors_forward()
+        #     r.wait_receive_tensors_forward()
         #     ##
 
         #     # send backward
-        #     work_list = []
         #     for input_name in r.receive_ranks:
         #         if input_name in r.target_tensor_names:
         #             continue
@@ -998,8 +1047,8 @@ def train(train_loader, r, optimizer, epoch):
         #             if input_name in r.target_tensor_names:
         #                 continue
         #             gradient[input_name] = gradients[input_name][i]
-        #         work_list += [r.send_tensors_backward(gradient)]
-        #     r.wait_send_tensors_backward(work_list)
+        #         r.send_tensors_backward(gradient)
+        #     r.wait_send_tensors_backward()
         #     ##
 
         r._run_forward(r.tensors[-1])
@@ -1014,7 +1063,6 @@ def train(train_loader, r, optimizer, epoch):
             optimizer.step()
 
             # send backward
-            work_list = []
             for input_name in r.receive_ranks:
                 if input_name in r.target_tensor_names:
                     continue
@@ -1025,8 +1073,8 @@ def train(train_loader, r, optimizer, epoch):
                     if input_name in r.target_tensor_names:
                         continue
                     gradient[input_name] = gradients[input_name][i]
-                work_list += [r.send_tensors_backward(gradient)]
-            r.wait_send_tensors_backward(work_list)
+                r.send_tensors_backward(gradient)
+            r.wait_send_tensors_backward()
             ##
     else:
         for _ in range(num_warmup_minibatches):
@@ -1035,15 +1083,30 @@ def train(train_loader, r, optimizer, epoch):
         for _ in range(n - num_warmup_minibatches):
             # r.run_forward()
             r.receive_tensors_forward()
+            r.receive_tensors_backward()
             r._run_forward(r.tensors[-1])
 
-            r.receive_tensors_backward()
+            r.wait_receive_tensors_backward()
             r.send_tensors_forward()
 
             optimizer.zero_grad()
             optimizer.load_old_params()
             # r.run_backward()
             r._run_backward()
+            r.wait_send_tensors_forward()
+            if r.group is not None:
+                with torch.cuda.stream(r.stream):
+                    num_replicas = r.num_ranks_in_stage
+                    r.stream.synchronize()
+                    start = time.time()
+                    print("%.6lf : Rank %d : _sync_reduction " % (start, r.rank))
+                    for module in r.modules():
+                        for param in module.parameters():
+                            dist.all_reduce(param.grad.data, group=r.group, op=dist.ReduceOp.SUM)
+                            param.grad.data /= num_replicas
+                    r.stream.synchronize()
+                    end = time.time()
+                    print("%.6lf : Rank %d : end_sync_reduction " % (end, r.rank))
             optimizer.load_new_params()
             optimizer.step()
 

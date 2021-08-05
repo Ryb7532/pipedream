@@ -1,7 +1,7 @@
 #!/bin/bash
 
-model=alexnet
-bs=256
+model=vgg16
+bs=16
 
 printf "config [ nodes gpus ]\n"
 read nodes gpu
@@ -97,7 +97,7 @@ mpicxx -o cpp/$file "cpp/${file}.cpp"
 echo "#!/bin/sh
 #$ -cwd
 #$ -l f_node=${nodes}
-#$ -l h_rt=00:10:00
+#$ -l h_rt=00:30:00
 #$ -N ${file}
 #$ -v GPU_COMPUTE_MODE=0
 

@@ -196,6 +196,7 @@ class ModulesWithDependencies:
         for module_input_names in self._all_input_names:
             if tensor_name in module_input_names:
                 return True
+        return False
 
 
 
@@ -441,8 +442,45 @@ class StageRuntime:
 
         self.epoch = -1
 
+    @property
+    def target(self):
+        return self.tensors[-1]["target"]
+
     def modules(self):
         return self.modules_with_dependencies.modules()
+
+    def parameters(self):
+        parameter_iterators = []
+        for module in self.modules_with_dependencies.modules():
+            parameter_iterators.append(module.parameters())
+        return itertools.chain(*parameter_iterators)
+
+    def state_dict(self):
+        state_dict = collections.OrderedDict()
+        for i, module in enumerate(self.modules_with_dependencies.modules()):
+            state_dict["module%d" % i] = module.state_dict()
+        if self.fp16:
+            state_dict["master_parameters"] = self.master_parameters
+        return state_dict
+
+    def load_state_dict(self, state_dict):
+        for i, module in enumerate(self.modules_with_dependencies.modules()):
+            module.load_state_dict(state_dict["module%d" % i])
+        if self.fp16:
+            saved_master_parameters = state_dict["master_parameters"]
+            for master_parameter, saved_master_parameter in zip(
+                self.master_parameters, saved_master_parameters):
+                master_parameter.data.copy_(saved_master_parameter.data)
+
+    def cuda(self):
+        modules = self.modules_with_dependencies.modules()
+        for i in range(len(modules)):
+            modules[i] = modules[i].cuda()
+
+    def zero_grad(self):
+        modules = self.modules_with_dependencies.modules()
+        for i in range(len(modules)):
+            modules[i].zero_grad()
 
     def train(self):
         self.tensors = []
@@ -669,6 +707,21 @@ class StageRuntime:
                 t = time.time()
                 print("%.6lf : Rank %d : send_backward__ : epoch %d : iter %d" % (t, self.rank, self.epoch, backward_minibatch_id))
 
+    def synchronize_replicas(self):
+        if self.group is not None:
+            with torch.cuda.stream(self.stream):
+                num_replicas = self.num_ranks_in_stage
+                self.stream.synchronize()
+                start = time.time()
+                print("%.6lf : Rank %d : _sync_reduction " % (start, self.rank))
+                for module in self.modules():
+                    for param in module.parameters():
+                        dist.all_reduce(param.grad.data, group=self.group, op=dist.ReduceOp.SUM)
+                        param.grad.data /= num_replicas
+                self.stream.synchronize()
+                end = time.time()
+                print("%.6lf : Rank %d : end_sync_reduction " % (end, self.rank))
+
     def run_forward(self):
         self.receive_tensors_forward()
         self.wait_receive_tensors_forward()
@@ -716,19 +769,7 @@ class StageRuntime:
         self.receive_tensors_backward()
         self.wait_receive_tensors_backward()
         self._run_backward()
-        if self.group is not None:
-            with torch.cuda.stream(self.stream):
-                num_replicas = self.num_ranks_in_stage
-                self.stream.synchronize()
-                start = time.time()
-                print("%.6lf : Rank %d : _sync_reduction " % (start, self.rank))
-                for module in self.modules():
-                    for param in module.parameters():
-                        dist.all_reduce(param.grad.data, group=self.group, op=dist.ReduceOp.SUM)
-                        param.grad.data /= num_replicas
-                self.stream.synchronize()
-                end = time.time()
-                print("%.6lf : Rank %d : end_sync_reduction " % (end, self.rank))
+        self.synchronize_replicas()
         self.send_tensors_backward()
         self.wait_send_tensors_backward()
 
@@ -808,6 +849,15 @@ class StageRuntime:
         num_iterations = num_iterations // self.num_ranks_in_stage
 
         return num_iterations
+
+    def get_adjusted_learning_rate(self, base_lr):
+        if self.stage == 0:
+            return base_lr
+
+        adjusted_lr = float(base_lr) * float(self.num_ranks_in_stage) \
+                      / float(self.num_ranks_in_first_stage)
+
+        return adjusted_lr
 
 
 
@@ -1094,19 +1144,7 @@ def train(train_loader, r, optimizer, epoch):
             # r.run_backward()
             r._run_backward()
             r.wait_send_tensors_forward()
-            if r.group is not None:
-                with torch.cuda.stream(r.stream):
-                    num_replicas = r.num_ranks_in_stage
-                    r.stream.synchronize()
-                    start = time.time()
-                    print("%.6lf : Rank %d : _sync_reduction " % (start, r.rank))
-                    for module in r.modules():
-                        for param in module.parameters():
-                            dist.all_reduce(param.grad.data, group=r.group, op=dist.ReduceOp.SUM)
-                            param.grad.data /= num_replicas
-                    r.stream.synchronize()
-                    end = time.time()
-                    print("%.6lf : Rank %d : end_sync_reduction " % (end, r.rank))
+            r.synchronize_replicas()
             optimizer.load_new_params()
             optimizer.step()
 

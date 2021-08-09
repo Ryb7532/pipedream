@@ -1,7 +1,7 @@
 #!/bin/bash
 
-model=alexnet
-bs=256
+model=vgg16
+bs=16
 
 printf "config [ nodes gpus ]\n"
 read nodes gpu

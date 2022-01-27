@@ -1,0 +1,304 @@
+nodes: 2, npernode: 4
+start: rank 0
+start: rank 7
+start: rank 5
+comm_init: rank 7
+comm_init: rank 5
+start: rank 4
+start: rank 6
+comm_init: rank 4
+comm_init: rank 6
+start: rank 1
+start: rank 3
+start: rank 2
+comm_init: rank 1
+comm_init: rank 3
+comm_init: rank 2
+comm_init: rank 0
+
+size: 1 KB
+r3i7n3:49034:49034 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.3.85<0> [1]ib1:10.0.3.86<0> [2]ib2:10.0.3.87<0> [3]ib3:10.0.3.88<0>
+r3i7n3:49034:49034 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r3i7n3:49034:49034 [0] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.3.85<0>
+NCCL version 2.4.2+cuda9.2
+r3i7n3:49036:49036 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.3.85<0> [1]ib1:10.0.3.86<0> [2]ib2:10.0.3.87<0> [3]ib3:10.0.3.88<0>
+r3i7n3:49037:49037 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.3.85<0> [1]ib1:10.0.3.86<0> [2]ib2:10.0.3.87<0> [3]ib3:10.0.3.88<0>
+r3i7n3:49035:49035 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.3.85<0> [1]ib1:10.0.3.86<0> [2]ib2:10.0.3.87<0> [3]ib3:10.0.3.88<0>
+r3i7n3:49036:49036 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r3i7n3:49037:49037 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r3i7n3:49035:49035 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r3i7n3:49037:49037 [3] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.3.85<0>
+r3i7n3:49035:49035 [1] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.3.85<0>
+r3i7n3:49036:49036 [2] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.3.85<0>
+r1i4n3:50453:50453 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.157<0> [1]ib1:10.0.0.158<0> [2]ib2:10.0.0.159<0> [3]ib3:10.0.0.160<0>
+r1i4n3:50452:50452 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.157<0> [1]ib1:10.0.0.158<0> [2]ib2:10.0.0.159<0> [3]ib3:10.0.0.160<0>
+r1i4n3:50455:50455 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.157<0> [1]ib1:10.0.0.158<0> [2]ib2:10.0.0.159<0> [3]ib3:10.0.0.160<0>
+r1i4n3:50454:50454 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.157<0> [1]ib1:10.0.0.158<0> [2]ib2:10.0.0.159<0> [3]ib3:10.0.0.160<0>
+r1i4n3:50453:50453 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i4n3:50455:50455 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i4n3:50452:50452 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i4n3:50454:50454 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i4n3:50455:50455 [3] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.157<0>
+r1i4n3:50452:50452 [0] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.157<0>
+r1i4n3:50453:50453 [1] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.157<0>
+r1i4n3:50454:50454 [2] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.157<0>
+r3i7n3:49035:49328 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r3i7n3:49035:49328 [1] NCCL INFO comm 0x2aabac001ae0 rank 1 nranks 8 cudaDev 1 nvmlDev 1
+r3i7n3:49036:49329 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r3i7n3:49037:49330 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r3i7n3:49036:49329 [2] NCCL INFO comm 0x2aabac001ae0 rank 2 nranks 8 cudaDev 2 nvmlDev 2
+r3i7n3:49037:49330 [3] NCCL INFO comm 0x2aabac001ae0 rank 3 nranks 8 cudaDev 3 nvmlDev 3
+r3i7n3:49034:49327 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r3i7n3:49034:49327 [0] NCCL INFO comm 0x2aabcc001ae0 rank 0 nranks 8 cudaDev 0 nvmlDev 0
+r1i4n3:50453:50738 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r1i4n3:50453:50738 [1] NCCL INFO comm 0x2aabbc001ae0 rank 5 nranks 8 cudaDev 1 nvmlDev 1
+r1i4n3:50452:50737 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r1i4n3:50452:50737 [0] NCCL INFO comm 0x2aabbc001ae0 rank 4 nranks 8 cudaDev 0 nvmlDev 0
+r1i4n3:50454:50740 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r1i4n3:50455:50739 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i4n3:50454:50740 [2] NCCL INFO comm 0x2aabc0001ae0 rank 6 nranks 8 cudaDev 2 nvmlDev 2
+r1i4n3:50455:50739 [3] NCCL INFO comm 0x2aabbc001ae0 rank 7 nranks 8 cudaDev 3 nvmlDev 3
+r1i4n3:50453:50738 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SOC PHB SOC PIX
+r1i4n3:50455:50739 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  PIX SOC PHB SOC
+r1i4n3:50452:50737 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SOC PHB SOC PIX
+r1i4n3:50454:50740 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  PIX SOC PHB SOC
+r3i7n3:49035:49328 [1] NCCL INFO CUDA Dev 1[1], IB NIC distance :  SOC PHB SOC PIX
+r3i7n3:49034:49327 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SOC PHB SOC PIX
+r3i7n3:49036:49329 [2] NCCL INFO CUDA Dev 2[2], IB NIC distance :  PIX SOC PHB SOC
+r3i7n3:49037:49330 [3] NCCL INFO CUDA Dev 3[3], IB NIC distance :  PIX SOC PHB SOC
+r3i7n3:49034:49327 [0] NCCL INFO Channel 00 :    0   1   3   6   4   5   7   2
+r3i7n3:49034:49327 [0] NCCL INFO Channel 01 :    0   2   3   1   4   6   7   5
+r3i7n3:49034:49327 [0] NCCL INFO Channel 02 :    0   1   3   6   4   5   7   2
+r3i7n3:49034:49327 [0] NCCL INFO Channel 03 :    0   2   3   1   4   6   7   5
+r1i4n3:50454:50740 [2] NCCL INFO Ring 00 : 3 -> 6 [receive] via NET/IB/0
+r3i7n3:49036:49329 [2] NCCL INFO Ring 00 : 7 -> 2 [receive] via NET/IB/0
+r1i4n3:50454:50740 [2] NCCL INFO Ring 00 : 6[2] -> 4[0] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 00 : 2[2] -> 0[0] via P2P/IPC
+r1i4n3:50453:50738 [1] NCCL INFO Ring 00 : 5[1] -> 7[3] via P2P/IPC
+r1i4n3:50452:50737 [0] NCCL INFO Ring 00 : 4[0] -> 5[1] via P2P/IPC
+r3i7n3:49035:49328 [1] NCCL INFO Ring 00 : 1[1] -> 3[3] via P2P/IPC
+r3i7n3:49034:49327 [0] NCCL INFO Ring 00 : 0[0] -> 1[1] via P2P/IPC
+r1i4n3:50455:50739 [3] NCCL INFO Ring 00 : 7 -> 2 [send] via NET/IB/0
+r3i7n3:49036:49329 [2] NCCL INFO NCCL_IB_SL set by environment to 0.
+r3i7n3:49036:49329 [2] NCCL INFO NCCL_IB_TIMEOUT set by environment to 18.
+r3i7n3:49037:49330 [3] NCCL INFO Ring 00 : 3 -> 6 [send] via NET/IB/0
+r1i4n3:50454:50740 [2] NCCL INFO NCCL_IB_SL set by environment to 0.
+r1i4n3:50454:50740 [2] NCCL INFO NCCL_IB_TIMEOUT set by environment to 18.
+r1i4n3:50455:50739 [3] NCCL INFO Ring 00 : 7[3] -> 5[1] via P2P/IPC
+r1i4n3:50453:50738 [1] NCCL INFO Ring 00 : 5[1] -> 4[0] via P2P/IPC
+r1i4n3:50452:50737 [0] NCCL INFO Ring 00 : 4[0] -> 6[2] via P2P/IPC
+r3i7n3:49037:49330 [3] NCCL INFO Ring 00 : 3[3] -> 1[1] via P2P/IPC
+r3i7n3:49035:49328 [1] NCCL INFO Ring 00 : 1[1] -> 0[0] via P2P/IPC
+r3i7n3:49034:49327 [0] NCCL INFO Ring 00 : 0[0] -> 2[2] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 00 : 6 -> 2 [receive] via NET/IB/0
+r1i4n3:50452:50737 [0] NCCL INFO Ring 01 : 1 -> 4 [receive] via NET/IB/3
+r3i7n3:49034:49327 [0] NCCL INFO Ring 01 : 5 -> 0 [receive] via NET/IB/3
+r1i4n3:50454:50740 [2] NCCL INFO Ring 00 : 6 -> 2 [send] via NET/IB/0
+r1i4n3:50455:50739 [3] NCCL INFO Ring 01 : 7[3] -> 5[1] via P2P/IPC
+r3i7n3:49037:49330 [3] NCCL INFO Ring 01 : 3[3] -> 1[1] via P2P/IPC
+r3i7n3:49034:49327 [0] NCCL INFO Ring 01 : 0[0] -> 2[2] via P2P/IPC
+r1i4n3:50452:50737 [0] NCCL INFO Ring 01 : 4[0] -> 6[2] via P2P/IPC
+r1i4n3:50454:50740 [2] NCCL INFO Ring 00 : 2 -> 6 [receive] via NET/IB/0
+r1i4n3:50453:50738 [1] NCCL INFO Ring 01 : 5 -> 0 [send] via NET/IB/3
+r3i7n3:49035:49328 [1] NCCL INFO Ring 01 : 1 -> 4 [send] via NET/IB/3
+r1i4n3:50453:50738 [1] NCCL INFO Ring 01 : 5[1] -> 7[3] via P2P/IPC
+r3i7n3:49035:49328 [1] NCCL INFO Ring 01 : 1[1] -> 3[3] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 00 : 2 -> 6 [send] via NET/IB/0
+r3i7n3:49034:49327 [0] NCCL INFO NCCL_IB_SL set by environment to 0.
+r3i7n3:49034:49327 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 18.
+r3i7n3:49036:49329 [2] NCCL INFO Ring 01 : 2[2] -> 3[3] via P2P/IPC
+r1i4n3:50452:50737 [0] NCCL INFO NCCL_IB_SL set by environment to 0.
+r1i4n3:50452:50737 [0] NCCL INFO NCCL_IB_TIMEOUT set by environment to 18.
+r1i4n3:50454:50740 [2] NCCL INFO Ring 01 : 6[2] -> 7[3] via P2P/IPC
+r3i7n3:49034:49327 [0] NCCL INFO Ring 01 : 4 -> 0 [receive] via NET/IB/3
+r3i7n3:49037:49330 [3] NCCL INFO Ring 01 : 3[3] -> 2[2] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 01 : 2[2] -> 0[0] via P2P/IPC
+r1i4n3:50455:50739 [3] NCCL INFO Ring 01 : 7[3] -> 6[2] via P2P/IPC
+r1i4n3:50454:50740 [2] NCCL INFO Ring 01 : 6[2] -> 4[0] via P2P/IPC
+r3i7n3:49035:49328 [1] NCCL INFO Ring 02 : 1[1] -> 3[3] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 02 : 7 -> 2 [receive] via NET/IB/0
+r1i4n3:50452:50737 [0] NCCL INFO Ring 01 : 4 -> 0 [send] via NET/IB/3
+r3i7n3:49036:49329 [2] NCCL INFO Ring 02 : 2[2] -> 0[0] via P2P/IPC
+r1i4n3:50453:50738 [1] NCCL INFO Ring 02 : 5[1] -> 7[3] via P2P/IPC
+r1i4n3:50454:50740 [2] NCCL INFO Ring 02 : 3 -> 6 [receive] via NET/IB/0
+r1i4n3:50452:50737 [0] NCCL INFO Ring 01 : 0 -> 4 [receive] via NET/IB/3
+r3i7n3:49037:49330 [3] NCCL INFO Ring 02 : 3 -> 6 [send] via NET/IB/0
+r1i4n3:50454:50740 [2] NCCL INFO Ring 02 : 6[2] -> 4[0] via P2P/IPC
+r3i7n3:49034:49327 [0] NCCL INFO Ring 01 : 0 -> 4 [send] via NET/IB/3
+r3i7n3:49037:49330 [3] NCCL INFO Ring 02 : 3[3] -> 1[1] via P2P/IPC
+r1i4n3:50455:50739 [3] NCCL INFO Ring 02 : 7 -> 2 [send] via NET/IB/0
+r1i4n3:50455:50739 [3] NCCL INFO Ring 02 : 7[3] -> 5[1] via P2P/IPC
+r3i7n3:49034:49327 [0] NCCL INFO Ring 02 : 0[0] -> 1[1] via P2P/IPC
+r1i4n3:50452:50737 [0] NCCL INFO Ring 02 : 4[0] -> 5[1] via P2P/IPC
+r3i7n3:49035:49328 [1] NCCL INFO Ring 02 : 1[1] -> 0[0] via P2P/IPC
+r1i4n3:50454:50740 [2] NCCL INFO Ring 02 : 2 -> 6 [receive] via NET/IB/0
+r3i7n3:49034:49327 [0] NCCL INFO Ring 02 : 0[0] -> 2[2] via P2P/IPC
+r1i4n3:50453:50738 [1] NCCL INFO Ring 02 : 5[1] -> 4[0] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 02 : 2 -> 6 [send] via NET/IB/0
+r1i4n3:50452:50737 [0] NCCL INFO Ring 02 : 4[0] -> 6[2] via P2P/IPC
+r3i7n3:49037:49330 [3] NCCL INFO Ring 03 : 3[3] -> 1[1] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 02 : 6 -> 2 [receive] via NET/IB/0
+r3i7n3:49034:49327 [0] NCCL INFO Ring 03 : 5 -> 0 [receive] via NET/IB/3
+r1i4n3:50452:50737 [0] NCCL INFO Ring 03 : 1 -> 4 [receive] via NET/IB/3
+r1i4n3:50455:50739 [3] NCCL INFO Ring 03 : 7[3] -> 5[1] via P2P/IPC
+r3i7n3:49034:49327 [0] NCCL INFO Ring 03 : 0[0] -> 2[2] via P2P/IPC
+r1i4n3:50454:50740 [2] NCCL INFO Ring 02 : 6 -> 2 [send] via NET/IB/0
+r1i4n3:50452:50737 [0] NCCL INFO Ring 03 : 4[0] -> 6[2] via P2P/IPC
+r3i7n3:49035:49328 [1] NCCL INFO Ring 03 : 1 -> 4 [send] via NET/IB/3
+r1i4n3:50453:50738 [1] NCCL INFO Ring 03 : 5 -> 0 [send] via NET/IB/3
+r3i7n3:49035:49328 [1] NCCL INFO Ring 03 : 1[1] -> 3[3] via P2P/IPC
+r1i4n3:50454:50740 [2] NCCL INFO Ring 03 : 6[2] -> 7[3] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 03 : 2[2] -> 3[3] via P2P/IPC
+r1i4n3:50453:50738 [1] NCCL INFO Ring 03 : 5[1] -> 7[3] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Ring 03 : 2[2] -> 0[0] via P2P/IPC
+r1i4n3:50453:50738 [1] NCCL INFO Trees [0] 4->5->7/-1/-1 [1] 7->5->-1/-1/-1 [2] 4->5->7/-1/-1 [3] 7->5->-1/-1/-1
+r1i4n3:50452:50737 [0] NCCL INFO Ring 03 : 0 -> 4 [receive] via NET/IB/3
+r3i7n3:49034:49327 [0] NCCL INFO Ring 03 : 0 -> 4 [send] via NET/IB/3
+r1i4n3:50455:50739 [3] NCCL INFO Ring 03 : 7[3] -> 6[2] via P2P/IPC
+r1i4n3:50454:50740 [2] NCCL INFO Ring 03 : 6[2] -> 4[0] via P2P/IPC
+r1i4n3:50453:50738 [1] NCCL INFO comm 0x2aabbc001ae0 rank 5 nranks 8 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r1i4n3:50454:50740 [2] NCCL INFO Trees [0] 2->6->4/-1/-1 [1] 4->6->7/-1/-1 [2] -1->6->4/2/-1 [3] 4->6->7/-1/-1
+r3i7n3:49034:49327 [0] NCCL INFO Ring 03 : 4 -> 0 [receive] via NET/IB/3
+r1i4n3:50454:50740 [2] NCCL INFO comm 0x2aabc0001ae0 rank 6 nranks 8 cudaDev 2 nvmlDev 2 - Init COMPLETE
+r1i4n3:50452:50737 [0] NCCL INFO Ring 03 : 4 -> 0 [send] via NET/IB/3
+r1i4n3:50452:50737 [0] NCCL INFO Trees [0] 6->4->5/-1/-1 [1] 0->4->6/-1/-1 [2] 6->4->5/-1/-1 [3] -1->4->6/0/-1
+r3i7n3:49034:49327 [0] NCCL INFO Trees [0] 2->0->1/-1/-1 [1] -1->0->2/4/-1 [2] 2->0->1/-1/-1 [3] 4->0->2/-1/-1
+r3i7n3:49034:49327 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees enabled for all sizes
+r1i4n3:50452:50737 [0] NCCL INFO comm 0x2aabbc001ae0 rank 4 nranks 8 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r3i7n3:49034:49327 [0] NCCL INFO comm 0x2aabcc001ae0 rank 0 nranks 8 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r3i7n3:49034:49034 [0] NCCL INFO Launch mode Parallel
+r1i4n3:50455:50739 [3] NCCL INFO Trees [0] 5->7->-1/-1/-1 [1] 6->7->5/-1/-1 [2] 5->7->-1/-1/-1 [3] 6->7->5/-1/-1
+r1i4n3:50455:50739 [3] NCCL INFO comm 0x2aabbc001ae0 rank 7 nranks 8 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r3i7n3:49035:49328 [1] NCCL INFO Trees [0] 0->1->3/-1/-1 [1] 3->1->-1/-1/-1 [2] 0->1->3/-1/-1 [3] 3->1->-1/-1/-1
+r3i7n3:49037:49330 [3] NCCL INFO Ring 03 : 3[3] -> 2[2] via P2P/IPC
+r3i7n3:49036:49329 [2] NCCL INFO Trees [0] -1->2->0/6/-1 [1] 0->2->3/-1/-1 [2] 6->2->0/-1/-1 [3] 0->2->3/-1/-1
+r3i7n3:49035:49328 [1] NCCL INFO comm 0x2aabac001ae0 rank 1 nranks 8 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r3i7n3:49037:49330 [3] NCCL INFO Trees [0] 1->3->-1/-1/-1 [1] 2->3->1/-1/-1 [2] 1->3->-1/-1/-1 [3] 2->3->1/-1/-1
+r3i7n3:49036:49329 [2] NCCL INFO comm 0x2aabac001ae0 rank 2 nranks 8 cudaDev 2 nvmlDev 2 - Init COMPLETE
+r3i7n3:49037:49330 [3] NCCL INFO comm 0x2aabac001ae0 rank 3 nranks 8 cudaDev 3 nvmlDev 3 - Init COMPLETE
+Rank 1: time 3.743026 ms
+Rank 3: time 3.746297 ms
+Rank 2: time 3.702376 ms
+Rank 0: time 3.746355 ms
+Rank 5: time 3.774328 ms
+Rank 6: time 3.777900 ms
+Rank 4: time 3.777909 ms
+Rank 7: time 3.777955 ms
+
+size: 1 KB
+Rank 2: time 0.104091 ms
+Rank 0: time 0.103369 ms
+Rank 3: time 0.104132 ms
+Rank 1: time 0.104198 ms
+Rank 6: time 0.104241 ms
+Rank 4: time 0.104258 ms
+Rank 7: time 0.104280 ms
+Rank 5: time 0.104287 ms
+
+size: 4 KB
+Rank 3: time 0.133393 ms
+Rank 1: time 0.145924 ms
+Rank 2: time 0.133193 ms
+Rank 0: time 0.144720 ms
+Rank 6: time 0.133421 ms
+Rank 5: time 0.133536 ms
+Rank 4: time 0.132940 ms
+Rank 7: time 0.133059 ms
+
+size: 16 KB
+Rank 0: time 0.127182 ms
+Rank 3: time 0.127554 ms
+Rank 1: time 0.127532 ms
+Rank 2: time 0.127516 ms
+Rank 6: time 0.127406 ms
+Rank 7: time 0.127337 ms
+Rank 4: time 0.127423 ms
+Rank 5: time 0.127389 ms
+
+size: 64 KB
+Rank 0: time 0.292680 ms
+Rank 3: time 0.292704 ms
+Rank 1: time 0.292740 ms
+Rank 2: time 0.292711 ms
+Rank 4: time 0.293150 ms
+Rank 6: time 0.293024 ms
+Rank 7: time 0.292857 ms
+Rank 5: time 0.293071 ms
+
+size: 256 KB
+Rank 0: time 0.354404 ms
+Rank 2: time 0.354443 ms
+Rank 1: time 0.354552 ms
+Rank 3: time 0.354626 ms
+Rank 6: time 0.354612 ms
+Rank 4: time 0.354712 ms
+Rank 5: time 0.354648 ms
+Rank 7: time 0.354757 ms
+
+size: 1 MB
+Rank 2: time 0.961792 ms
+Rank 0: time 0.968952 ms
+Rank 3: time 0.961716 ms
+Rank 1: time 0.962439 ms
+Rank 6: time 0.957823 ms
+Rank 4: time 0.959144 ms
+Rank 5: time 0.958772 ms
+Rank 7: time 0.957551 ms
+
+size: 4 MB
+Rank 0: time 3.362384 ms
+Rank 2: time 3.362765 ms
+Rank 3: time 3.362775 ms
+Rank 1: time 3.362963 ms
+Rank 4: time 3.363063 ms
+Rank 6: time 3.363194 ms
+Rank 7: time 3.363144 ms
+Rank 5: time 3.363032 ms
+
+size: 16 MB
+Rank 2: time 12.436085 ms
+Rank 0: time 12.435181 ms
+Rank 1: time 12.436190 ms
+Rank 3: time 12.435915 ms
+Rank 6: time 12.437806 ms
+Rank 4: time 12.441974 ms
+Rank 5: time 12.437217 ms
+Rank 7: time 12.437797 ms
+
+size: 64 MB
+Rank 2: time 50.665951 ms
+Rank 0: time 50.665801 ms
+Rank 1: time 50.663798 ms
+Rank 3: time 50.665913 ms
+Rank 6: time 50.654712 ms
+Rank 4: time 50.655608 ms
+Rank 5: time 50.653968 ms
+Rank 7: time 50.655029 ms
+
+size: 256 MB
+Rank 2: time 203.191609 ms
+Rank 1: time 203.191893 ms
+Rank 0: time 203.192351 ms
+Rank 3: time 203.191705 ms
+Rank 6: time 203.180444 ms
+Rank 4: time 203.181968 ms
+Rank 5: time 203.180909 ms
+Rank 7: time 203.179603 ms
+
+size: 1024 MB
+Rank 2: time 819.860044 ms
+Rank 0: time 819.859004 ms
+Rank 6: time 819.722197 ms
+Rank 5: time 819.722722 ms
+Rank 4: time 819.721642 ms
+Rank 7: time 819.722505 ms
+Rank 1: time 819.860160 ms
+Rank 3: time 819.860806 ms
+r3i7n3:49037:49037 [3] NCCL INFO Destroyed comm 0x2aabac001ae0 rank 3
+r1i4n3:50453:50453 [1] NCCL INFO Destroyed comm 0x2aabbc001ae0 rank 5
+r1i4n3:50455:50455 [3] NCCL INFO Destroyed comm 0x2aabbc001ae0 rank 7
+r3i7n3:49035:49035 [1] NCCL INFO Destroyed comm 0x2aabac001ae0 rank 1
+r3i7n3:49034:49034 [0] NCCL INFO Destroyed comm 0x2aabcc001ae0 rank 0
+r1i4n3:50452:50452 [0] NCCL INFO Destroyed comm 0x2aabbc001ae0 rank 4
+r1i4n3:50454:50454 [2] NCCL INFO Destroyed comm 0x2aabc0001ae0 rank 6
+r3i7n3:49036:49036 [2] NCCL INFO Destroyed comm 0x2aabac001ae0 rank 2

@@ -1,0 +1,76 @@
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 235, in main
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+    macrobatch=macrobatch,
+  File "../optimizer.py", line 41, in __init__
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 235, in main
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+    macrobatch=macrobatch,
+  File "../optimizer.py", line 41, in __init__
+    master_parameters, **optimizer_args)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+    master_parameters, **optimizer_args)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+    super(SGD, self).__init__(params, defaults)
+    super(SGD, self).__init__(params, defaults)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+ValueError: optimizer got an empty parameter list
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_no_stream.py", line 462, in send_and_recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.5.21]:47017
+Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_no_stream.py", line 462, in send_and_recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.5.21]:13506
+
+
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_no_stream.py", line 482, in send_and_recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.5.21]:11145
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_no_stream.py", line 482, in send_and_recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.5.21]:13506
+

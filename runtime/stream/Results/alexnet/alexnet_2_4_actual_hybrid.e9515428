@@ -1,0 +1,168 @@
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 623, in <module>
+  File "main_with_runtime.py", line 623, in <module>
+    main()
+    main()
+  File "main_with_runtime.py", line 233, in main
+  File "main_with_runtime.py", line 233, in main
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+    macrobatch=macrobatch,
+    macrobatch=macrobatch,
+  File "../optimizer.py", line 41, in __init__
+  File "../optimizer.py", line 41, in __init__
+    master_parameters, **optimizer_args)
+    master_parameters, **optimizer_args)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+    super(SGD, self).__init__(params, defaults)
+    super(SGD, self).__init__(params, defaults)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+ValueError: optimizer got an empty parameter list
+Exception in thread Thread-8:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 490, in recv_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 539, in _recv
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:31445
+Exception in thread Thread-6:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 490, in recv_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 539, in _recv
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:33689
+
+
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 490, in recv_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 539, in _recv
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:20896
+
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 490, in recv_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 539, in _recv
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:42632
+
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 490, in recv_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 539, in _recv
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:55716
+
+Exception in thread Thread-6:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 490, in recv_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 539, in _recv
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:13714
+
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 514, in send_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 582, in _send
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:48043
+Exception in thread Thread-11:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 514, in send_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 582, in _send
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:56027
+
+
+Exception in thread Thread-7:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 514, in send_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 582, in _send
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:10642
+
+Exception in thread Thread-12:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication_stream.py", line 514, in send_helper_thread
+    sub_process_group=sub_process_group)
+  File "../communication_stream.py", line 582, in _send
+    group=sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 755, in broadcast
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.4.45]:22436
+

@@ -1,0 +1,15 @@
+1MB
+Average_epoch_time (Rank 1 ): 19.292746 seconds
+Average_epoch_time (Rank 3 ): 19.292754 seconds
+Average_epoch_time (Rank 2 ): 19.292753 seconds
+Average_epoch_time (Rank 0 ): 19.292774 seconds
+5MB
+Average_epoch_time (Rank 1 ): 18.961299 seconds
+Average_epoch_time (Rank 0 ): 18.961315 seconds
+Average_epoch_time (Rank 2 ): 18.961313 seconds
+Average_epoch_time (Rank 3 ): 18.961326 seconds
+10MB
+Average_epoch_time (Rank 0 ): 18.390654 seconds
+Average_epoch_time (Rank 1 ): 18.390646 seconds
+Average_epoch_time (Rank 3 ): 18.390644 seconds
+Average_epoch_time (Rank 2 ): 18.390653 seconds

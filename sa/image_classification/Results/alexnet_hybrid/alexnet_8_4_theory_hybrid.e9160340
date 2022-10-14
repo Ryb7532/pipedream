@@ -1,0 +1,908 @@
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 234, in main
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+    macrobatch=macrobatch,
+  File "../optimizer.py", line 41, in __init__
+    master_parameters, **optimizer_args)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+    super(SGD, self).__init__(params, defaults)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 234, in main
+    macrobatch=args.macrobatch)
+  File "../sgd.py", line 23, in __init__
+    macrobatch=macrobatch,
+  File "../optimizer.py", line 41, in __init__
+    master_parameters, **optimizer_args)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/sgd.py", line 64, in __init__
+    super(SGD, self).__init__(params, defaults)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/optim/optimizer.py", line 45, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:47846
+
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:18135
+
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:29352
+
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:32896
+
+Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:49040
+
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:24249
+
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:56482
+
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:25242
+
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:35051
+
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:28570
+
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:28052
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:64220
+
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:2956
+
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:22923
+
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:4515
+
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:54182
+
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:935
+
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:15245
+
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 529, in recv_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:39325
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "../communication.py", line 560, in send_helper_thread
+    dist.barrier(sub_process_group)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/distributed/distributed_c10d.py", line 1194, in barrier
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:572] Connection closed by peer [10.0.3.5]:54418
+
+Traceback (most recent call last):
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/6/17B13541/pipedream/improve/image_classification/launch.py", line 173, in <module>
+    main()
+  File "/home/6/17B13541/pipedream/improve/image_classification/launch.py", line 169, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/apps/t3/sles12sp4/free/python/3.6.5/gcc4.8.5/bin/python3', '-u', 'main_with_runtime.py', '--rank=31', '--local_rank=3', '-s', '--distributed_backend', 'gloo', '-m', 'models.alexnet.gpus=8_4_theory', '--epochs', '6', '-b', '256', '--config_path', 'models/alexnet/gpus=8_4_theory/hybrid_conf.json', '--num_ranks_in_server', '4', '--master_addr', '10.0.0.125']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 2; 15.90 GiB total capacity; 14.66 GiB already allocated; 77.38 MiB free; 537.37 MiB cached)
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 3; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 1; 15.90 GiB total capacity; 14.71 GiB already allocated; 5.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 0; 15.90 GiB total capacity; 14.71 GiB already allocated; 5.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 3; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 0; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 2; 15.90 GiB total capacity; 14.66 GiB already allocated; 77.38 MiB free; 537.37 MiB cached)
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 1; 15.90 GiB total capacity; 14.66 GiB already allocated; 77.38 MiB free; 537.37 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 0; 15.90 GiB total capacity; 14.71 GiB already allocated; 33.31 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 0; 15.90 GiB total capacity; 14.71 GiB already allocated; 3.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    self._run_forward(tensors)
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    main()
+  File "main_with_runtime.py", line 331, in main
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    return if_false(*args, **kwargs)
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 2; 15.90 GiB total capacity; 14.71 GiB already allocated; 9.25 MiB free; 537.13 MiB cached)
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 1; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 3; 15.90 GiB total capacity; 14.71 GiB already allocated; 29.38 MiB free; 537.13 MiB cached)
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 3; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 0; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 0; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.25 MiB free; 537.13 MiB cached)
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 1; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 1; 15.90 GiB total capacity; 14.71 GiB already allocated; 31.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 2; 15.90 GiB total capacity; 14.66 GiB already allocated; 69.38 MiB free; 537.37 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 3; 15.90 GiB total capacity; 14.71 GiB already allocated; 5.38 MiB free; 537.13 MiB cached)
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 626, in <module>
+    main()
+  File "main_with_runtime.py", line 331, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 395, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/improve/image_classification/models/alexnet/gpus=8_4_theory/stage0.py", line 23, in forward
+    out4 = self.layer4(out3)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/pooling.py", line 146, in forward
+    self.return_indices)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/_jit_internal.py", line 133, in fn
+    return if_false(*args, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 490, in _max_pool2d
+    input, kernel_size, stride, padding, dilation, ceil_mode)[0]
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/functional.py", line 482, in max_pool2d_with_indices
+    return torch._C._nn.max_pool2d_with_indices(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 92.00 MiB (GPU 2; 15.90 GiB total capacity; 14.71 GiB already allocated; 35.38 MiB free; 537.13 MiB cached)

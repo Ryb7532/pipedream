@@ -1,0 +1,25 @@
+create process groups in rank 1
+create process groups in rank 0
+r6i3n1:13471:13471 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.6.41<0> [1]ib1:10.0.6.42<0> [2]ib2:10.0.6.43<0> [3]ib3:10.0.6.44<0>
+r6i3n1:13471:13471 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r6i3n1:13471:13471 [0] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.6.41<0>
+NCCL version 2.4.2+cuda9.2
+r6i3n1:13472:13472 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.6.41<0> [1]ib1:10.0.6.42<0> [2]ib2:10.0.6.43<0> [3]ib3:10.0.6.44<0>
+r6i3n1:13472:13472 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r6i3n1:13472:13472 [1] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.6.41<0>
+r6i3n1:13471:13747 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r6i3n1:13471:13747 [0] NCCL INFO comm 0x2aaba0001ae0 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r6i3n1:13472:13748 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r6i3n1:13472:13748 [1] NCCL INFO comm 0x2aab98001ae0 rank 1 nranks 2 cudaDev 1 nvmlDev 1
+r6i3n1:13471:13747 [0] NCCL INFO Channel 00 :    0   1
+r6i3n1:13471:13747 [0] NCCL INFO Channel 01 :    0   1
+r6i3n1:13472:13748 [1] NCCL INFO Ring 00 : 1[1] -> 0[0] via P2P/IPC
+r6i3n1:13471:13747 [0] NCCL INFO Ring 00 : 0[0] -> 1[1] via P2P/IPC
+r6i3n1:13472:13748 [1] NCCL INFO Ring 01 : 1[1] -> 0[0] via P2P/IPC
+r6i3n1:13471:13747 [0] NCCL INFO Ring 01 : 0[0] -> 1[1] via P2P/IPC
+r6i3n1:13471:13747 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r6i3n1:13472:13748 [1] NCCL INFO comm 0x2aab98001ae0 rank 1 nranks 2 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r6i3n1:13471:13747 [0] NCCL INFO comm 0x2aaba0001ae0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r6i3n1:13471:13471 [0] NCCL INFO Launch mode Parallel
+r6i3n1:13472:13472 [1] NCCL INFO Destroyed comm 0x2aab98001ae0 rank 1
+r6i3n1:13471:13471 [0] NCCL INFO Destroyed comm 0x2aaba0001ae0 rank 0

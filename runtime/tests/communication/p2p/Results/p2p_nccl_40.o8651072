@@ -1,0 +1,20 @@
+Local rank: 0
+Local rank: 2
+Time to receive 4e-05 MB: 0.001 seconds
+Throughput: 0.000 GB/s
+Time to receive 0.0004 MB: 0.001 seconds
+Throughput: 0.001 GB/s
+Time to receive 0.004 MB: 0.001 seconds
+Throughput: 0.007 GB/s
+Time to receive 0.04 MB: 0.001 seconds
+Throughput: 0.071 GB/s
+Time to receive 0.4 MB: 0.001 seconds
+Throughput: 0.714 GB/s
+Time to receive 4.0 MB: 0.001 seconds
+Throughput: 5.472 GB/s
+Time to receive 40.0 MB: 0.002 seconds
+Throughput: 23.033 GB/s
+Time to receive 400.0 MB: 0.012 seconds
+Throughput: 32.637 GB/s
+Time to receive 3200.0 MB: 0.093 seconds
+Throughput: 34.476 GB/s

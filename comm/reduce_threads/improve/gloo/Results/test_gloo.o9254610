@@ -1,0 +1,1508 @@
+Local rank: 0
+Finished initializing process group; backend: gloo, rank: 0, world_size: 2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Local rank: 1
+Finished initializing process group; backend: gloo, rank: 1, world_size: 2
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552457.248653 : Rank 1 : _recv : epoch 0 : iter 0 : from 0 : out0
+1623552457.248880 : Rank 1 : _recv : epoch 0 : iter 0 : from 0 : out1
+1623552457.248978 : Rank 1 : _recv : epoch 0 : iter 0 : from 0 : out2
+1623552457.249345 : Rank 1 : _recv : epoch 0 : iter 1 : from 0 : out0
+1623552457.249411 : Rank 1 : _recv : epoch 0 : iter 1 : from 0 : out1
+1623552457.249473 : Rank 1 : _recv : epoch 0 : iter 1 : from 0 : out2
+1623552457.249815 : Rank 1 : _recv : epoch 0 : iter 2 : from 0 : out0
+1623552457.249879 : Rank 1 : _recv : epoch 0 : iter 2 : from 0 : out1
+1623552457.249936 : Rank 1 : _recv : epoch 0 : iter 2 : from 0 : out2
+1623552457.250273 : Rank 1 : _recv : epoch 0 : iter 3 : from 0 : out0
+1623552457.250336 : Rank 1 : _recv : epoch 0 : iter 3 : from 0 : out1
+1623552457.250401 : Rank 1 : _recv : epoch 0 : iter 3 : from 0 : out2
+1623552457.250727 : Rank 1 : _recv : epoch 0 : iter 4 : from 0 : out0
+1623552457.250790 : Rank 1 : _recv : epoch 0 : iter 4 : from 0 : out1
+1623552457.250847 : Rank 1 : _recv : epoch 0 : iter 4 : from 0 : out2
+1623552457.251171 : Rank 1 : _recv : epoch 0 : iter 5 : from 0 : out0
+1623552457.251242 : Rank 1 : _recv : epoch 0 : iter 5 : from 0 : out1
+1623552457.251300 : Rank 1 : _recv : epoch 0 : iter 5 : from 0 : out2
+1623552457.251630 : Rank 1 : _recv : epoch 0 : iter 6 : from 0 : out0
+1623552457.251693 : Rank 1 : _recv : epoch 0 : iter 6 : from 0 : out1
+1623552457.251750 : Rank 1 : _recv : epoch 0 : iter 6 : from 0 : out2
+1623552457.252075 : Rank 1 : _recv : epoch 0 : iter 7 : from 0 : out0
+1623552457.252136 : Rank 1 : _recv : epoch 0 : iter 7 : from 0 : out1
+1623552457.252195 : Rank 1 : _recv : epoch 0 : iter 7 : from 0 : out2
+1623552457.252515 : Rank 1 : _recv : epoch 0 : iter 8 : from 0 : out0
+1623552457.252577 : Rank 1 : _recv : epoch 0 : iter 8 : from 0 : out1
+1623552457.252635 : Rank 1 : _recv : epoch 0 : iter 8 : from 0 : out2
+1623552457.252956 : Rank 1 : _recv : epoch 0 : iter 9 : from 0 : out0
+1623552457.253017 : Rank 1 : _recv : epoch 0 : iter 9 : from 0 : out1
+1623552457.253074 : Rank 1 : _recv : epoch 0 : iter 9 : from 0 : out2
+1623552457.253399 : Rank 1 : _recv : epoch 0 : iter 10 : from 0 : out0
+1623552457.253476 : Rank 1 : _recv : epoch 0 : iter 10 : from 0 : out1
+1623552457.253534 : Rank 1 : _recv : epoch 0 : iter 10 : from 0 : out2
+1623552457.253856 : Rank 1 : _recv : epoch 0 : iter 11 : from 0 : out0
+1623552457.253917 : Rank 1 : _recv : epoch 0 : iter 11 : from 0 : out1
+1623552457.253973 : Rank 1 : _recv : epoch 0 : iter 11 : from 0 : out2
+1623552457.254297 : Rank 1 : _recv : epoch 0 : iter 12 : from 0 : out0
+1623552457.254356 : Rank 1 : _recv : epoch 0 : iter 12 : from 0 : out1
+1623552457.254421 : Rank 1 : _recv : epoch 0 : iter 12 : from 0 : out2
+1623552457.254759 : Rank 1 : _recv : epoch 0 : iter 13 : from 0 : out0
+1623552457.254819 : Rank 1 : _recv : epoch 0 : iter 13 : from 0 : out1
+1623552457.254879 : Rank 1 : _recv : epoch 0 : iter 13 : from 0 : out2
+1623552457.255202 : Rank 1 : _recv : epoch 0 : iter 14 : from 0 : out0
+1623552457.255264 : Rank 1 : _recv : epoch 0 : iter 14 : from 0 : out1
+1623552457.255320 : Rank 1 : _recv : epoch 0 : iter 14 : from 0 : out2
+1623552457.255642 : Rank 1 : _recv : epoch 0 : iter 15 : from 0 : out0
+1623552457.255705 : Rank 1 : _recv : epoch 0 : iter 15 : from 0 : out1
+1623552457.255761 : Rank 1 : _recv : epoch 0 : iter 15 : from 0 : out2
+1623552457.256077 : Rank 1 : _recv : epoch 0 : iter 16 : from 0 : out0
+1623552457.256140 : Rank 1 : _recv : epoch 0 : iter 16 : from 0 : out1
+1623552457.256195 : Rank 1 : _recv : epoch 0 : iter 16 : from 0 : out2
+1623552457.256521 : Rank 1 : _recv : epoch 0 : iter 17 : from 0 : out0
+1623552457.256593 : Rank 1 : _recv : epoch 0 : iter 17 : from 0 : out1
+1623552457.256648 : Rank 1 : _recv : epoch 0 : iter 17 : from 0 : out2
+1623552457.256977 : Rank 1 : _recv : epoch 0 : iter 18 : from 0 : out0
+1623552457.257039 : Rank 1 : _recv : epoch 0 : iter 18 : from 0 : out1
+1623552457.257096 : Rank 1 : _recv : epoch 0 : iter 18 : from 0 : out2
+1623552457.257414 : Rank 1 : _recv : epoch 0 : iter 19 : from 0 : out0
+1623552457.257488 : Rank 1 : _recv : epoch 0 : iter 19 : from 0 : out1
+1623552457.257543 : Rank 1 : _recv : epoch 0 : iter 19 : from 0 : out2
+Time to receive 0.00012 MB: 0.001 seconds
+Throughput: 0.000 GB/s
+1623552457.241714 : Rank 0 : _send : epoch 0 : iter 0 : to 1 : 40.00 bytes : out0
+1623552457.248510 : Rank 0 : _send : epoch 0 : iter 0 : to 1 : 40.00 bytes : out1
+1623552457.248711 : Rank 0 : _send : epoch 0 : iter 0 : to 1 : 40.00 bytes : out2
+1623552457.248885 : Rank 0 : comp_send : epoch 0 : iter 0 : to 1 : out0
+1623552457.248933 : Rank 0 : comp_send : epoch 0 : iter 0 : to 1 : out1
+1623552457.248965 : Rank 0 : comp_send : epoch 0 : iter 0 : to 1 : out2
+1623552457.248981 : Rank 0 : _send : epoch 0 : iter 1 : to 1 : 40.00 bytes : out0
+1623552457.249129 : Rank 0 : _send : epoch 0 : iter 1 : to 1 : 40.00 bytes : out1
+1623552457.249266 : Rank 0 : _send : epoch 0 : iter 1 : to 1 : 40.00 bytes : out2
+1623552457.249386 : Rank 0 : comp_send : epoch 0 : iter 1 : to 1 : out0
+1623552457.249415 : Rank 0 : comp_send : epoch 0 : iter 1 : to 1 : out1
+1623552457.249439 : Rank 0 : comp_send : epoch 0 : iter 1 : to 1 : out2
+1623552457.249453 : Rank 0 : _send : epoch 0 : iter 2 : to 1 : 40.00 bytes : out0
+1623552457.249581 : Rank 0 : _send : epoch 0 : iter 2 : to 1 : 40.00 bytes : out1
+1623552457.249705 : Rank 0 : _send : epoch 0 : iter 2 : to 1 : 40.00 bytes : out2
+1623552457.249824 : Rank 0 : comp_send : epoch 0 : iter 2 : to 1 : out0
+1623552457.249864 : Rank 0 : comp_send : epoch 0 : iter 2 : to 1 : out1
+1623552457.249891 : Rank 0 : comp_send : epoch 0 : iter 2 : to 1 : out2
+1623552457.249906 : Rank 0 : _send : epoch 0 : iter 3 : to 1 : 40.00 bytes : out0
+1623552457.250036 : Rank 0 : _send : epoch 0 : iter 3 : to 1 : 40.00 bytes : out1
+1623552457.250163 : Rank 0 : _send : epoch 0 : iter 3 : to 1 : 40.00 bytes : out2
+1623552457.250281 : Rank 0 : comp_send : epoch 0 : iter 3 : to 1 : out0
+1623552457.250311 : Rank 0 : comp_send : epoch 0 : iter 3 : to 1 : out1
+1623552457.250337 : Rank 0 : comp_send : epoch 0 : iter 3 : to 1 : out2
+1623552457.250351 : Rank 0 : _send : epoch 0 : iter 4 : to 1 : 40.00 bytes : out0
+1623552457.250492 : Rank 0 : _send : epoch 0 : iter 4 : to 1 : 40.00 bytes : out1
+1623552457.250626 : Rank 0 : _send : epoch 0 : iter 4 : to 1 : 40.00 bytes : out2
+1623552457.250746 : Rank 0 : comp_send : epoch 0 : iter 4 : to 1 : out0
+1623552457.250785 : Rank 0 : comp_send : epoch 0 : iter 4 : to 1 : out1
+1623552457.250812 : Rank 0 : comp_send : epoch 0 : iter 4 : to 1 : out2
+1623552457.250827 : Rank 0 : _send : epoch 0 : iter 5 : to 1 : 40.00 bytes : out0
+1623552457.250954 : Rank 0 : _send : epoch 0 : iter 5 : to 1 : 40.00 bytes : out1
+1623552457.251076 : Rank 0 : _send : epoch 0 : iter 5 : to 1 : 40.00 bytes : out2
+1623552457.251194 : Rank 0 : comp_send : epoch 0 : iter 5 : to 1 : out0
+1623552457.251223 : Rank 0 : comp_send : epoch 0 : iter 5 : to 1 : out1
+1623552457.251247 : Rank 0 : comp_send : epoch 0 : iter 5 : to 1 : out2
+1623552457.251261 : Rank 0 : _send : epoch 0 : iter 6 : to 1 : 40.00 bytes : out0
+1623552457.251386 : Rank 0 : _send : epoch 0 : iter 6 : to 1 : 40.00 bytes : out1
+1623552457.251508 : Rank 0 : _send : epoch 0 : iter 6 : to 1 : 40.00 bytes : out2
+1623552457.251625 : Rank 0 : comp_send : epoch 0 : iter 6 : to 1 : out0
+1623552457.251664 : Rank 0 : comp_send : epoch 0 : iter 6 : to 1 : out1
+1623552457.251690 : Rank 0 : comp_send : epoch 0 : iter 6 : to 1 : out2
+1623552457.251704 : Rank 0 : _send : epoch 0 : iter 7 : to 1 : 40.00 bytes : out0
+1623552457.251830 : Rank 0 : _send : epoch 0 : iter 7 : to 1 : 40.00 bytes : out1
+1623552457.251950 : Rank 0 : _send : epoch 0 : iter 7 : to 1 : 40.00 bytes : out2
+1623552457.252081 : Rank 0 : comp_send : epoch 0 : iter 7 : to 1 : out0
+1623552457.252121 : Rank 0 : comp_send : epoch 0 : iter 7 : to 1 : out1
+1623552457.252147 : Rank 0 : comp_send : epoch 0 : iter 7 : to 1 : out2
+1623552457.252162 : Rank 0 : _send : epoch 0 : iter 8 : to 1 : 40.00 bytes : out0
+1623552457.252288 : Rank 0 : _send : epoch 0 : iter 8 : to 1 : 40.00 bytes : out1
+1623552457.252415 : Rank 0 : _send : epoch 0 : iter 8 : to 1 : 40.00 bytes : out2
+1623552457.252530 : Rank 0 : comp_send : epoch 0 : iter 8 : to 1 : out0
+1623552457.252560 : Rank 0 : comp_send : epoch 0 : iter 8 : to 1 : out1
+1623552457.252584 : Rank 0 : comp_send : epoch 0 : iter 8 : to 1 : out2
+1623552457.252605 : Rank 0 : _send : epoch 0 : iter 9 : to 1 : 40.00 bytes : out0
+1623552457.252731 : Rank 0 : _send : epoch 0 : iter 9 : to 1 : 40.00 bytes : out1
+1623552457.252857 : Rank 0 : _send : epoch 0 : iter 9 : to 1 : 40.00 bytes : out2
+1623552457.252976 : Rank 0 : comp_send : epoch 0 : iter 9 : to 1 : out0
+1623552457.253005 : Rank 0 : comp_send : epoch 0 : iter 9 : to 1 : out1
+1623552457.253029 : Rank 0 : comp_send : epoch 0 : iter 9 : to 1 : out2
+1623552457.253043 : Rank 0 : _send : epoch 0 : iter 10 : to 1 : 40.00 bytes : out0
+1623552457.253166 : Rank 0 : _send : epoch 0 : iter 10 : to 1 : 40.00 bytes : out1
+1623552457.253286 : Rank 0 : _send : epoch 0 : iter 10 : to 1 : 40.00 bytes : out2
+1623552457.253401 : Rank 0 : comp_send : epoch 0 : iter 10 : to 1 : out0
+1623552457.253445 : Rank 0 : comp_send : epoch 0 : iter 10 : to 1 : out1
+1623552457.253474 : Rank 0 : comp_send : epoch 0 : iter 10 : to 1 : out2
+1623552457.253489 : Rank 0 : _send : epoch 0 : iter 11 : to 1 : 40.00 bytes : out0
+1623552457.253613 : Rank 0 : _send : epoch 0 : iter 11 : to 1 : 40.00 bytes : out1
+1623552457.253745 : Rank 0 : _send : epoch 0 : iter 11 : to 1 : 40.00 bytes : out2
+1623552457.253861 : Rank 0 : comp_send : epoch 0 : iter 11 : to 1 : out0
+1623552457.253904 : Rank 0 : comp_send : epoch 0 : iter 11 : to 1 : out1
+1623552457.253930 : Rank 0 : comp_send : epoch 0 : iter 11 : to 1 : out2
+1623552457.253944 : Rank 0 : _send : epoch 0 : iter 12 : to 1 : 40.00 bytes : out0
+1623552457.254068 : Rank 0 : _send : epoch 0 : iter 12 : to 1 : 40.00 bytes : out1
+1623552457.254207 : Rank 0 : _send : epoch 0 : iter 12 : to 1 : 40.00 bytes : out2
+1623552457.254342 : Rank 0 : comp_send : epoch 0 : iter 12 : to 1 : out0
+1623552457.254378 : Rank 0 : comp_send : epoch 0 : iter 12 : to 1 : out1
+1623552457.254412 : Rank 0 : comp_send : epoch 0 : iter 12 : to 1 : out2
+1623552457.254427 : Rank 0 : _send : epoch 0 : iter 13 : to 1 : 40.00 bytes : out0
+1623552457.254553 : Rank 0 : _send : epoch 0 : iter 13 : to 1 : 40.00 bytes : out1
+1623552457.254674 : Rank 0 : _send : epoch 0 : iter 13 : to 1 : 40.00 bytes : out2
+1623552457.254791 : Rank 0 : comp_send : epoch 0 : iter 13 : to 1 : out0
+1623552457.254819 : Rank 0 : comp_send : epoch 0 : iter 13 : to 1 : out1
+1623552457.254843 : Rank 0 : comp_send : epoch 0 : iter 13 : to 1 : out2
+1623552457.254865 : Rank 0 : _send : epoch 0 : iter 14 : to 1 : 40.00 bytes : out0
+1623552457.254989 : Rank 0 : _send : epoch 0 : iter 14 : to 1 : 40.00 bytes : out1
+1623552457.255109 : Rank 0 : _send : epoch 0 : iter 14 : to 1 : 40.00 bytes : out2
+1623552457.255228 : Rank 0 : comp_send : epoch 0 : iter 14 : to 1 : out0
+1623552457.255258 : Rank 0 : comp_send : epoch 0 : iter 14 : to 1 : out1
+1623552457.255283 : Rank 0 : comp_send : epoch 0 : iter 14 : to 1 : out2
+1623552457.255296 : Rank 0 : _send : epoch 0 : iter 15 : to 1 : 40.00 bytes : out0
+1623552457.255419 : Rank 0 : _send : epoch 0 : iter 15 : to 1 : 40.00 bytes : out1
+1623552457.255542 : Rank 0 : _send : epoch 0 : iter 15 : to 1 : 40.00 bytes : out2
+1623552457.255659 : Rank 0 : comp_send : epoch 0 : iter 15 : to 1 : out0
+1623552457.255688 : Rank 0 : comp_send : epoch 0 : iter 15 : to 1 : out1
+1623552457.255711 : Rank 0 : comp_send : epoch 0 : iter 15 : to 1 : out2
+1623552457.255725 : Rank 0 : _send : epoch 0 : iter 16 : to 1 : 40.00 bytes : out0
+1623552457.255848 : Rank 0 : _send : epoch 0 : iter 16 : to 1 : 40.00 bytes : out1
+1623552457.255967 : Rank 0 : _send : epoch 0 : iter 16 : to 1 : 40.00 bytes : out2
+1623552457.256081 : Rank 0 : comp_send : epoch 0 : iter 16 : to 1 : out0
+1623552457.256126 : Rank 0 : comp_send : epoch 0 : iter 16 : to 1 : out1
+1623552457.256153 : Rank 0 : comp_send : epoch 0 : iter 16 : to 1 : out2
+1623552457.256167 : Rank 0 : _send : epoch 0 : iter 17 : to 1 : 40.00 bytes : out0
+1623552457.256292 : Rank 0 : _send : epoch 0 : iter 17 : to 1 : 40.00 bytes : out1
+1623552457.256424 : Rank 0 : _send : epoch 0 : iter 17 : to 1 : 40.00 bytes : out2
+1623552457.256542 : Rank 0 : comp_send : epoch 0 : iter 17 : to 1 : out0
+1623552457.256603 : Rank 0 : comp_send : epoch 0 : iter 17 : to 1 : out1
+1623552457.256629 : Rank 0 : comp_send : epoch 0 : iter 17 : to 1 : out2
+1623552457.256643 : Rank 0 : _send : epoch 0 : iter 18 : to 1 : 40.00 bytes : out0
+1623552457.256768 : Rank 0 : _send : epoch 0 : iter 18 : to 1 : 40.00 bytes : out1
+1623552457.256895 : Rank 0 : _send : epoch 0 : iter 18 : to 1 : 40.00 bytes : out2
+1623552457.257011 : Rank 0 : comp_send : epoch 0 : iter 18 : to 1 : out0
+1623552457.257040 : Rank 0 : comp_send : epoch 0 : iter 18 : to 1 : out1
+1623552457.257064 : Rank 0 : comp_send : epoch 0 : iter 18 : to 1 : out2
+1623552457.257078 : Rank 0 : _send : epoch 0 : iter 19 : to 1 : 40.00 bytes : out0
+1623552457.257201 : Rank 0 : _send : epoch 0 : iter 19 : to 1 : 40.00 bytes : out1
+1623552457.257322 : Rank 0 : _send : epoch 0 : iter 19 : to 1 : 40.00 bytes : out2
+1623552457.257440 : Rank 0 : comp_send : epoch 0 : iter 19 : to 1 : out0
+1623552457.257468 : Rank 0 : comp_send : epoch 0 : iter 19 : to 1 : out1
+1623552457.257493 : Rank 0 : comp_send : epoch 0 : iter 19 : to 1 : out2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552457.259780 : Rank 1 : _recv : epoch 1 : iter 0 : from 0 : out0
+1623552457.259952 : Rank 1 : _recv : epoch 1 : iter 0 : from 0 : out1
+1623552457.260091 : Rank 1 : _recv : epoch 1 : iter 0 : from 0 : out2
+1623552457.260422 : Rank 1 : _recv : epoch 1 : iter 1 : from 0 : out0
+1623552457.260485 : Rank 1 : _recv : epoch 1 : iter 1 : from 0 : out1
+1623552457.260589 : Rank 1 : _recv : epoch 1 : iter 1 : from 0 : out2
+1623552457.260913 : Rank 1 : _recv : epoch 1 : iter 2 : from 0 : out0
+1623552457.260971 : Rank 1 : _recv : epoch 1 : iter 2 : from 0 : out1
+1623552457.261044 : Rank 1 : _recv : epoch 1 : iter 2 : from 0 : out2
+1623552457.261356 : Rank 1 : _recv : epoch 1 : iter 3 : from 0 : out0
+1623552457.261415 : Rank 1 : _recv : epoch 1 : iter 3 : from 0 : out1
+1623552457.261492 : Rank 1 : _recv : epoch 1 : iter 3 : from 0 : out2
+1623552457.261805 : Rank 1 : _recv : epoch 1 : iter 4 : from 0 : out0
+1623552457.261862 : Rank 1 : _recv : epoch 1 : iter 4 : from 0 : out1
+1623552457.261935 : Rank 1 : _recv : epoch 1 : iter 4 : from 0 : out2
+1623552457.262243 : Rank 1 : _recv : epoch 1 : iter 5 : from 0 : out0
+1623552457.262301 : Rank 1 : _recv : epoch 1 : iter 5 : from 0 : out1
+1623552457.262796 : Rank 1 : _recv : epoch 1 : iter 5 : from 0 : out2
+1623552457.263120 : Rank 1 : _recv : epoch 1 : iter 6 : from 0 : out0
+1623552457.263180 : Rank 1 : _recv : epoch 1 : iter 6 : from 0 : out1
+1623552457.263235 : Rank 1 : _recv : epoch 1 : iter 6 : from 0 : out2
+1623552457.263555 : Rank 1 : _recv : epoch 1 : iter 7 : from 0 : out0
+1623552457.263614 : Rank 1 : _recv : epoch 1 : iter 7 : from 0 : out1
+1623552457.263670 : Rank 1 : _recv : epoch 1 : iter 7 : from 0 : out2
+1623552457.263993 : Rank 1 : _recv : epoch 1 : iter 8 : from 0 : out0
+1623552457.264052 : Rank 1 : _recv : epoch 1 : iter 8 : from 0 : out1
+1623552457.264109 : Rank 1 : _recv : epoch 1 : iter 8 : from 0 : out2
+1623552457.264433 : Rank 1 : _recv : epoch 1 : iter 9 : from 0 : out0
+1623552457.264491 : Rank 1 : _recv : epoch 1 : iter 9 : from 0 : out1
+1623552457.264547 : Rank 1 : _recv : epoch 1 : iter 9 : from 0 : out2
+1623552457.264856 : Rank 1 : _recv : epoch 1 : iter 10 : from 0 : out0
+1623552457.264912 : Rank 1 : _recv : epoch 1 : iter 10 : from 0 : out1
+1623552457.264966 : Rank 1 : _recv : epoch 1 : iter 10 : from 0 : out2
+1623552457.265274 : Rank 1 : _recv : epoch 1 : iter 11 : from 0 : out0
+1623552457.265332 : Rank 1 : _recv : epoch 1 : iter 11 : from 0 : out1
+1623552457.265413 : Rank 1 : _recv : epoch 1 : iter 11 : from 0 : out2
+1623552457.265724 : Rank 1 : _recv : epoch 1 : iter 12 : from 0 : out0
+1623552457.265782 : Rank 1 : _recv : epoch 1 : iter 12 : from 0 : out1
+1623552457.265858 : Rank 1 : _recv : epoch 1 : iter 12 : from 0 : out2
+1623552457.266170 : Rank 1 : _recv : epoch 1 : iter 13 : from 0 : out0
+1623552457.266229 : Rank 1 : _recv : epoch 1 : iter 13 : from 0 : out1
+1623552457.266303 : Rank 1 : _recv : epoch 1 : iter 13 : from 0 : out2
+1623552457.266620 : Rank 1 : _recv : epoch 1 : iter 14 : from 0 : out0
+1623552457.266680 : Rank 1 : _recv : epoch 1 : iter 14 : from 0 : out1
+1623552457.266757 : Rank 1 : _recv : epoch 1 : iter 14 : from 0 : out2
+1623552457.267066 : Rank 1 : _recv : epoch 1 : iter 15 : from 0 : out0
+1623552457.267123 : Rank 1 : _recv : epoch 1 : iter 15 : from 0 : out1
+1623552457.267201 : Rank 1 : _recv : epoch 1 : iter 15 : from 0 : out2
+1623552457.267514 : Rank 1 : _recv : epoch 1 : iter 16 : from 0 : out0
+1623552457.267574 : Rank 1 : _recv : epoch 1 : iter 16 : from 0 : out1
+1623552457.267643 : Rank 1 : _recv : epoch 1 : iter 16 : from 0 : out2
+1623552457.267964 : Rank 1 : _recv : epoch 1 : iter 17 : from 0 : out0
+1623552457.268022 : Rank 1 : _recv : epoch 1 : iter 17 : from 0 : out1
+1623552457.268116 : Rank 1 : _recv : epoch 1 : iter 17 : from 0 : out2
+1623552457.268422 : Rank 1 : _recv : epoch 1 : iter 18 : from 0 : out0
+1623552457.268481 : Rank 1 : _recv : epoch 1 : iter 18 : from 0 : out1
+1623552457.268556 : Rank 1 : _recv : epoch 1 : iter 18 : from 0 : out2
+1623552457.268862 : Rank 1 : _recv : epoch 1 : iter 19 : from 0 : out0
+1623552457.268920 : Rank 1 : _recv : epoch 1 : iter 19 : from 0 : out1
+1623552457.269002 : Rank 1 : _recv : epoch 1 : iter 19 : from 0 : out2
+Time to receive 0.0012 MB: 0.001 seconds
+Throughput: 0.002 GB/s
+1623552457.259263 : Rank 0 : _send : epoch 1 : iter 0 : to 1 : 400.00 bytes : out0
+1623552457.259728 : Rank 0 : _send : epoch 1 : iter 0 : to 1 : 400.00 bytes : out1
+1623552457.259899 : Rank 0 : _send : epoch 1 : iter 0 : to 1 : 400.00 bytes : out2
+1623552457.260055 : Rank 0 : comp_send : epoch 1 : iter 0 : to 1 : out0
+1623552457.260089 : Rank 0 : comp_send : epoch 1 : iter 0 : to 1 : out1
+1623552457.260117 : Rank 0 : comp_send : epoch 1 : iter 0 : to 1 : out2
+1623552457.260132 : Rank 0 : _send : epoch 1 : iter 1 : to 1 : 400.00 bytes : out0
+1623552457.260278 : Rank 0 : _send : epoch 1 : iter 1 : to 1 : 400.00 bytes : out1
+1623552457.260406 : Rank 0 : _send : epoch 1 : iter 1 : to 1 : 400.00 bytes : out2
+1623552457.260547 : Rank 0 : comp_send : epoch 1 : iter 1 : to 1 : out0
+1623552457.260580 : Rank 0 : comp_send : epoch 1 : iter 1 : to 1 : out1
+1623552457.260607 : Rank 0 : comp_send : epoch 1 : iter 1 : to 1 : out2
+1623552457.260622 : Rank 0 : _send : epoch 1 : iter 2 : to 1 : 400.00 bytes : out0
+1623552457.260752 : Rank 0 : _send : epoch 1 : iter 2 : to 1 : 400.00 bytes : out1
+1623552457.260879 : Rank 0 : _send : epoch 1 : iter 2 : to 1 : 400.00 bytes : out2
+1623552457.261000 : Rank 0 : comp_send : epoch 1 : iter 2 : to 1 : out0
+1623552457.261035 : Rank 0 : comp_send : epoch 1 : iter 2 : to 1 : out1
+1623552457.261061 : Rank 0 : comp_send : epoch 1 : iter 2 : to 1 : out2
+1623552457.261076 : Rank 0 : _send : epoch 1 : iter 3 : to 1 : 400.00 bytes : out0
+1623552457.261203 : Rank 0 : _send : epoch 1 : iter 3 : to 1 : 400.00 bytes : out1
+1623552457.261327 : Rank 0 : _send : epoch 1 : iter 3 : to 1 : 400.00 bytes : out2
+1623552457.261450 : Rank 0 : comp_send : epoch 1 : iter 3 : to 1 : out0
+1623552457.261482 : Rank 0 : comp_send : epoch 1 : iter 3 : to 1 : out1
+1623552457.261509 : Rank 0 : comp_send : epoch 1 : iter 3 : to 1 : out2
+1623552457.261523 : Rank 0 : _send : epoch 1 : iter 4 : to 1 : 400.00 bytes : out0
+1623552457.261650 : Rank 0 : _send : epoch 1 : iter 4 : to 1 : 400.00 bytes : out1
+1623552457.261776 : Rank 0 : _send : epoch 1 : iter 4 : to 1 : 400.00 bytes : out2
+1623552457.261895 : Rank 0 : comp_send : epoch 1 : iter 4 : to 1 : out0
+1623552457.261927 : Rank 0 : comp_send : epoch 1 : iter 4 : to 1 : out1
+1623552457.261954 : Rank 0 : comp_send : epoch 1 : iter 4 : to 1 : out2
+1623552457.261968 : Rank 0 : _send : epoch 1 : iter 5 : to 1 : 400.00 bytes : out0
+1623552457.262096 : Rank 0 : _send : epoch 1 : iter 5 : to 1 : 400.00 bytes : out1
+1623552457.262221 : Rank 0 : _send : epoch 1 : iter 5 : to 1 : 400.00 bytes : out2
+1623552457.262345 : Rank 0 : comp_send : epoch 1 : iter 5 : to 1 : out0
+1623552457.262398 : Rank 0 : comp_send : epoch 1 : iter 5 : to 1 : out1
+1623552457.262429 : Rank 0 : comp_send : epoch 1 : iter 5 : to 1 : out2
+1623552457.262443 : Rank 0 : _send : epoch 1 : iter 6 : to 1 : 400.00 bytes : out0
+1623552457.262577 : Rank 0 : _send : epoch 1 : iter 6 : to 1 : 400.00 bytes : out1
+1623552457.262699 : Rank 0 : _send : epoch 1 : iter 6 : to 1 : 400.00 bytes : out2
+1623552457.262993 : Rank 0 : comp_send : epoch 1 : iter 6 : to 1 : out0
+1623552457.263083 : Rank 0 : comp_send : epoch 1 : iter 6 : to 1 : out1
+1623552457.263156 : Rank 0 : comp_send : epoch 1 : iter 6 : to 1 : out2
+1623552457.263172 : Rank 0 : _send : epoch 1 : iter 7 : to 1 : 400.00 bytes : out0
+1623552457.263308 : Rank 0 : _send : epoch 1 : iter 7 : to 1 : 400.00 bytes : out1
+1623552457.263433 : Rank 0 : _send : epoch 1 : iter 7 : to 1 : 400.00 bytes : out2
+1623552457.263559 : Rank 0 : comp_send : epoch 1 : iter 7 : to 1 : out0
+1623552457.263606 : Rank 0 : comp_send : epoch 1 : iter 7 : to 1 : out1
+1623552457.263635 : Rank 0 : comp_send : epoch 1 : iter 7 : to 1 : out2
+1623552457.263650 : Rank 0 : _send : epoch 1 : iter 8 : to 1 : 400.00 bytes : out0
+1623552457.263782 : Rank 0 : _send : epoch 1 : iter 8 : to 1 : 400.00 bytes : out1
+1623552457.263907 : Rank 0 : _send : epoch 1 : iter 8 : to 1 : 400.00 bytes : out2
+1623552457.264030 : Rank 0 : comp_send : epoch 1 : iter 8 : to 1 : out0
+1623552457.264062 : Rank 0 : comp_send : epoch 1 : iter 8 : to 1 : out1
+1623552457.264089 : Rank 0 : comp_send : epoch 1 : iter 8 : to 1 : out2
+1623552457.264103 : Rank 0 : _send : epoch 1 : iter 9 : to 1 : 400.00 bytes : out0
+1623552457.264230 : Rank 0 : _send : epoch 1 : iter 9 : to 1 : 400.00 bytes : out1
+1623552457.264358 : Rank 0 : _send : epoch 1 : iter 9 : to 1 : 400.00 bytes : out2
+1623552457.264478 : Rank 0 : comp_send : epoch 1 : iter 9 : to 1 : out0
+1623552457.264509 : Rank 0 : comp_send : epoch 1 : iter 9 : to 1 : out1
+1623552457.264535 : Rank 0 : comp_send : epoch 1 : iter 9 : to 1 : out2
+1623552457.264549 : Rank 0 : _send : epoch 1 : iter 10 : to 1 : 400.00 bytes : out0
+1623552457.264676 : Rank 0 : _send : epoch 1 : iter 10 : to 1 : 400.00 bytes : out1
+1623552457.264804 : Rank 0 : _send : epoch 1 : iter 10 : to 1 : 400.00 bytes : out2
+1623552457.264925 : Rank 0 : comp_send : epoch 1 : iter 10 : to 1 : out0
+1623552457.264958 : Rank 0 : comp_send : epoch 1 : iter 10 : to 1 : out1
+1623552457.264984 : Rank 0 : comp_send : epoch 1 : iter 10 : to 1 : out2
+1623552457.264999 : Rank 0 : _send : epoch 1 : iter 11 : to 1 : 400.00 bytes : out0
+1623552457.265123 : Rank 0 : _send : epoch 1 : iter 11 : to 1 : 400.00 bytes : out1
+1623552457.265245 : Rank 0 : _send : epoch 1 : iter 11 : to 1 : 400.00 bytes : out2
+1623552457.265368 : Rank 0 : comp_send : epoch 1 : iter 11 : to 1 : out0
+1623552457.265400 : Rank 0 : comp_send : epoch 1 : iter 11 : to 1 : out1
+1623552457.265426 : Rank 0 : comp_send : epoch 1 : iter 11 : to 1 : out2
+1623552457.265440 : Rank 0 : _send : epoch 1 : iter 12 : to 1 : 400.00 bytes : out0
+1623552457.265567 : Rank 0 : _send : epoch 1 : iter 12 : to 1 : 400.00 bytes : out1
+1623552457.265693 : Rank 0 : _send : epoch 1 : iter 12 : to 1 : 400.00 bytes : out2
+1623552457.265818 : Rank 0 : comp_send : epoch 1 : iter 12 : to 1 : out0
+1623552457.265849 : Rank 0 : comp_send : epoch 1 : iter 12 : to 1 : out1
+1623552457.265875 : Rank 0 : comp_send : epoch 1 : iter 12 : to 1 : out2
+1623552457.265889 : Rank 0 : _send : epoch 1 : iter 13 : to 1 : 400.00 bytes : out0
+1623552457.266016 : Rank 0 : _send : epoch 1 : iter 13 : to 1 : 400.00 bytes : out1
+1623552457.266140 : Rank 0 : _send : epoch 1 : iter 13 : to 1 : 400.00 bytes : out2
+1623552457.266261 : Rank 0 : comp_send : epoch 1 : iter 13 : to 1 : out0
+1623552457.266292 : Rank 0 : comp_send : epoch 1 : iter 13 : to 1 : out1
+1623552457.266319 : Rank 0 : comp_send : epoch 1 : iter 13 : to 1 : out2
+1623552457.266333 : Rank 0 : _send : epoch 1 : iter 14 : to 1 : 400.00 bytes : out0
+1623552457.266473 : Rank 0 : _send : epoch 1 : iter 14 : to 1 : 400.00 bytes : out1
+1623552457.266597 : Rank 0 : _send : epoch 1 : iter 14 : to 1 : 400.00 bytes : out2
+1623552457.266716 : Rank 0 : comp_send : epoch 1 : iter 14 : to 1 : out0
+1623552457.266749 : Rank 0 : comp_send : epoch 1 : iter 14 : to 1 : out1
+1623552457.266775 : Rank 0 : comp_send : epoch 1 : iter 14 : to 1 : out2
+1623552457.266789 : Rank 0 : _send : epoch 1 : iter 15 : to 1 : 400.00 bytes : out0
+1623552457.266914 : Rank 0 : _send : epoch 1 : iter 15 : to 1 : 400.00 bytes : out1
+1623552457.267037 : Rank 0 : _send : epoch 1 : iter 15 : to 1 : 400.00 bytes : out2
+1623552457.267160 : Rank 0 : comp_send : epoch 1 : iter 15 : to 1 : out0
+1623552457.267192 : Rank 0 : comp_send : epoch 1 : iter 15 : to 1 : out1
+1623552457.267219 : Rank 0 : comp_send : epoch 1 : iter 15 : to 1 : out2
+1623552457.267233 : Rank 0 : _send : epoch 1 : iter 16 : to 1 : 400.00 bytes : out0
+1623552457.267360 : Rank 0 : _send : epoch 1 : iter 16 : to 1 : 400.00 bytes : out1
+1623552457.267483 : Rank 0 : _send : epoch 1 : iter 16 : to 1 : 400.00 bytes : out2
+1623552457.267602 : Rank 0 : comp_send : epoch 1 : iter 16 : to 1 : out0
+1623552457.267634 : Rank 0 : comp_send : epoch 1 : iter 16 : to 1 : out1
+1623552457.267661 : Rank 0 : comp_send : epoch 1 : iter 16 : to 1 : out2
+1623552457.267675 : Rank 0 : _send : epoch 1 : iter 17 : to 1 : 400.00 bytes : out0
+1623552457.267801 : Rank 0 : _send : epoch 1 : iter 17 : to 1 : 400.00 bytes : out1
+1623552457.267925 : Rank 0 : _send : epoch 1 : iter 17 : to 1 : 400.00 bytes : out2
+1623552457.268075 : Rank 0 : comp_send : epoch 1 : iter 17 : to 1 : out0
+1623552457.268106 : Rank 0 : comp_send : epoch 1 : iter 17 : to 1 : out1
+1623552457.268133 : Rank 0 : comp_send : epoch 1 : iter 17 : to 1 : out2
+1623552457.268147 : Rank 0 : _send : epoch 1 : iter 18 : to 1 : 400.00 bytes : out0
+1623552457.268273 : Rank 0 : _send : epoch 1 : iter 18 : to 1 : 400.00 bytes : out1
+1623552457.268396 : Rank 0 : _send : epoch 1 : iter 18 : to 1 : 400.00 bytes : out2
+1623552457.268515 : Rank 0 : comp_send : epoch 1 : iter 18 : to 1 : out0
+1623552457.268548 : Rank 0 : comp_send : epoch 1 : iter 18 : to 1 : out1
+1623552457.268574 : Rank 0 : comp_send : epoch 1 : iter 18 : to 1 : out2
+1623552457.268589 : Rank 0 : _send : epoch 1 : iter 19 : to 1 : 400.00 bytes : out0
+1623552457.268715 : Rank 0 : _send : epoch 1 : iter 19 : to 1 : 400.00 bytes : out1
+1623552457.268839 : Rank 0 : _send : epoch 1 : iter 19 : to 1 : 400.00 bytes : out2
+1623552457.268962 : Rank 0 : comp_send : epoch 1 : iter 19 : to 1 : out0
+1623552457.268993 : Rank 0 : comp_send : epoch 1 : iter 19 : to 1 : out1
+1623552457.269022 : Rank 0 : comp_send : epoch 1 : iter 19 : to 1 : out2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552457.271227 : Rank 1 : _recv : epoch 2 : iter 0 : from 0 : out0
+1623552457.271385 : Rank 1 : _recv : epoch 2 : iter 0 : from 0 : out1
+1623552457.271522 : Rank 1 : _recv : epoch 2 : iter 0 : from 0 : out2
+1623552457.271864 : Rank 1 : _recv : epoch 2 : iter 1 : from 0 : out0
+1623552457.271928 : Rank 1 : _recv : epoch 2 : iter 1 : from 0 : out1
+1623552457.272005 : Rank 1 : _recv : epoch 2 : iter 1 : from 0 : out2
+1623552457.272330 : Rank 1 : _recv : epoch 2 : iter 2 : from 0 : out0
+1623552457.272389 : Rank 1 : _recv : epoch 2 : iter 2 : from 0 : out1
+1623552457.272456 : Rank 1 : _recv : epoch 2 : iter 2 : from 0 : out2
+1623552457.272771 : Rank 1 : _recv : epoch 2 : iter 3 : from 0 : out0
+1623552457.272830 : Rank 1 : _recv : epoch 2 : iter 3 : from 0 : out1
+1623552457.272936 : Rank 1 : _recv : epoch 2 : iter 3 : from 0 : out2
+1623552457.273259 : Rank 1 : _recv : epoch 2 : iter 4 : from 0 : out0
+1623552457.273318 : Rank 1 : _recv : epoch 2 : iter 4 : from 0 : out1
+1623552457.273395 : Rank 1 : _recv : epoch 2 : iter 4 : from 0 : out2
+1623552457.273724 : Rank 1 : _recv : epoch 2 : iter 5 : from 0 : out0
+1623552457.273783 : Rank 1 : _recv : epoch 2 : iter 5 : from 0 : out1
+1623552457.273860 : Rank 1 : _recv : epoch 2 : iter 5 : from 0 : out2
+1623552457.274170 : Rank 1 : _recv : epoch 2 : iter 6 : from 0 : out0
+1623552457.274228 : Rank 1 : _recv : epoch 2 : iter 6 : from 0 : out1
+1623552457.274305 : Rank 1 : _recv : epoch 2 : iter 6 : from 0 : out2
+1623552457.274855 : Rank 1 : _recv : epoch 2 : iter 7 : from 0 : out0
+1623552457.274988 : Rank 1 : _recv : epoch 2 : iter 7 : from 0 : out1
+1623552457.275105 : Rank 1 : _recv : epoch 2 : iter 7 : from 0 : out2
+1623552457.275419 : Rank 1 : _recv : epoch 2 : iter 8 : from 0 : out0
+1623552457.275477 : Rank 1 : _recv : epoch 2 : iter 8 : from 0 : out1
+1623552457.275551 : Rank 1 : _recv : epoch 2 : iter 8 : from 0 : out2
+1623552457.275876 : Rank 1 : _recv : epoch 2 : iter 9 : from 0 : out0
+1623552457.275934 : Rank 1 : _recv : epoch 2 : iter 9 : from 0 : out1
+1623552457.276031 : Rank 1 : _recv : epoch 2 : iter 9 : from 0 : out2
+1623552457.276344 : Rank 1 : _recv : epoch 2 : iter 10 : from 0 : out0
+1623552457.276401 : Rank 1 : _recv : epoch 2 : iter 10 : from 0 : out1
+1623552457.276472 : Rank 1 : _recv : epoch 2 : iter 10 : from 0 : out2
+1623552457.276783 : Rank 1 : _recv : epoch 2 : iter 11 : from 0 : out0
+1623552457.276843 : Rank 1 : _recv : epoch 2 : iter 11 : from 0 : out1
+1623552457.276940 : Rank 1 : _recv : epoch 2 : iter 11 : from 0 : out2
+1623552457.277251 : Rank 1 : _recv : epoch 2 : iter 12 : from 0 : out0
+1623552457.277310 : Rank 1 : _recv : epoch 2 : iter 12 : from 0 : out1
+1623552457.277381 : Rank 1 : _recv : epoch 2 : iter 12 : from 0 : out2
+1623552457.277693 : Rank 1 : _recv : epoch 2 : iter 13 : from 0 : out0
+1623552457.277754 : Rank 1 : _recv : epoch 2 : iter 13 : from 0 : out1
+1623552457.277857 : Rank 1 : _recv : epoch 2 : iter 13 : from 0 : out2
+1623552457.278170 : Rank 1 : _recv : epoch 2 : iter 14 : from 0 : out0
+1623552457.278227 : Rank 1 : _recv : epoch 2 : iter 14 : from 0 : out1
+1623552457.278298 : Rank 1 : _recv : epoch 2 : iter 14 : from 0 : out2
+1623552457.278636 : Rank 1 : _recv : epoch 2 : iter 15 : from 0 : out0
+1623552457.278697 : Rank 1 : _recv : epoch 2 : iter 15 : from 0 : out1
+1623552457.278771 : Rank 1 : _recv : epoch 2 : iter 15 : from 0 : out2
+1623552457.279082 : Rank 1 : _recv : epoch 2 : iter 16 : from 0 : out0
+1623552457.279141 : Rank 1 : _recv : epoch 2 : iter 16 : from 0 : out1
+1623552457.279236 : Rank 1 : _recv : epoch 2 : iter 16 : from 0 : out2
+1623552457.279547 : Rank 1 : _recv : epoch 2 : iter 17 : from 0 : out0
+1623552457.279605 : Rank 1 : _recv : epoch 2 : iter 17 : from 0 : out1
+1623552457.279722 : Rank 1 : _recv : epoch 2 : iter 17 : from 0 : out2
+1623552457.280030 : Rank 1 : _recv : epoch 2 : iter 18 : from 0 : out0
+1623552457.280088 : Rank 1 : _recv : epoch 2 : iter 18 : from 0 : out1
+1623552457.280184 : Rank 1 : _recv : epoch 2 : iter 18 : from 0 : out2
+1623552457.280507 : Rank 1 : _recv : epoch 2 : iter 19 : from 0 : out0
+1623552457.280566 : Rank 1 : _recv : epoch 2 : iter 19 : from 0 : out1
+1623552457.280653 : Rank 1 : _recv : epoch 2 : iter 19 : from 0 : out2
+Time to receive 0.012 MB: 0.001 seconds
+Throughput: 0.023 GB/s
+1623552457.270738 : Rank 0 : _send : epoch 2 : iter 0 : to 1 : 4000.00 bytes : out0
+1623552457.271174 : Rank 0 : _send : epoch 2 : iter 0 : to 1 : 4000.00 bytes : out1
+1623552457.271334 : Rank 0 : _send : epoch 2 : iter 0 : to 1 : 4000.00 bytes : out2
+1623552457.271483 : Rank 0 : comp_send : epoch 2 : iter 0 : to 1 : out0
+1623552457.271518 : Rank 0 : comp_send : epoch 2 : iter 0 : to 1 : out1
+1623552457.271545 : Rank 0 : comp_send : epoch 2 : iter 0 : to 1 : out2
+1623552457.271560 : Rank 0 : _send : epoch 2 : iter 1 : to 1 : 4000.00 bytes : out0
+1623552457.271699 : Rank 0 : _send : epoch 2 : iter 1 : to 1 : 4000.00 bytes : out1
+1623552457.271827 : Rank 0 : _send : epoch 2 : iter 1 : to 1 : 4000.00 bytes : out2
+1623552457.271963 : Rank 0 : comp_send : epoch 2 : iter 1 : to 1 : out0
+1623552457.271995 : Rank 0 : comp_send : epoch 2 : iter 1 : to 1 : out1
+1623552457.272021 : Rank 0 : comp_send : epoch 2 : iter 1 : to 1 : out2
+1623552457.272035 : Rank 0 : _send : epoch 2 : iter 2 : to 1 : 4000.00 bytes : out0
+1623552457.272165 : Rank 0 : _send : epoch 2 : iter 2 : to 1 : 4000.00 bytes : out1
+1623552457.272295 : Rank 0 : _send : epoch 2 : iter 2 : to 1 : 4000.00 bytes : out2
+1623552457.272416 : Rank 0 : comp_send : epoch 2 : iter 2 : to 1 : out0
+1623552457.272462 : Rank 0 : comp_send : epoch 2 : iter 2 : to 1 : out1
+1623552457.272491 : Rank 0 : comp_send : epoch 2 : iter 2 : to 1 : out2
+1623552457.272505 : Rank 0 : _send : epoch 2 : iter 3 : to 1 : 4000.00 bytes : out0
+1623552457.272633 : Rank 0 : _send : epoch 2 : iter 3 : to 1 : 4000.00 bytes : out1
+1623552457.272758 : Rank 0 : _send : epoch 2 : iter 3 : to 1 : 4000.00 bytes : out2
+1623552457.272892 : Rank 0 : comp_send : epoch 2 : iter 3 : to 1 : out0
+1623552457.272924 : Rank 0 : comp_send : epoch 2 : iter 3 : to 1 : out1
+1623552457.272950 : Rank 0 : comp_send : epoch 2 : iter 3 : to 1 : out2
+1623552457.272965 : Rank 0 : _send : epoch 2 : iter 4 : to 1 : 4000.00 bytes : out0
+1623552457.273092 : Rank 0 : _send : epoch 2 : iter 4 : to 1 : 4000.00 bytes : out1
+1623552457.273234 : Rank 0 : _send : epoch 2 : iter 4 : to 1 : 4000.00 bytes : out2
+1623552457.273354 : Rank 0 : comp_send : epoch 2 : iter 4 : to 1 : out0
+1623552457.273403 : Rank 0 : comp_send : epoch 2 : iter 4 : to 1 : out1
+1623552457.273431 : Rank 0 : comp_send : epoch 2 : iter 4 : to 1 : out2
+1623552457.273446 : Rank 0 : _send : epoch 2 : iter 5 : to 1 : 4000.00 bytes : out0
+1623552457.273574 : Rank 0 : _send : epoch 2 : iter 5 : to 1 : 4000.00 bytes : out1
+1623552457.273698 : Rank 0 : _send : epoch 2 : iter 5 : to 1 : 4000.00 bytes : out2
+1623552457.273821 : Rank 0 : comp_send : epoch 2 : iter 5 : to 1 : out0
+1623552457.273852 : Rank 0 : comp_send : epoch 2 : iter 5 : to 1 : out1
+1623552457.273880 : Rank 0 : comp_send : epoch 2 : iter 5 : to 1 : out2
+1623552457.273893 : Rank 0 : _send : epoch 2 : iter 6 : to 1 : 4000.00 bytes : out0
+1623552457.274020 : Rank 0 : _send : epoch 2 : iter 6 : to 1 : 4000.00 bytes : out1
+1623552457.274145 : Rank 0 : _send : epoch 2 : iter 6 : to 1 : 4000.00 bytes : out2
+1623552457.274265 : Rank 0 : comp_send : epoch 2 : iter 6 : to 1 : out0
+1623552457.274312 : Rank 0 : comp_send : epoch 2 : iter 6 : to 1 : out1
+1623552457.274340 : Rank 0 : comp_send : epoch 2 : iter 6 : to 1 : out2
+1623552457.274354 : Rank 0 : _send : epoch 2 : iter 7 : to 1 : 4000.00 bytes : out0
+1623552457.274817 : Rank 0 : _send : epoch 2 : iter 7 : to 1 : 4000.00 bytes : out1
+1623552457.274944 : Rank 0 : _send : epoch 2 : iter 7 : to 1 : 4000.00 bytes : out2
+1623552457.275067 : Rank 0 : comp_send : epoch 2 : iter 7 : to 1 : out0
+1623552457.275099 : Rank 0 : comp_send : epoch 2 : iter 7 : to 1 : out1
+1623552457.275127 : Rank 0 : comp_send : epoch 2 : iter 7 : to 1 : out2
+1623552457.275141 : Rank 0 : _send : epoch 2 : iter 8 : to 1 : 4000.00 bytes : out0
+1623552457.275267 : Rank 0 : _send : epoch 2 : iter 8 : to 1 : 4000.00 bytes : out1
+1623552457.275392 : Rank 0 : _send : epoch 2 : iter 8 : to 1 : 4000.00 bytes : out2
+1623552457.275510 : Rank 0 : comp_send : epoch 2 : iter 8 : to 1 : out0
+1623552457.275557 : Rank 0 : comp_send : epoch 2 : iter 8 : to 1 : out1
+1623552457.275585 : Rank 0 : comp_send : epoch 2 : iter 8 : to 1 : out2
+1623552457.275599 : Rank 0 : _send : epoch 2 : iter 9 : to 1 : 4000.00 bytes : out0
+1623552457.275729 : Rank 0 : _send : epoch 2 : iter 9 : to 1 : 4000.00 bytes : out1
+1623552457.275854 : Rank 0 : _send : epoch 2 : iter 9 : to 1 : 4000.00 bytes : out2
+1623552457.275992 : Rank 0 : comp_send : epoch 2 : iter 9 : to 1 : out0
+1623552457.276024 : Rank 0 : comp_send : epoch 2 : iter 9 : to 1 : out1
+1623552457.276050 : Rank 0 : comp_send : epoch 2 : iter 9 : to 1 : out2
+1623552457.276064 : Rank 0 : _send : epoch 2 : iter 10 : to 1 : 4000.00 bytes : out0
+1623552457.276190 : Rank 0 : _send : epoch 2 : iter 10 : to 1 : 4000.00 bytes : out1
+1623552457.276314 : Rank 0 : _send : epoch 2 : iter 10 : to 1 : 4000.00 bytes : out2
+1623552457.276432 : Rank 0 : comp_send : epoch 2 : iter 10 : to 1 : out0
+1623552457.276476 : Rank 0 : comp_send : epoch 2 : iter 10 : to 1 : out1
+1623552457.276505 : Rank 0 : comp_send : epoch 2 : iter 10 : to 1 : out2
+1623552457.276520 : Rank 0 : _send : epoch 2 : iter 11 : to 1 : 4000.00 bytes : out0
+1623552457.276648 : Rank 0 : _send : epoch 2 : iter 11 : to 1 : 4000.00 bytes : out1
+1623552457.276772 : Rank 0 : _send : epoch 2 : iter 11 : to 1 : 4000.00 bytes : out2
+1623552457.276894 : Rank 0 : comp_send : epoch 2 : iter 11 : to 1 : out0
+1623552457.276926 : Rank 0 : comp_send : epoch 2 : iter 11 : to 1 : out1
+1623552457.276952 : Rank 0 : comp_send : epoch 2 : iter 11 : to 1 : out2
+1623552457.276965 : Rank 0 : _send : epoch 2 : iter 12 : to 1 : 4000.00 bytes : out0
+1623552457.277093 : Rank 0 : _send : epoch 2 : iter 12 : to 1 : 4000.00 bytes : out1
+1623552457.277219 : Rank 0 : _send : epoch 2 : iter 12 : to 1 : 4000.00 bytes : out2
+1623552457.277339 : Rank 0 : comp_send : epoch 2 : iter 12 : to 1 : out0
+1623552457.277384 : Rank 0 : comp_send : epoch 2 : iter 12 : to 1 : out1
+1623552457.277413 : Rank 0 : comp_send : epoch 2 : iter 12 : to 1 : out2
+1623552457.277427 : Rank 0 : _send : epoch 2 : iter 13 : to 1 : 4000.00 bytes : out0
+1623552457.277553 : Rank 0 : _send : epoch 2 : iter 13 : to 1 : 4000.00 bytes : out1
+1623552457.277677 : Rank 0 : _send : epoch 2 : iter 13 : to 1 : 4000.00 bytes : out2
+1623552457.277811 : Rank 0 : comp_send : epoch 2 : iter 13 : to 1 : out0
+1623552457.277847 : Rank 0 : comp_send : epoch 2 : iter 13 : to 1 : out1
+1623552457.277874 : Rank 0 : comp_send : epoch 2 : iter 13 : to 1 : out2
+1623552457.277888 : Rank 0 : _send : epoch 2 : iter 14 : to 1 : 4000.00 bytes : out0
+1623552457.278013 : Rank 0 : _send : epoch 2 : iter 14 : to 1 : 4000.00 bytes : out1
+1623552457.278139 : Rank 0 : _send : epoch 2 : iter 14 : to 1 : 4000.00 bytes : out2
+1623552457.278258 : Rank 0 : comp_send : epoch 2 : iter 14 : to 1 : out0
+1623552457.278306 : Rank 0 : comp_send : epoch 2 : iter 14 : to 1 : out1
+1623552457.278335 : Rank 0 : comp_send : epoch 2 : iter 14 : to 1 : out2
+1623552457.278349 : Rank 0 : _send : epoch 2 : iter 15 : to 1 : 4000.00 bytes : out0
+1623552457.278486 : Rank 0 : _send : epoch 2 : iter 15 : to 1 : 4000.00 bytes : out1
+1623552457.278610 : Rank 0 : _send : epoch 2 : iter 15 : to 1 : 4000.00 bytes : out2
+1623552457.278733 : Rank 0 : comp_send : epoch 2 : iter 15 : to 1 : out0
+1623552457.278764 : Rank 0 : comp_send : epoch 2 : iter 15 : to 1 : out1
+1623552457.278792 : Rank 0 : comp_send : epoch 2 : iter 15 : to 1 : out2
+1623552457.278808 : Rank 0 : _send : epoch 2 : iter 16 : to 1 : 4000.00 bytes : out0
+1623552457.278942 : Rank 0 : _send : epoch 2 : iter 16 : to 1 : 4000.00 bytes : out1
+1623552457.279070 : Rank 0 : _send : epoch 2 : iter 16 : to 1 : 4000.00 bytes : out2
+1623552457.279190 : Rank 0 : comp_send : epoch 2 : iter 16 : to 1 : out0
+1623552457.279238 : Rank 0 : comp_send : epoch 2 : iter 16 : to 1 : out1
+1623552457.279267 : Rank 0 : comp_send : epoch 2 : iter 16 : to 1 : out2
+1623552457.279282 : Rank 0 : _send : epoch 2 : iter 17 : to 1 : 4000.00 bytes : out0
+1623552457.279410 : Rank 0 : _send : epoch 2 : iter 17 : to 1 : 4000.00 bytes : out1
+1623552457.279534 : Rank 0 : _send : epoch 2 : iter 17 : to 1 : 4000.00 bytes : out2
+1623552457.279679 : Rank 0 : comp_send : epoch 2 : iter 17 : to 1 : out0
+1623552457.279719 : Rank 0 : comp_send : epoch 2 : iter 17 : to 1 : out1
+1623552457.279747 : Rank 0 : comp_send : epoch 2 : iter 17 : to 1 : out2
+1623552457.279761 : Rank 0 : _send : epoch 2 : iter 18 : to 1 : 4000.00 bytes : out0
+1623552457.279891 : Rank 0 : _send : epoch 2 : iter 18 : to 1 : 4000.00 bytes : out1
+1623552457.280017 : Rank 0 : _send : epoch 2 : iter 18 : to 1 : 4000.00 bytes : out2
+1623552457.280137 : Rank 0 : comp_send : epoch 2 : iter 18 : to 1 : out0
+1623552457.280185 : Rank 0 : comp_send : epoch 2 : iter 18 : to 1 : out1
+1623552457.280213 : Rank 0 : comp_send : epoch 2 : iter 18 : to 1 : out2
+1623552457.280228 : Rank 0 : _send : epoch 2 : iter 19 : to 1 : 4000.00 bytes : out0
+1623552457.280355 : Rank 0 : _send : epoch 2 : iter 19 : to 1 : 4000.00 bytes : out1
+1623552457.280479 : Rank 0 : _send : epoch 2 : iter 19 : to 1 : 4000.00 bytes : out2
+1623552457.280614 : Rank 0 : comp_send : epoch 2 : iter 19 : to 1 : out0
+1623552457.280646 : Rank 0 : comp_send : epoch 2 : iter 19 : to 1 : out1
+1623552457.280673 : Rank 0 : comp_send : epoch 2 : iter 19 : to 1 : out2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552457.284619 : Rank 1 : _recv : epoch 3 : iter 0 : from 0 : out0
+1623552457.284788 : Rank 1 : _recv : epoch 3 : iter 0 : from 0 : out1
+1623552457.284944 : Rank 1 : _recv : epoch 3 : iter 0 : from 0 : out2
+1623552457.285325 : Rank 1 : _recv : epoch 3 : iter 1 : from 0 : out0
+1623552457.285387 : Rank 1 : _recv : epoch 3 : iter 1 : from 0 : out1
+1623552457.285478 : Rank 1 : _recv : epoch 3 : iter 1 : from 0 : out2
+1623552457.285839 : Rank 1 : _recv : epoch 3 : iter 2 : from 0 : out0
+1623552457.285899 : Rank 1 : _recv : epoch 3 : iter 2 : from 0 : out1
+1623552457.285972 : Rank 1 : _recv : epoch 3 : iter 2 : from 0 : out2
+1623552457.286330 : Rank 1 : _recv : epoch 3 : iter 3 : from 0 : out0
+1623552457.286397 : Rank 1 : _recv : epoch 3 : iter 3 : from 0 : out1
+1623552457.286799 : Rank 1 : _recv : epoch 3 : iter 3 : from 0 : out2
+1623552457.287157 : Rank 1 : _recv : epoch 3 : iter 4 : from 0 : out0
+1623552457.287216 : Rank 1 : _recv : epoch 3 : iter 4 : from 0 : out1
+1623552457.287297 : Rank 1 : _recv : epoch 3 : iter 4 : from 0 : out2
+1623552457.287653 : Rank 1 : _recv : epoch 3 : iter 5 : from 0 : out0
+1623552457.287711 : Rank 1 : _recv : epoch 3 : iter 5 : from 0 : out1
+1623552457.287796 : Rank 1 : _recv : epoch 3 : iter 5 : from 0 : out2
+1623552457.288155 : Rank 1 : _recv : epoch 3 : iter 6 : from 0 : out0
+1623552457.288215 : Rank 1 : _recv : epoch 3 : iter 6 : from 0 : out1
+1623552457.288297 : Rank 1 : _recv : epoch 3 : iter 6 : from 0 : out2
+1623552457.288654 : Rank 1 : _recv : epoch 3 : iter 7 : from 0 : out0
+1623552457.288711 : Rank 1 : _recv : epoch 3 : iter 7 : from 0 : out1
+1623552457.288789 : Rank 1 : _recv : epoch 3 : iter 7 : from 0 : out2
+1623552457.289144 : Rank 1 : _recv : epoch 3 : iter 8 : from 0 : out0
+1623552457.289203 : Rank 1 : _recv : epoch 3 : iter 8 : from 0 : out1
+1623552457.289279 : Rank 1 : _recv : epoch 3 : iter 8 : from 0 : out2
+1623552457.289636 : Rank 1 : _recv : epoch 3 : iter 9 : from 0 : out0
+1623552457.289694 : Rank 1 : _recv : epoch 3 : iter 9 : from 0 : out1
+1623552457.289779 : Rank 1 : _recv : epoch 3 : iter 9 : from 0 : out2
+1623552457.290132 : Rank 1 : _recv : epoch 3 : iter 10 : from 0 : out0
+1623552457.290190 : Rank 1 : _recv : epoch 3 : iter 10 : from 0 : out1
+1623552457.290264 : Rank 1 : _recv : epoch 3 : iter 10 : from 0 : out2
+1623552457.290625 : Rank 1 : _recv : epoch 3 : iter 11 : from 0 : out0
+1623552457.290685 : Rank 1 : _recv : epoch 3 : iter 11 : from 0 : out1
+1623552457.290766 : Rank 1 : _recv : epoch 3 : iter 11 : from 0 : out2
+1623552457.291123 : Rank 1 : _recv : epoch 3 : iter 12 : from 0 : out0
+1623552457.291181 : Rank 1 : _recv : epoch 3 : iter 12 : from 0 : out1
+1623552457.291259 : Rank 1 : _recv : epoch 3 : iter 12 : from 0 : out2
+1623552457.291621 : Rank 1 : _recv : epoch 3 : iter 13 : from 0 : out0
+1623552457.291681 : Rank 1 : _recv : epoch 3 : iter 13 : from 0 : out1
+1623552457.291773 : Rank 1 : _recv : epoch 3 : iter 13 : from 0 : out2
+1623552457.292129 : Rank 1 : _recv : epoch 3 : iter 14 : from 0 : out0
+1623552457.292186 : Rank 1 : _recv : epoch 3 : iter 14 : from 0 : out1
+1623552457.292259 : Rank 1 : _recv : epoch 3 : iter 14 : from 0 : out2
+1623552457.292610 : Rank 1 : _recv : epoch 3 : iter 15 : from 0 : out0
+1623552457.292668 : Rank 1 : _recv : epoch 3 : iter 15 : from 0 : out1
+1623552457.292761 : Rank 1 : _recv : epoch 3 : iter 15 : from 0 : out2
+1623552457.293114 : Rank 1 : _recv : epoch 3 : iter 16 : from 0 : out0
+1623552457.293171 : Rank 1 : _recv : epoch 3 : iter 16 : from 0 : out1
+1623552457.293244 : Rank 1 : _recv : epoch 3 : iter 16 : from 0 : out2
+1623552457.293594 : Rank 1 : _recv : epoch 3 : iter 17 : from 0 : out0
+1623552457.293653 : Rank 1 : _recv : epoch 3 : iter 17 : from 0 : out1
+1623552457.293752 : Rank 1 : _recv : epoch 3 : iter 17 : from 0 : out2
+1623552457.294105 : Rank 1 : _recv : epoch 3 : iter 18 : from 0 : out0
+1623552457.294163 : Rank 1 : _recv : epoch 3 : iter 18 : from 0 : out1
+1623552457.294246 : Rank 1 : _recv : epoch 3 : iter 18 : from 0 : out2
+1623552457.294610 : Rank 1 : _recv : epoch 3 : iter 19 : from 0 : out0
+1623552457.294670 : Rank 1 : _recv : epoch 3 : iter 19 : from 0 : out1
+1623552457.294752 : Rank 1 : _recv : epoch 3 : iter 19 : from 0 : out2
+Time to receive 0.12 MB: 0.001 seconds
+Throughput: 0.219 GB/s
+1623552457.284128 : Rank 0 : _send : epoch 3 : iter 0 : to 1 : 40000.00 bytes : out0
+1623552457.284547 : Rank 0 : _send : epoch 3 : iter 0 : to 1 : 40000.00 bytes : out1
+1623552457.284711 : Rank 0 : _send : epoch 3 : iter 0 : to 1 : 40000.00 bytes : out2
+1623552457.284882 : Rank 0 : comp_send : epoch 3 : iter 0 : to 1 : out0
+1623552457.284937 : Rank 0 : comp_send : epoch 3 : iter 0 : to 1 : out1
+1623552457.284969 : Rank 0 : comp_send : epoch 3 : iter 0 : to 1 : out2
+1623552457.284984 : Rank 0 : _send : epoch 3 : iter 1 : to 1 : 40000.00 bytes : out0
+1623552457.285128 : Rank 0 : _send : epoch 3 : iter 1 : to 1 : 40000.00 bytes : out1
+1623552457.285277 : Rank 0 : _send : epoch 3 : iter 1 : to 1 : 40000.00 bytes : out2
+1623552457.285423 : Rank 0 : comp_send : epoch 3 : iter 1 : to 1 : out0
+1623552457.285471 : Rank 0 : comp_send : epoch 3 : iter 1 : to 1 : out1
+1623552457.285500 : Rank 0 : comp_send : epoch 3 : iter 1 : to 1 : out2
+1623552457.285515 : Rank 0 : _send : epoch 3 : iter 2 : to 1 : 40000.00 bytes : out0
+1623552457.285652 : Rank 0 : _send : epoch 3 : iter 2 : to 1 : 40000.00 bytes : out1
+1623552457.285788 : Rank 0 : _send : epoch 3 : iter 2 : to 1 : 40000.00 bytes : out2
+1623552457.285916 : Rank 0 : comp_send : epoch 3 : iter 2 : to 1 : out0
+1623552457.285964 : Rank 0 : comp_send : epoch 3 : iter 2 : to 1 : out1
+1623552457.285996 : Rank 0 : comp_send : epoch 3 : iter 2 : to 1 : out2
+1623552457.286011 : Rank 0 : _send : epoch 3 : iter 3 : to 1 : 40000.00 bytes : out0
+1623552457.286149 : Rank 0 : _send : epoch 3 : iter 3 : to 1 : 40000.00 bytes : out1
+1623552457.286284 : Rank 0 : _send : epoch 3 : iter 3 : to 1 : 40000.00 bytes : out2
+1623552457.286746 : Rank 0 : comp_send : epoch 3 : iter 3 : to 1 : out0
+1623552457.286795 : Rank 0 : comp_send : epoch 3 : iter 3 : to 1 : out1
+1623552457.286825 : Rank 0 : comp_send : epoch 3 : iter 3 : to 1 : out2
+1623552457.286840 : Rank 0 : _send : epoch 3 : iter 4 : to 1 : 40000.00 bytes : out0
+1623552457.286979 : Rank 0 : _send : epoch 3 : iter 4 : to 1 : 40000.00 bytes : out1
+1623552457.287115 : Rank 0 : _send : epoch 3 : iter 4 : to 1 : 40000.00 bytes : out2
+1623552457.287245 : Rank 0 : comp_send : epoch 3 : iter 4 : to 1 : out0
+1623552457.287292 : Rank 0 : comp_send : epoch 3 : iter 4 : to 1 : out1
+1623552457.287323 : Rank 0 : comp_send : epoch 3 : iter 4 : to 1 : out2
+1623552457.287338 : Rank 0 : _send : epoch 3 : iter 5 : to 1 : 40000.00 bytes : out0
+1623552457.287475 : Rank 0 : _send : epoch 3 : iter 5 : to 1 : 40000.00 bytes : out1
+1623552457.287611 : Rank 0 : _send : epoch 3 : iter 5 : to 1 : 40000.00 bytes : out2
+1623552457.287740 : Rank 0 : comp_send : epoch 3 : iter 5 : to 1 : out0
+1623552457.287788 : Rank 0 : comp_send : epoch 3 : iter 5 : to 1 : out1
+1623552457.287822 : Rank 0 : comp_send : epoch 3 : iter 5 : to 1 : out2
+1623552457.287838 : Rank 0 : _send : epoch 3 : iter 6 : to 1 : 40000.00 bytes : out0
+1623552457.287982 : Rank 0 : _send : epoch 3 : iter 6 : to 1 : 40000.00 bytes : out1
+1623552457.288115 : Rank 0 : _send : epoch 3 : iter 6 : to 1 : 40000.00 bytes : out2
+1623552457.288244 : Rank 0 : comp_send : epoch 3 : iter 6 : to 1 : out0
+1623552457.288293 : Rank 0 : comp_send : epoch 3 : iter 6 : to 1 : out1
+1623552457.288324 : Rank 0 : comp_send : epoch 3 : iter 6 : to 1 : out2
+1623552457.288338 : Rank 0 : _send : epoch 3 : iter 7 : to 1 : 40000.00 bytes : out0
+1623552457.288475 : Rank 0 : _send : epoch 3 : iter 7 : to 1 : 40000.00 bytes : out1
+1623552457.288604 : Rank 0 : _send : epoch 3 : iter 7 : to 1 : 40000.00 bytes : out2
+1623552457.288734 : Rank 0 : comp_send : epoch 3 : iter 7 : to 1 : out0
+1623552457.288783 : Rank 0 : comp_send : epoch 3 : iter 7 : to 1 : out1
+1623552457.288812 : Rank 0 : comp_send : epoch 3 : iter 7 : to 1 : out2
+1623552457.288826 : Rank 0 : _send : epoch 3 : iter 8 : to 1 : 40000.00 bytes : out0
+1623552457.288961 : Rank 0 : _send : epoch 3 : iter 8 : to 1 : 40000.00 bytes : out1
+1623552457.289096 : Rank 0 : _send : epoch 3 : iter 8 : to 1 : 40000.00 bytes : out2
+1623552457.289225 : Rank 0 : comp_send : epoch 3 : iter 8 : to 1 : out0
+1623552457.289272 : Rank 0 : comp_send : epoch 3 : iter 8 : to 1 : out1
+1623552457.289304 : Rank 0 : comp_send : epoch 3 : iter 8 : to 1 : out2
+1623552457.289320 : Rank 0 : _send : epoch 3 : iter 9 : to 1 : 40000.00 bytes : out0
+1623552457.289453 : Rank 0 : _send : epoch 3 : iter 9 : to 1 : 40000.00 bytes : out1
+1623552457.289595 : Rank 0 : _send : epoch 3 : iter 9 : to 1 : 40000.00 bytes : out2
+1623552457.289724 : Rank 0 : comp_send : epoch 3 : iter 9 : to 1 : out0
+1623552457.289770 : Rank 0 : comp_send : epoch 3 : iter 9 : to 1 : out1
+1623552457.289800 : Rank 0 : comp_send : epoch 3 : iter 9 : to 1 : out2
+1623552457.289815 : Rank 0 : _send : epoch 3 : iter 10 : to 1 : 40000.00 bytes : out0
+1623552457.289952 : Rank 0 : _send : epoch 3 : iter 10 : to 1 : 40000.00 bytes : out1
+1623552457.290082 : Rank 0 : _send : epoch 3 : iter 10 : to 1 : 40000.00 bytes : out2
+1623552457.290212 : Rank 0 : comp_send : epoch 3 : iter 10 : to 1 : out0
+1623552457.290263 : Rank 0 : comp_send : epoch 3 : iter 10 : to 1 : out1
+1623552457.290292 : Rank 0 : comp_send : epoch 3 : iter 10 : to 1 : out2
+1623552457.290306 : Rank 0 : _send : epoch 3 : iter 11 : to 1 : 40000.00 bytes : out0
+1623552457.290451 : Rank 0 : _send : epoch 3 : iter 11 : to 1 : 40000.00 bytes : out1
+1623552457.290581 : Rank 0 : _send : epoch 3 : iter 11 : to 1 : 40000.00 bytes : out2
+1623552457.290709 : Rank 0 : comp_send : epoch 3 : iter 11 : to 1 : out0
+1623552457.290757 : Rank 0 : comp_send : epoch 3 : iter 11 : to 1 : out1
+1623552457.290786 : Rank 0 : comp_send : epoch 3 : iter 11 : to 1 : out2
+1623552457.290800 : Rank 0 : _send : epoch 3 : iter 12 : to 1 : 40000.00 bytes : out0
+1623552457.290936 : Rank 0 : _send : epoch 3 : iter 12 : to 1 : 40000.00 bytes : out1
+1623552457.291079 : Rank 0 : _send : epoch 3 : iter 12 : to 1 : 40000.00 bytes : out2
+1623552457.291204 : Rank 0 : comp_send : epoch 3 : iter 12 : to 1 : out0
+1623552457.291254 : Rank 0 : comp_send : epoch 3 : iter 12 : to 1 : out1
+1623552457.291283 : Rank 0 : comp_send : epoch 3 : iter 12 : to 1 : out2
+1623552457.291297 : Rank 0 : _send : epoch 3 : iter 13 : to 1 : 40000.00 bytes : out0
+1623552457.291434 : Rank 0 : _send : epoch 3 : iter 13 : to 1 : 40000.00 bytes : out1
+1623552457.291574 : Rank 0 : _send : epoch 3 : iter 13 : to 1 : 40000.00 bytes : out2
+1623552457.291719 : Rank 0 : comp_send : epoch 3 : iter 13 : to 1 : out0
+1623552457.291768 : Rank 0 : comp_send : epoch 3 : iter 13 : to 1 : out1
+1623552457.291797 : Rank 0 : comp_send : epoch 3 : iter 13 : to 1 : out2
+1623552457.291811 : Rank 0 : _send : epoch 3 : iter 14 : to 1 : 40000.00 bytes : out0
+1623552457.291943 : Rank 0 : _send : epoch 3 : iter 14 : to 1 : 40000.00 bytes : out1
+1623552457.292079 : Rank 0 : _send : epoch 3 : iter 14 : to 1 : 40000.00 bytes : out2
+1623552457.292206 : Rank 0 : comp_send : epoch 3 : iter 14 : to 1 : out0
+1623552457.292252 : Rank 0 : comp_send : epoch 3 : iter 14 : to 1 : out1
+1623552457.292283 : Rank 0 : comp_send : epoch 3 : iter 14 : to 1 : out2
+1623552457.292297 : Rank 0 : _send : epoch 3 : iter 15 : to 1 : 40000.00 bytes : out0
+1623552457.292430 : Rank 0 : _send : epoch 3 : iter 15 : to 1 : 40000.00 bytes : out1
+1623552457.292563 : Rank 0 : _send : epoch 3 : iter 15 : to 1 : 40000.00 bytes : out2
+1623552457.292708 : Rank 0 : comp_send : epoch 3 : iter 15 : to 1 : out0
+1623552457.292755 : Rank 0 : comp_send : epoch 3 : iter 15 : to 1 : out1
+1623552457.292784 : Rank 0 : comp_send : epoch 3 : iter 15 : to 1 : out2
+1623552457.292799 : Rank 0 : _send : epoch 3 : iter 16 : to 1 : 40000.00 bytes : out0
+1623552457.292933 : Rank 0 : _send : epoch 3 : iter 16 : to 1 : 40000.00 bytes : out1
+1623552457.293063 : Rank 0 : _send : epoch 3 : iter 16 : to 1 : 40000.00 bytes : out2
+1623552457.293190 : Rank 0 : comp_send : epoch 3 : iter 16 : to 1 : out0
+1623552457.293238 : Rank 0 : comp_send : epoch 3 : iter 16 : to 1 : out1
+1623552457.293267 : Rank 0 : comp_send : epoch 3 : iter 16 : to 1 : out2
+1623552457.293282 : Rank 0 : _send : epoch 3 : iter 17 : to 1 : 40000.00 bytes : out0
+1623552457.293414 : Rank 0 : _send : epoch 3 : iter 17 : to 1 : 40000.00 bytes : out1
+1623552457.293568 : Rank 0 : _send : epoch 3 : iter 17 : to 1 : 40000.00 bytes : out2
+1623552457.293700 : Rank 0 : comp_send : epoch 3 : iter 17 : to 1 : out0
+1623552457.293745 : Rank 0 : comp_send : epoch 3 : iter 17 : to 1 : out1
+1623552457.293775 : Rank 0 : comp_send : epoch 3 : iter 17 : to 1 : out2
+1623552457.293789 : Rank 0 : _send : epoch 3 : iter 18 : to 1 : 40000.00 bytes : out0
+1623552457.293924 : Rank 0 : _send : epoch 3 : iter 18 : to 1 : 40000.00 bytes : out1
+1623552457.294068 : Rank 0 : _send : epoch 3 : iter 18 : to 1 : 40000.00 bytes : out2
+1623552457.294193 : Rank 0 : comp_send : epoch 3 : iter 18 : to 1 : out0
+1623552457.294239 : Rank 0 : comp_send : epoch 3 : iter 18 : to 1 : out1
+1623552457.294268 : Rank 0 : comp_send : epoch 3 : iter 18 : to 1 : out2
+1623552457.294282 : Rank 0 : _send : epoch 3 : iter 19 : to 1 : 40000.00 bytes : out0
+1623552457.294425 : Rank 0 : _send : epoch 3 : iter 19 : to 1 : 40000.00 bytes : out1
+1623552457.294570 : Rank 0 : _send : epoch 3 : iter 19 : to 1 : 40000.00 bytes : out2
+1623552457.294698 : Rank 0 : comp_send : epoch 3 : iter 19 : to 1 : out0
+1623552457.294745 : Rank 0 : comp_send : epoch 3 : iter 19 : to 1 : out1
+1623552457.294775 : Rank 0 : comp_send : epoch 3 : iter 19 : to 1 : out2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552457.316165 : Rank 1 : _recv : epoch 4 : iter 0 : from 0 : out0
+1623552457.316364 : Rank 1 : _recv : epoch 4 : iter 0 : from 0 : out1
+1623552457.316581 : Rank 1 : _recv : epoch 4 : iter 0 : from 0 : out2
+1623552457.317450 : Rank 1 : _recv : epoch 4 : iter 1 : from 0 : out0
+1623552457.317515 : Rank 1 : _recv : epoch 4 : iter 1 : from 0 : out1
+1623552457.317632 : Rank 1 : _recv : epoch 4 : iter 1 : from 0 : out2
+1623552457.318481 : Rank 1 : _recv : epoch 4 : iter 2 : from 0 : out0
+1623552457.318558 : Rank 1 : _recv : epoch 4 : iter 2 : from 0 : out1
+1623552457.318662 : Rank 1 : _recv : epoch 4 : iter 2 : from 0 : out2
+1623552457.319492 : Rank 1 : _recv : epoch 4 : iter 3 : from 0 : out0
+1623552457.319568 : Rank 1 : _recv : epoch 4 : iter 3 : from 0 : out1
+1623552457.319672 : Rank 1 : _recv : epoch 4 : iter 3 : from 0 : out2
+1623552457.320509 : Rank 1 : _recv : epoch 4 : iter 4 : from 0 : out0
+1623552457.320581 : Rank 1 : _recv : epoch 4 : iter 4 : from 0 : out1
+1623552457.320683 : Rank 1 : _recv : epoch 4 : iter 4 : from 0 : out2
+1623552457.321526 : Rank 1 : _recv : epoch 4 : iter 5 : from 0 : out0
+1623552457.321596 : Rank 1 : _recv : epoch 4 : iter 5 : from 0 : out1
+1623552457.321700 : Rank 1 : _recv : epoch 4 : iter 5 : from 0 : out2
+1623552457.322520 : Rank 1 : _recv : epoch 4 : iter 6 : from 0 : out0
+1623552457.322592 : Rank 1 : _recv : epoch 4 : iter 6 : from 0 : out1
+1623552457.322696 : Rank 1 : _recv : epoch 4 : iter 6 : from 0 : out2
+1623552457.323502 : Rank 1 : _recv : epoch 4 : iter 7 : from 0 : out0
+1623552457.323577 : Rank 1 : _recv : epoch 4 : iter 7 : from 0 : out1
+1623552457.323681 : Rank 1 : _recv : epoch 4 : iter 7 : from 0 : out2
+1623552457.324500 : Rank 1 : _recv : epoch 4 : iter 8 : from 0 : out0
+1623552457.324570 : Rank 1 : _recv : epoch 4 : iter 8 : from 0 : out1
+1623552457.324672 : Rank 1 : _recv : epoch 4 : iter 8 : from 0 : out2
+1623552457.325504 : Rank 1 : _recv : epoch 4 : iter 9 : from 0 : out0
+1623552457.325576 : Rank 1 : _recv : epoch 4 : iter 9 : from 0 : out1
+1623552457.325683 : Rank 1 : _recv : epoch 4 : iter 9 : from 0 : out2
+1623552457.326491 : Rank 1 : _recv : epoch 4 : iter 10 : from 0 : out0
+1623552457.326564 : Rank 1 : _recv : epoch 4 : iter 10 : from 0 : out1
+1623552457.326667 : Rank 1 : _recv : epoch 4 : iter 10 : from 0 : out2
+1623552457.327470 : Rank 1 : _recv : epoch 4 : iter 11 : from 0 : out0
+1623552457.327545 : Rank 1 : _recv : epoch 4 : iter 11 : from 0 : out1
+1623552457.327647 : Rank 1 : _recv : epoch 4 : iter 11 : from 0 : out2
+1623552457.328476 : Rank 1 : _recv : epoch 4 : iter 12 : from 0 : out0
+1623552457.328551 : Rank 1 : _recv : epoch 4 : iter 12 : from 0 : out1
+1623552457.328649 : Rank 1 : _recv : epoch 4 : iter 12 : from 0 : out2
+1623552457.329471 : Rank 1 : _recv : epoch 4 : iter 13 : from 0 : out0
+1623552457.329540 : Rank 1 : _recv : epoch 4 : iter 13 : from 0 : out1
+1623552457.329644 : Rank 1 : _recv : epoch 4 : iter 13 : from 0 : out2
+1623552457.330478 : Rank 1 : _recv : epoch 4 : iter 14 : from 0 : out0
+1623552457.330554 : Rank 1 : _recv : epoch 4 : iter 14 : from 0 : out1
+1623552457.330657 : Rank 1 : _recv : epoch 4 : iter 14 : from 0 : out2
+1623552457.331472 : Rank 1 : _recv : epoch 4 : iter 15 : from 0 : out0
+1623552457.331545 : Rank 1 : _recv : epoch 4 : iter 15 : from 0 : out1
+1623552457.331648 : Rank 1 : _recv : epoch 4 : iter 15 : from 0 : out2
+1623552457.332469 : Rank 1 : _recv : epoch 4 : iter 16 : from 0 : out0
+1623552457.332540 : Rank 1 : _recv : epoch 4 : iter 16 : from 0 : out1
+1623552457.332642 : Rank 1 : _recv : epoch 4 : iter 16 : from 0 : out2
+1623552457.333472 : Rank 1 : _recv : epoch 4 : iter 17 : from 0 : out0
+1623552457.333553 : Rank 1 : _recv : epoch 4 : iter 17 : from 0 : out1
+1623552457.333656 : Rank 1 : _recv : epoch 4 : iter 17 : from 0 : out2
+1623552457.334487 : Rank 1 : _recv : epoch 4 : iter 18 : from 0 : out0
+1623552457.334564 : Rank 1 : _recv : epoch 4 : iter 18 : from 0 : out1
+1623552457.334662 : Rank 1 : _recv : epoch 4 : iter 18 : from 0 : out2
+1623552457.335498 : Rank 1 : _recv : epoch 4 : iter 19 : from 0 : out0
+1623552457.335575 : Rank 1 : _recv : epoch 4 : iter 19 : from 0 : out1
+1623552457.335670 : Rank 1 : _recv : epoch 4 : iter 19 : from 0 : out2
+Time to receive 1.2 MB: 0.001 seconds
+Throughput: 1.171 GB/s
+1623552457.315508 : Rank 0 : _send : epoch 4 : iter 0 : to 1 : 400000.00 bytes : out0
+1623552457.315952 : Rank 0 : _send : epoch 4 : iter 0 : to 1 : 400000.00 bytes : out1
+1623552457.316156 : Rank 0 : _send : epoch 4 : iter 0 : to 1 : 400000.00 bytes : out2
+1623552457.316391 : Rank 0 : comp_send : epoch 4 : iter 0 : to 1 : out0
+1623552457.316438 : Rank 0 : comp_send : epoch 4 : iter 0 : to 1 : out1
+1623552457.316525 : Rank 0 : comp_send : epoch 4 : iter 0 : to 1 : out2
+1623552457.316544 : Rank 0 : _send : epoch 4 : iter 1 : to 1 : 400000.00 bytes : out0
+1623552457.316800 : Rank 0 : _send : epoch 4 : iter 1 : to 1 : 400000.00 bytes : out1
+1623552457.317038 : Rank 0 : _send : epoch 4 : iter 1 : to 1 : 400000.00 bytes : out2
+1623552457.317263 : Rank 0 : comp_send : epoch 4 : iter 1 : to 1 : out0
+1623552457.317384 : Rank 0 : comp_send : epoch 4 : iter 1 : to 1 : out1
+1623552457.317614 : Rank 0 : comp_send : epoch 4 : iter 1 : to 1 : out2
+1623552457.317644 : Rank 0 : _send : epoch 4 : iter 2 : to 1 : 400000.00 bytes : out0
+1623552457.317899 : Rank 0 : _send : epoch 4 : iter 2 : to 1 : 400000.00 bytes : out1
+1623552457.318176 : Rank 0 : _send : epoch 4 : iter 2 : to 1 : 400000.00 bytes : out2
+1623552457.318427 : Rank 0 : comp_send : epoch 4 : iter 2 : to 1 : out0
+1623552457.318481 : Rank 0 : comp_send : epoch 4 : iter 2 : to 1 : out1
+1623552457.318651 : Rank 0 : comp_send : epoch 4 : iter 2 : to 1 : out2
+1623552457.318680 : Rank 0 : _send : epoch 4 : iter 3 : to 1 : 400000.00 bytes : out0
+1623552457.318937 : Rank 0 : _send : epoch 4 : iter 3 : to 1 : 400000.00 bytes : out1
+1623552457.319203 : Rank 0 : _send : epoch 4 : iter 3 : to 1 : 400000.00 bytes : out2
+1623552457.319445 : Rank 0 : comp_send : epoch 4 : iter 3 : to 1 : out0
+1623552457.319497 : Rank 0 : comp_send : epoch 4 : iter 3 : to 1 : out1
+1623552457.319655 : Rank 0 : comp_send : epoch 4 : iter 3 : to 1 : out2
+1623552457.319685 : Rank 0 : _send : epoch 4 : iter 4 : to 1 : 400000.00 bytes : out0
+1623552457.319933 : Rank 0 : _send : epoch 4 : iter 4 : to 1 : 400000.00 bytes : out1
+1623552457.320197 : Rank 0 : _send : epoch 4 : iter 4 : to 1 : 400000.00 bytes : out2
+1623552457.320430 : Rank 0 : comp_send : epoch 4 : iter 4 : to 1 : out0
+1623552457.320483 : Rank 0 : comp_send : epoch 4 : iter 4 : to 1 : out1
+1623552457.320672 : Rank 0 : comp_send : epoch 4 : iter 4 : to 1 : out2
+1623552457.320701 : Rank 0 : _send : epoch 4 : iter 5 : to 1 : 400000.00 bytes : out0
+1623552457.320952 : Rank 0 : _send : epoch 4 : iter 5 : to 1 : 400000.00 bytes : out1
+1623552457.321216 : Rank 0 : _send : epoch 4 : iter 5 : to 1 : 400000.00 bytes : out2
+1623552457.321450 : Rank 0 : comp_send : epoch 4 : iter 5 : to 1 : out0
+1623552457.321505 : Rank 0 : comp_send : epoch 4 : iter 5 : to 1 : out1
+1623552457.321682 : Rank 0 : comp_send : epoch 4 : iter 5 : to 1 : out2
+1623552457.321712 : Rank 0 : _send : epoch 4 : iter 6 : to 1 : 400000.00 bytes : out0
+1623552457.321961 : Rank 0 : _send : epoch 4 : iter 6 : to 1 : 400000.00 bytes : out1
+1623552457.322206 : Rank 0 : _send : epoch 4 : iter 6 : to 1 : 400000.00 bytes : out2
+1623552457.322446 : Rank 0 : comp_send : epoch 4 : iter 6 : to 1 : out0
+1623552457.322500 : Rank 0 : comp_send : epoch 4 : iter 6 : to 1 : out1
+1623552457.322684 : Rank 0 : comp_send : epoch 4 : iter 6 : to 1 : out2
+1623552457.322713 : Rank 0 : _send : epoch 4 : iter 7 : to 1 : 400000.00 bytes : out0
+1623552457.322961 : Rank 0 : _send : epoch 4 : iter 7 : to 1 : 400000.00 bytes : out1
+1623552457.323210 : Rank 0 : _send : epoch 4 : iter 7 : to 1 : 400000.00 bytes : out2
+1623552457.323451 : Rank 0 : comp_send : epoch 4 : iter 7 : to 1 : out0
+1623552457.323505 : Rank 0 : comp_send : epoch 4 : iter 7 : to 1 : out1
+1623552457.323664 : Rank 0 : comp_send : epoch 4 : iter 7 : to 1 : out2
+1623552457.323694 : Rank 0 : _send : epoch 4 : iter 8 : to 1 : 400000.00 bytes : out0
+1623552457.323942 : Rank 0 : _send : epoch 4 : iter 8 : to 1 : 400000.00 bytes : out1
+1623552457.324186 : Rank 0 : _send : epoch 4 : iter 8 : to 1 : 400000.00 bytes : out2
+1623552457.324416 : Rank 0 : comp_send : epoch 4 : iter 8 : to 1 : out0
+1623552457.324468 : Rank 0 : comp_send : epoch 4 : iter 8 : to 1 : out1
+1623552457.324661 : Rank 0 : comp_send : epoch 4 : iter 8 : to 1 : out2
+1623552457.324692 : Rank 0 : _send : epoch 4 : iter 9 : to 1 : 400000.00 bytes : out0
+1623552457.324940 : Rank 0 : _send : epoch 4 : iter 9 : to 1 : 400000.00 bytes : out1
+1623552457.325202 : Rank 0 : _send : epoch 4 : iter 9 : to 1 : 400000.00 bytes : out2
+1623552457.325446 : Rank 0 : comp_send : epoch 4 : iter 9 : to 1 : out0
+1623552457.325502 : Rank 0 : comp_send : epoch 4 : iter 9 : to 1 : out1
+1623552457.325664 : Rank 0 : comp_send : epoch 4 : iter 9 : to 1 : out2
+1623552457.325693 : Rank 0 : _send : epoch 4 : iter 10 : to 1 : 400000.00 bytes : out0
+1623552457.325940 : Rank 0 : _send : epoch 4 : iter 10 : to 1 : 400000.00 bytes : out1
+1623552457.326185 : Rank 0 : _send : epoch 4 : iter 10 : to 1 : 400000.00 bytes : out2
+1623552457.326426 : Rank 0 : comp_send : epoch 4 : iter 10 : to 1 : out0
+1623552457.326482 : Rank 0 : comp_send : epoch 4 : iter 10 : to 1 : out1
+1623552457.326656 : Rank 0 : comp_send : epoch 4 : iter 10 : to 1 : out2
+1623552457.326685 : Rank 0 : _send : epoch 4 : iter 11 : to 1 : 400000.00 bytes : out0
+1623552457.326931 : Rank 0 : _send : epoch 4 : iter 11 : to 1 : 400000.00 bytes : out1
+1623552457.327181 : Rank 0 : _send : epoch 4 : iter 11 : to 1 : 400000.00 bytes : out2
+1623552457.327424 : Rank 0 : comp_send : epoch 4 : iter 11 : to 1 : out0
+1623552457.327477 : Rank 0 : comp_send : epoch 4 : iter 11 : to 1 : out1
+1623552457.327629 : Rank 0 : comp_send : epoch 4 : iter 11 : to 1 : out2
+1623552457.327658 : Rank 0 : _send : epoch 4 : iter 12 : to 1 : 400000.00 bytes : out0
+1623552457.327906 : Rank 0 : _send : epoch 4 : iter 12 : to 1 : 400000.00 bytes : out1
+1623552457.328180 : Rank 0 : _send : epoch 4 : iter 12 : to 1 : 400000.00 bytes : out2
+1623552457.328422 : Rank 0 : comp_send : epoch 4 : iter 12 : to 1 : out0
+1623552457.328476 : Rank 0 : comp_send : epoch 4 : iter 12 : to 1 : out1
+1623552457.328629 : Rank 0 : comp_send : epoch 4 : iter 12 : to 1 : out2
+1623552457.328658 : Rank 0 : _send : epoch 4 : iter 13 : to 1 : 400000.00 bytes : out0
+1623552457.328907 : Rank 0 : _send : epoch 4 : iter 13 : to 1 : 400000.00 bytes : out1
+1623552457.329154 : Rank 0 : _send : epoch 4 : iter 13 : to 1 : 400000.00 bytes : out2
+1623552457.329386 : Rank 0 : comp_send : epoch 4 : iter 13 : to 1 : out0
+1623552457.329439 : Rank 0 : comp_send : epoch 4 : iter 13 : to 1 : out1
+1623552457.329627 : Rank 0 : comp_send : epoch 4 : iter 13 : to 1 : out2
+1623552457.329657 : Rank 0 : _send : epoch 4 : iter 14 : to 1 : 400000.00 bytes : out0
+1623552457.329906 : Rank 0 : _send : epoch 4 : iter 14 : to 1 : 400000.00 bytes : out1
+1623552457.330180 : Rank 0 : _send : epoch 4 : iter 14 : to 1 : 400000.00 bytes : out2
+1623552457.330428 : Rank 0 : comp_send : epoch 4 : iter 14 : to 1 : out0
+1623552457.330482 : Rank 0 : comp_send : epoch 4 : iter 14 : to 1 : out1
+1623552457.330646 : Rank 0 : comp_send : epoch 4 : iter 14 : to 1 : out2
+1623552457.330675 : Rank 0 : _send : epoch 4 : iter 15 : to 1 : 400000.00 bytes : out0
+1623552457.330924 : Rank 0 : _send : epoch 4 : iter 15 : to 1 : 400000.00 bytes : out1
+1623552457.331175 : Rank 0 : _send : epoch 4 : iter 15 : to 1 : 400000.00 bytes : out2
+1623552457.331417 : Rank 0 : comp_send : epoch 4 : iter 15 : to 1 : out0
+1623552457.331471 : Rank 0 : comp_send : epoch 4 : iter 15 : to 1 : out1
+1623552457.331629 : Rank 0 : comp_send : epoch 4 : iter 15 : to 1 : out2
+1623552457.331659 : Rank 0 : _send : epoch 4 : iter 16 : to 1 : 400000.00 bytes : out0
+1623552457.331906 : Rank 0 : _send : epoch 4 : iter 16 : to 1 : 400000.00 bytes : out1
+1623552457.332154 : Rank 0 : _send : epoch 4 : iter 16 : to 1 : 400000.00 bytes : out2
+1623552457.332385 : Rank 0 : comp_send : epoch 4 : iter 16 : to 1 : out0
+1623552457.332438 : Rank 0 : comp_send : epoch 4 : iter 16 : to 1 : out1
+1623552457.332631 : Rank 0 : comp_send : epoch 4 : iter 16 : to 1 : out2
+1623552457.332659 : Rank 0 : _send : epoch 4 : iter 17 : to 1 : 400000.00 bytes : out0
+1623552457.332909 : Rank 0 : _send : epoch 4 : iter 17 : to 1 : 400000.00 bytes : out1
+1623552457.333205 : Rank 0 : _send : epoch 4 : iter 17 : to 1 : 400000.00 bytes : out2
+1623552457.333472 : Rank 0 : comp_send : epoch 4 : iter 17 : to 1 : out0
+1623552457.333525 : Rank 0 : comp_send : epoch 4 : iter 17 : to 1 : out1
+1623552457.333639 : Rank 0 : comp_send : epoch 4 : iter 17 : to 1 : out2
+1623552457.333668 : Rank 0 : _send : epoch 4 : iter 18 : to 1 : 400000.00 bytes : out0
+1623552457.333922 : Rank 0 : _send : epoch 4 : iter 18 : to 1 : 400000.00 bytes : out1
+1623552457.334193 : Rank 0 : _send : epoch 4 : iter 18 : to 1 : 400000.00 bytes : out2
+1623552457.334440 : Rank 0 : comp_send : epoch 4 : iter 18 : to 1 : out0
+1623552457.334493 : Rank 0 : comp_send : epoch 4 : iter 18 : to 1 : out1
+1623552457.334650 : Rank 0 : comp_send : epoch 4 : iter 18 : to 1 : out2
+1623552457.334680 : Rank 0 : _send : epoch 4 : iter 19 : to 1 : 400000.00 bytes : out0
+1623552457.334932 : Rank 0 : _send : epoch 4 : iter 19 : to 1 : 400000.00 bytes : out1
+1623552457.335207 : Rank 0 : _send : epoch 4 : iter 19 : to 1 : 400000.00 bytes : out2
+1623552457.335451 : Rank 0 : comp_send : epoch 4 : iter 19 : to 1 : out0
+1623552457.335505 : Rank 0 : comp_send : epoch 4 : iter 19 : to 1 : out1
+1623552457.335651 : Rank 0 : comp_send : epoch 4 : iter 19 : to 1 : out2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552457.550142 : Rank 1 : _recv : epoch 5 : iter 0 : from 0 : out0
+1623552457.552384 : Rank 1 : _recv : epoch 5 : iter 0 : from 0 : out1
+1623552457.554912 : Rank 1 : _recv : epoch 5 : iter 0 : from 0 : out2
+1623552457.566296 : Rank 1 : _recv : epoch 5 : iter 1 : from 0 : out0
+1623552457.566440 : Rank 1 : _recv : epoch 5 : iter 1 : from 0 : out1
+1623552457.568852 : Rank 1 : _recv : epoch 5 : iter 1 : from 0 : out2
+1623552457.574839 : Rank 1 : _recv : epoch 5 : iter 2 : from 0 : out0
+1623552457.575991 : Rank 1 : _recv : epoch 5 : iter 2 : from 0 : out1
+1623552457.577132 : Rank 1 : _recv : epoch 5 : iter 2 : from 0 : out2
+1623552457.583765 : Rank 1 : _recv : epoch 5 : iter 3 : from 0 : out0
+1623552457.584877 : Rank 1 : _recv : epoch 5 : iter 3 : from 0 : out1
+1623552457.586340 : Rank 1 : _recv : epoch 5 : iter 3 : from 0 : out2
+1623552457.593097 : Rank 1 : _recv : epoch 5 : iter 4 : from 0 : out0
+1623552457.594219 : Rank 1 : _recv : epoch 5 : iter 4 : from 0 : out1
+1623552457.595338 : Rank 1 : _recv : epoch 5 : iter 4 : from 0 : out2
+1623552457.601223 : Rank 1 : _recv : epoch 5 : iter 5 : from 0 : out0
+1623552457.602341 : Rank 1 : _recv : epoch 5 : iter 5 : from 0 : out1
+1623552457.603821 : Rank 1 : _recv : epoch 5 : iter 5 : from 0 : out2
+1623552457.610390 : Rank 1 : _recv : epoch 5 : iter 6 : from 0 : out0
+1623552457.611515 : Rank 1 : _recv : epoch 5 : iter 6 : from 0 : out1
+1623552457.612576 : Rank 1 : _recv : epoch 5 : iter 6 : from 0 : out2
+1623552457.619165 : Rank 1 : _recv : epoch 5 : iter 7 : from 0 : out0
+1623552457.620286 : Rank 1 : _recv : epoch 5 : iter 7 : from 0 : out1
+1623552457.621717 : Rank 1 : _recv : epoch 5 : iter 7 : from 0 : out2
+1623552457.627500 : Rank 1 : _recv : epoch 5 : iter 8 : from 0 : out0
+1623552457.628770 : Rank 1 : _recv : epoch 5 : iter 8 : from 0 : out1
+1623552457.629885 : Rank 1 : _recv : epoch 5 : iter 8 : from 0 : out2
+1623552457.639898 : Rank 1 : _recv : epoch 5 : iter 9 : from 0 : out0
+1623552457.641031 : Rank 1 : _recv : epoch 5 : iter 9 : from 0 : out1
+1623552457.642107 : Rank 1 : _recv : epoch 5 : iter 9 : from 0 : out2
+1623552457.652893 : Rank 1 : _recv : epoch 5 : iter 10 : from 0 : out0
+1623552457.653006 : Rank 1 : _recv : epoch 5 : iter 10 : from 0 : out1
+1623552457.655089 : Rank 1 : _recv : epoch 5 : iter 10 : from 0 : out2
+1623552457.664823 : Rank 1 : _recv : epoch 5 : iter 11 : from 0 : out0
+1623552457.665924 : Rank 1 : _recv : epoch 5 : iter 11 : from 0 : out1
+1623552457.667043 : Rank 1 : _recv : epoch 5 : iter 11 : from 0 : out2
+1623552457.675428 : Rank 1 : _recv : epoch 5 : iter 12 : from 0 : out0
+1623552457.677061 : Rank 1 : _recv : epoch 5 : iter 12 : from 0 : out1
+1623552457.678416 : Rank 1 : _recv : epoch 5 : iter 12 : from 0 : out2
+1623552457.684915 : Rank 1 : _recv : epoch 5 : iter 13 : from 0 : out0
+1623552457.686347 : Rank 1 : _recv : epoch 5 : iter 13 : from 0 : out1
+1623552457.687802 : Rank 1 : _recv : epoch 5 : iter 13 : from 0 : out2
+1623552457.694164 : Rank 1 : _recv : epoch 5 : iter 14 : from 0 : out0
+1623552457.695258 : Rank 1 : _recv : epoch 5 : iter 14 : from 0 : out1
+1623552457.696355 : Rank 1 : _recv : epoch 5 : iter 14 : from 0 : out2
+1623552457.702666 : Rank 1 : _recv : epoch 5 : iter 15 : from 0 : out0
+1623552457.703748 : Rank 1 : _recv : epoch 5 : iter 15 : from 0 : out1
+1623552457.704818 : Rank 1 : _recv : epoch 5 : iter 15 : from 0 : out2
+1623552457.711036 : Rank 1 : _recv : epoch 5 : iter 16 : from 0 : out0
+1623552457.712477 : Rank 1 : _recv : epoch 5 : iter 16 : from 0 : out1
+1623552457.713536 : Rank 1 : _recv : epoch 5 : iter 16 : from 0 : out2
+1623552457.719858 : Rank 1 : _recv : epoch 5 : iter 17 : from 0 : out0
+1623552457.721275 : Rank 1 : _recv : epoch 5 : iter 17 : from 0 : out1
+1623552457.722362 : Rank 1 : _recv : epoch 5 : iter 17 : from 0 : out2
+1623552457.728617 : Rank 1 : _recv : epoch 5 : iter 18 : from 0 : out0
+1623552457.729724 : Rank 1 : _recv : epoch 5 : iter 18 : from 0 : out1
+1623552457.731165 : Rank 1 : _recv : epoch 5 : iter 18 : from 0 : out2
+1623552457.737557 : Rank 1 : _recv : epoch 5 : iter 19 : from 0 : out0
+1623552457.738989 : Rank 1 : _recv : epoch 5 : iter 19 : from 0 : out1
+1623552457.740058 : Rank 1 : _recv : epoch 5 : iter 19 : from 0 : out2
+Time to receive 12.0 MB: 0.010 seconds
+Throughput: 1.233 GB/s
+1623552457.545803 : Rank 0 : _send : epoch 5 : iter 0 : to 1 : 4000000.00 bytes : out0
+1623552457.548654 : Rank 0 : _send : epoch 5 : iter 0 : to 1 : 4000000.00 bytes : out1
+1623552457.550912 : Rank 0 : _send : epoch 5 : iter 0 : to 1 : 4000000.00 bytes : out2
+1623552457.553165 : Rank 0 : comp_send : epoch 5 : iter 0 : to 1 : out0
+1623552457.553204 : Rank 0 : comp_send : epoch 5 : iter 0 : to 1 : out1
+1623552457.554885 : Rank 0 : comp_send : epoch 5 : iter 0 : to 1 : out2
+1623552457.554904 : Rank 0 : _send : epoch 5 : iter 1 : to 1 : 4000000.00 bytes : out0
+1623552457.555391 : Rank 0 : _send : epoch 5 : iter 1 : to 1 : 4000000.00 bytes : out1
+1623552457.555862 : Rank 0 : _send : epoch 5 : iter 1 : to 1 : 4000000.00 bytes : out2
+1623552457.563102 : Rank 0 : comp_send : epoch 5 : iter 1 : to 1 : out0
+1623552457.565698 : Rank 0 : comp_send : epoch 5 : iter 1 : to 1 : out1
+1623552457.568827 : Rank 0 : comp_send : epoch 5 : iter 1 : to 1 : out2
+1623552457.568848 : Rank 0 : _send : epoch 5 : iter 2 : to 1 : 4000000.00 bytes : out0
+1623552457.569451 : Rank 0 : _send : epoch 5 : iter 2 : to 1 : 4000000.00 bytes : out1
+1623552457.569933 : Rank 0 : _send : epoch 5 : iter 2 : to 1 : 4000000.00 bytes : out2
+1623552457.574840 : Rank 0 : comp_send : epoch 5 : iter 2 : to 1 : out0
+1623552457.575975 : Rank 0 : comp_send : epoch 5 : iter 2 : to 1 : out1
+1623552457.577125 : Rank 0 : comp_send : epoch 5 : iter 2 : to 1 : out2
+1623552457.577146 : Rank 0 : _send : epoch 5 : iter 3 : to 1 : 4000000.00 bytes : out0
+1623552457.577657 : Rank 0 : _send : epoch 5 : iter 3 : to 1 : 4000000.00 bytes : out1
+1623552457.578133 : Rank 0 : _send : epoch 5 : iter 3 : to 1 : 4000000.00 bytes : out2
+1623552457.583740 : Rank 0 : comp_send : epoch 5 : iter 3 : to 1 : out0
+1623552457.584864 : Rank 0 : comp_send : epoch 5 : iter 3 : to 1 : out1
+1623552457.586326 : Rank 0 : comp_send : epoch 5 : iter 3 : to 1 : out2
+1623552457.586344 : Rank 0 : _send : epoch 5 : iter 4 : to 1 : 4000000.00 bytes : out0
+1623552457.586831 : Rank 0 : _send : epoch 5 : iter 4 : to 1 : 4000000.00 bytes : out1
+1623552457.587302 : Rank 0 : _send : epoch 5 : iter 4 : to 1 : 4000000.00 bytes : out2
+1623552457.593085 : Rank 0 : comp_send : epoch 5 : iter 4 : to 1 : out0
+1623552457.594200 : Rank 0 : comp_send : epoch 5 : iter 4 : to 1 : out1
+1623552457.595328 : Rank 0 : comp_send : epoch 5 : iter 4 : to 1 : out2
+1623552457.595346 : Rank 0 : _send : epoch 5 : iter 5 : to 1 : 4000000.00 bytes : out0
+1623552457.595834 : Rank 0 : _send : epoch 5 : iter 5 : to 1 : 4000000.00 bytes : out1
+1623552457.596303 : Rank 0 : _send : epoch 5 : iter 5 : to 1 : 4000000.00 bytes : out2
+1623552457.601206 : Rank 0 : comp_send : epoch 5 : iter 5 : to 1 : out0
+1623552457.602319 : Rank 0 : comp_send : epoch 5 : iter 5 : to 1 : out1
+1623552457.603792 : Rank 0 : comp_send : epoch 5 : iter 5 : to 1 : out2
+1623552457.603811 : Rank 0 : _send : epoch 5 : iter 6 : to 1 : 4000000.00 bytes : out0
+1623552457.604306 : Rank 0 : _send : epoch 5 : iter 6 : to 1 : 4000000.00 bytes : out1
+1623552457.604783 : Rank 0 : _send : epoch 5 : iter 6 : to 1 : 4000000.00 bytes : out2
+1623552457.610370 : Rank 0 : comp_send : epoch 5 : iter 6 : to 1 : out0
+1623552457.611487 : Rank 0 : comp_send : epoch 5 : iter 6 : to 1 : out1
+1623552457.612568 : Rank 0 : comp_send : epoch 5 : iter 6 : to 1 : out2
+1623552457.612586 : Rank 0 : _send : epoch 5 : iter 7 : to 1 : 4000000.00 bytes : out0
+1623552457.613062 : Rank 0 : _send : epoch 5 : iter 7 : to 1 : 4000000.00 bytes : out1
+1623552457.613532 : Rank 0 : _send : epoch 5 : iter 7 : to 1 : 4000000.00 bytes : out2
+1623552457.619151 : Rank 0 : comp_send : epoch 5 : iter 7 : to 1 : out0
+1623552457.620271 : Rank 0 : comp_send : epoch 5 : iter 7 : to 1 : out1
+1623552457.621700 : Rank 0 : comp_send : epoch 5 : iter 7 : to 1 : out2
+1623552457.621722 : Rank 0 : _send : epoch 5 : iter 8 : to 1 : 4000000.00 bytes : out0
+1623552457.622233 : Rank 0 : _send : epoch 5 : iter 8 : to 1 : 4000000.00 bytes : out1
+1623552457.622757 : Rank 0 : _send : epoch 5 : iter 8 : to 1 : 4000000.00 bytes : out2
+1623552457.627534 : Rank 0 : comp_send : epoch 5 : iter 8 : to 1 : out0
+1623552457.628764 : Rank 0 : comp_send : epoch 5 : iter 8 : to 1 : out1
+1623552457.629886 : Rank 0 : comp_send : epoch 5 : iter 8 : to 1 : out2
+1623552457.629912 : Rank 0 : _send : epoch 5 : iter 9 : to 1 : 4000000.00 bytes : out0
+1623552457.630436 : Rank 0 : _send : epoch 5 : iter 9 : to 1 : 4000000.00 bytes : out1
+1623552457.630968 : Rank 0 : _send : epoch 5 : iter 9 : to 1 : 4000000.00 bytes : out2
+1623552457.639231 : Rank 0 : comp_send : epoch 5 : iter 9 : to 1 : out0
+1623552457.639317 : Rank 0 : comp_send : epoch 5 : iter 9 : to 1 : out1
+1623552457.642092 : Rank 0 : comp_send : epoch 5 : iter 9 : to 1 : out2
+1623552457.642120 : Rank 0 : _send : epoch 5 : iter 10 : to 1 : 4000000.00 bytes : out0
+1623552457.642689 : Rank 0 : _send : epoch 5 : iter 10 : to 1 : 4000000.00 bytes : out1
+1623552457.643167 : Rank 0 : _send : epoch 5 : iter 10 : to 1 : 4000000.00 bytes : out2
+1623552457.649216 : Rank 0 : comp_send : epoch 5 : iter 10 : to 1 : out0
+1623552457.653995 : Rank 0 : comp_send : epoch 5 : iter 10 : to 1 : out1
+1623552457.655082 : Rank 0 : comp_send : epoch 5 : iter 10 : to 1 : out2
+1623552457.655103 : Rank 0 : _send : epoch 5 : iter 11 : to 1 : 4000000.00 bytes : out0
+1623552457.655605 : Rank 0 : _send : epoch 5 : iter 11 : to 1 : 4000000.00 bytes : out1
+1623552457.656088 : Rank 0 : _send : epoch 5 : iter 11 : to 1 : 4000000.00 bytes : out2
+1623552457.659959 : Rank 0 : comp_send : epoch 5 : iter 11 : to 1 : out0
+1623552457.663266 : Rank 0 : comp_send : epoch 5 : iter 11 : to 1 : out1
+1623552457.667033 : Rank 0 : comp_send : epoch 5 : iter 11 : to 1 : out2
+1623552457.667054 : Rank 0 : _send : epoch 5 : iter 12 : to 1 : 4000000.00 bytes : out0
+1623552457.667531 : Rank 0 : _send : epoch 5 : iter 12 : to 1 : 4000000.00 bytes : out1
+1623552457.668003 : Rank 0 : _send : epoch 5 : iter 12 : to 1 : 4000000.00 bytes : out2
+1623552457.673417 : Rank 0 : comp_send : epoch 5 : iter 12 : to 1 : out0
+1623552457.676977 : Rank 0 : comp_send : epoch 5 : iter 12 : to 1 : out1
+1623552457.678400 : Rank 0 : comp_send : epoch 5 : iter 12 : to 1 : out2
+1623552457.678419 : Rank 0 : _send : epoch 5 : iter 13 : to 1 : 4000000.00 bytes : out0
+1623552457.678890 : Rank 0 : _send : epoch 5 : iter 13 : to 1 : 4000000.00 bytes : out1
+1623552457.679360 : Rank 0 : _send : epoch 5 : iter 13 : to 1 : 4000000.00 bytes : out2
+1623552457.684909 : Rank 0 : comp_send : epoch 5 : iter 13 : to 1 : out0
+1623552457.686329 : Rank 0 : comp_send : epoch 5 : iter 13 : to 1 : out1
+1623552457.687795 : Rank 0 : comp_send : epoch 5 : iter 13 : to 1 : out2
+1623552457.687816 : Rank 0 : _send : epoch 5 : iter 14 : to 1 : 4000000.00 bytes : out0
+1623552457.688315 : Rank 0 : _send : epoch 5 : iter 14 : to 1 : 4000000.00 bytes : out1
+1623552457.688788 : Rank 0 : _send : epoch 5 : iter 14 : to 1 : 4000000.00 bytes : out2
+1623552457.694156 : Rank 0 : comp_send : epoch 5 : iter 14 : to 1 : out0
+1623552457.695245 : Rank 0 : comp_send : epoch 5 : iter 14 : to 1 : out1
+1623552457.696341 : Rank 0 : comp_send : epoch 5 : iter 14 : to 1 : out2
+1623552457.696359 : Rank 0 : _send : epoch 5 : iter 15 : to 1 : 4000000.00 bytes : out0
+1623552457.696842 : Rank 0 : _send : epoch 5 : iter 15 : to 1 : 4000000.00 bytes : out1
+1623552457.697311 : Rank 0 : _send : epoch 5 : iter 15 : to 1 : 4000000.00 bytes : out2
+1623552457.702654 : Rank 0 : comp_send : epoch 5 : iter 15 : to 1 : out0
+1623552457.703740 : Rank 0 : comp_send : epoch 5 : iter 15 : to 1 : out1
+1623552457.704801 : Rank 0 : comp_send : epoch 5 : iter 15 : to 1 : out2
+1623552457.704820 : Rank 0 : _send : epoch 5 : iter 16 : to 1 : 4000000.00 bytes : out0
+1623552457.705302 : Rank 0 : _send : epoch 5 : iter 16 : to 1 : 4000000.00 bytes : out1
+1623552457.705770 : Rank 0 : _send : epoch 5 : iter 16 : to 1 : 4000000.00 bytes : out2
+1623552457.711033 : Rank 0 : comp_send : epoch 5 : iter 16 : to 1 : out0
+1623552457.712469 : Rank 0 : comp_send : epoch 5 : iter 16 : to 1 : out1
+1623552457.713526 : Rank 0 : comp_send : epoch 5 : iter 16 : to 1 : out2
+1623552457.713557 : Rank 0 : _send : epoch 5 : iter 17 : to 1 : 4000000.00 bytes : out0
+1623552457.714114 : Rank 0 : _send : epoch 5 : iter 17 : to 1 : 4000000.00 bytes : out1
+1623552457.714589 : Rank 0 : _send : epoch 5 : iter 17 : to 1 : 4000000.00 bytes : out2
+1623552457.719859 : Rank 0 : comp_send : epoch 5 : iter 17 : to 1 : out0
+1623552457.721268 : Rank 0 : comp_send : epoch 5 : iter 17 : to 1 : out1
+1623552457.722352 : Rank 0 : comp_send : epoch 5 : iter 17 : to 1 : out2
+1623552457.722377 : Rank 0 : _send : epoch 5 : iter 18 : to 1 : 4000000.00 bytes : out0
+1623552457.722866 : Rank 0 : _send : epoch 5 : iter 18 : to 1 : 4000000.00 bytes : out1
+1623552457.723335 : Rank 0 : _send : epoch 5 : iter 18 : to 1 : 4000000.00 bytes : out2
+1623552457.728617 : Rank 0 : comp_send : epoch 5 : iter 18 : to 1 : out0
+1623552457.729723 : Rank 0 : comp_send : epoch 5 : iter 18 : to 1 : out1
+1623552457.731164 : Rank 0 : comp_send : epoch 5 : iter 18 : to 1 : out2
+1623552457.731192 : Rank 0 : _send : epoch 5 : iter 19 : to 1 : 4000000.00 bytes : out0
+1623552457.731690 : Rank 0 : _send : epoch 5 : iter 19 : to 1 : 4000000.00 bytes : out1
+1623552457.732161 : Rank 0 : _send : epoch 5 : iter 19 : to 1 : 4000000.00 bytes : out2
+1623552457.737556 : Rank 0 : comp_send : epoch 5 : iter 19 : to 1 : out0
+1623552457.738981 : Rank 0 : comp_send : epoch 5 : iter 19 : to 1 : out1
+1623552457.740050 : Rank 0 : comp_send : epoch 5 : iter 19 : to 1 : out2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552459.856963 : Rank 1 : _recv : epoch 6 : iter 0 : from 0 : out0
+1623552459.879695 : Rank 1 : _recv : epoch 6 : iter 0 : from 0 : out1
+1623552459.903856 : Rank 1 : _recv : epoch 6 : iter 0 : from 0 : out2
+1623552459.940020 : Rank 1 : _recv : epoch 6 : iter 1 : from 0 : out0
+1623552459.948261 : Rank 1 : _recv : epoch 6 : iter 1 : from 0 : out1
+1623552459.964090 : Rank 1 : _recv : epoch 6 : iter 1 : from 0 : out2
+1623552460.006206 : Rank 1 : _recv : epoch 6 : iter 2 : from 0 : out0
+1623552460.015802 : Rank 1 : _recv : epoch 6 : iter 2 : from 0 : out1
+1623552460.025941 : Rank 1 : _recv : epoch 6 : iter 2 : from 0 : out2
+1623552460.070130 : Rank 1 : _recv : epoch 6 : iter 3 : from 0 : out0
+1623552460.082488 : Rank 1 : _recv : epoch 6 : iter 3 : from 0 : out1
+1623552460.094552 : Rank 1 : _recv : epoch 6 : iter 3 : from 0 : out2
+1623552460.137424 : Rank 1 : _recv : epoch 6 : iter 4 : from 0 : out0
+1623552460.150392 : Rank 1 : _recv : epoch 6 : iter 4 : from 0 : out1
+1623552460.166545 : Rank 1 : _recv : epoch 6 : iter 4 : from 0 : out2
+1623552460.204024 : Rank 1 : _recv : epoch 6 : iter 5 : from 0 : out0
+1623552460.222203 : Rank 1 : _recv : epoch 6 : iter 5 : from 0 : out1
+1623552460.240166 : Rank 1 : _recv : epoch 6 : iter 5 : from 0 : out2
+1623552460.277882 : Rank 1 : _recv : epoch 6 : iter 6 : from 0 : out0
+1623552460.295411 : Rank 1 : _recv : epoch 6 : iter 6 : from 0 : out1
+1623552460.308509 : Rank 1 : _recv : epoch 6 : iter 6 : from 0 : out2
+1623552460.345830 : Rank 1 : _recv : epoch 6 : iter 7 : from 0 : out0
+1623552460.364172 : Rank 1 : _recv : epoch 6 : iter 7 : from 0 : out1
+1623552460.382113 : Rank 1 : _recv : epoch 6 : iter 7 : from 0 : out2
+1623552460.415116 : Rank 1 : _recv : epoch 6 : iter 8 : from 0 : out0
+1623552460.427651 : Rank 1 : _recv : epoch 6 : iter 8 : from 0 : out1
+1623552460.441068 : Rank 1 : _recv : epoch 6 : iter 8 : from 0 : out2
+1623552460.485292 : Rank 1 : _recv : epoch 6 : iter 9 : from 0 : out0
+1623552460.498181 : Rank 1 : _recv : epoch 6 : iter 9 : from 0 : out1
+1623552460.513214 : Rank 1 : _recv : epoch 6 : iter 9 : from 0 : out2
+1623552460.548313 : Rank 1 : _recv : epoch 6 : iter 10 : from 0 : out0
+1623552460.561400 : Rank 1 : _recv : epoch 6 : iter 10 : from 0 : out1
+1623552460.574737 : Rank 1 : _recv : epoch 6 : iter 10 : from 0 : out2
+1623552460.614474 : Rank 1 : _recv : epoch 6 : iter 11 : from 0 : out0
+1623552460.632895 : Rank 1 : _recv : epoch 6 : iter 11 : from 0 : out1
+1623552460.651105 : Rank 1 : _recv : epoch 6 : iter 11 : from 0 : out2
+1623552460.689120 : Rank 1 : _recv : epoch 6 : iter 12 : from 0 : out0
+1623552460.701819 : Rank 1 : _recv : epoch 6 : iter 12 : from 0 : out1
+1623552460.715018 : Rank 1 : _recv : epoch 6 : iter 12 : from 0 : out2
+1623552460.752635 : Rank 1 : _recv : epoch 6 : iter 13 : from 0 : out0
+1623552460.767241 : Rank 1 : _recv : epoch 6 : iter 13 : from 0 : out1
+1623552460.782071 : Rank 1 : _recv : epoch 6 : iter 13 : from 0 : out2
+1623552460.828010 : Rank 1 : _recv : epoch 6 : iter 14 : from 0 : out0
+1623552460.845696 : Rank 1 : _recv : epoch 6 : iter 14 : from 0 : out1
+1623552460.861746 : Rank 1 : _recv : epoch 6 : iter 14 : from 0 : out2
+1623552460.903541 : Rank 1 : _recv : epoch 6 : iter 15 : from 0 : out0
+1623552460.919700 : Rank 1 : _recv : epoch 6 : iter 15 : from 0 : out1
+1623552460.935642 : Rank 1 : _recv : epoch 6 : iter 15 : from 0 : out2
+1623552460.971243 : Rank 1 : _recv : epoch 6 : iter 16 : from 0 : out0
+1623552460.984477 : Rank 1 : _recv : epoch 6 : iter 16 : from 0 : out1
+1623552460.997901 : Rank 1 : _recv : epoch 6 : iter 16 : from 0 : out2
+1623552461.042080 : Rank 1 : _recv : epoch 6 : iter 17 : from 0 : out0
+1623552461.059401 : Rank 1 : _recv : epoch 6 : iter 17 : from 0 : out1
+1623552461.075142 : Rank 1 : _recv : epoch 6 : iter 17 : from 0 : out2
+1623552461.111824 : Rank 1 : _recv : epoch 6 : iter 18 : from 0 : out0
+1623552461.126033 : Rank 1 : _recv : epoch 6 : iter 18 : from 0 : out1
+1623552461.140783 : Rank 1 : _recv : epoch 6 : iter 18 : from 0 : out2
+1623552461.179647 : Rank 1 : _recv : epoch 6 : iter 19 : from 0 : out0
+1623552461.196708 : Rank 1 : _recv : epoch 6 : iter 19 : from 0 : out1
+1623552461.212361 : Rank 1 : _recv : epoch 6 : iter 19 : from 0 : out2
+Time to receive 120.0 MB: 0.069 seconds
+Throughput: 1.727 GB/s
+1623552459.822852 : Rank 0 : _send : epoch 6 : iter 0 : to 1 : 40000000.00 bytes : out0
+1623552459.842307 : Rank 0 : _send : epoch 6 : iter 0 : to 1 : 40000000.00 bytes : out1
+1623552459.863207 : Rank 0 : _send : epoch 6 : iter 0 : to 1 : 40000000.00 bytes : out2
+1623552459.884210 : Rank 0 : comp_send : epoch 6 : iter 0 : to 1 : out0
+1623552459.884269 : Rank 0 : comp_send : epoch 6 : iter 0 : to 1 : out1
+1623552459.903819 : Rank 0 : comp_send : epoch 6 : iter 0 : to 1 : out2
+1623552459.903867 : Rank 0 : _send : epoch 6 : iter 1 : to 1 : 40000000.00 bytes : out0
+1623552459.907556 : Rank 0 : _send : epoch 6 : iter 1 : to 1 : 40000000.00 bytes : out1
+1623552459.911280 : Rank 0 : _send : epoch 6 : iter 1 : to 1 : 40000000.00 bytes : out2
+1623552459.937176 : Rank 0 : comp_send : epoch 6 : iter 1 : to 1 : out0
+1623552459.948219 : Rank 0 : comp_send : epoch 6 : iter 1 : to 1 : out1
+1623552459.964074 : Rank 0 : comp_send : epoch 6 : iter 1 : to 1 : out2
+1623552459.964101 : Rank 0 : _send : epoch 6 : iter 2 : to 1 : 40000000.00 bytes : out0
+1623552459.967893 : Rank 0 : _send : epoch 6 : iter 2 : to 1 : 40000000.00 bytes : out1
+1623552459.971680 : Rank 0 : _send : epoch 6 : iter 2 : to 1 : 40000000.00 bytes : out2
+1623552460.005022 : Rank 0 : comp_send : epoch 6 : iter 2 : to 1 : out0
+1623552460.015772 : Rank 0 : comp_send : epoch 6 : iter 2 : to 1 : out1
+1623552460.025916 : Rank 0 : comp_send : epoch 6 : iter 2 : to 1 : out2
+1623552460.025943 : Rank 0 : _send : epoch 6 : iter 3 : to 1 : 40000000.00 bytes : out0
+1623552460.029775 : Rank 0 : _send : epoch 6 : iter 3 : to 1 : 40000000.00 bytes : out1
+1623552460.033477 : Rank 0 : _send : epoch 6 : iter 3 : to 1 : 40000000.00 bytes : out2
+1623552460.070107 : Rank 0 : comp_send : epoch 6 : iter 3 : to 1 : out0
+1623552460.082441 : Rank 0 : comp_send : epoch 6 : iter 3 : to 1 : out1
+1623552460.094529 : Rank 0 : comp_send : epoch 6 : iter 3 : to 1 : out2
+1623552460.094556 : Rank 0 : _send : epoch 6 : iter 4 : to 1 : 40000000.00 bytes : out0
+1623552460.098426 : Rank 0 : _send : epoch 6 : iter 4 : to 1 : 40000000.00 bytes : out1
+1623552460.102178 : Rank 0 : _send : epoch 6 : iter 4 : to 1 : 40000000.00 bytes : out2
+1623552460.134096 : Rank 0 : comp_send : epoch 6 : iter 4 : to 1 : out0
+1623552460.150383 : Rank 0 : comp_send : epoch 6 : iter 4 : to 1 : out1
+1623552460.166523 : Rank 0 : comp_send : epoch 6 : iter 4 : to 1 : out2
+1623552460.166554 : Rank 0 : _send : epoch 6 : iter 5 : to 1 : 40000000.00 bytes : out0
+1623552460.170478 : Rank 0 : _send : epoch 6 : iter 5 : to 1 : 40000000.00 bytes : out1
+1623552460.174285 : Rank 0 : _send : epoch 6 : iter 5 : to 1 : 40000000.00 bytes : out2
+1623552460.204032 : Rank 0 : comp_send : epoch 6 : iter 5 : to 1 : out0
+1623552460.222192 : Rank 0 : comp_send : epoch 6 : iter 5 : to 1 : out1
+1623552460.240174 : Rank 0 : comp_send : epoch 6 : iter 5 : to 1 : out2
+1623552460.240219 : Rank 0 : _send : epoch 6 : iter 6 : to 1 : 40000000.00 bytes : out0
+1623552460.244445 : Rank 0 : _send : epoch 6 : iter 6 : to 1 : 40000000.00 bytes : out1
+1623552460.248209 : Rank 0 : _send : epoch 6 : iter 6 : to 1 : 40000000.00 bytes : out2
+1623552460.277889 : Rank 0 : comp_send : epoch 6 : iter 6 : to 1 : out0
+1623552460.295397 : Rank 0 : comp_send : epoch 6 : iter 6 : to 1 : out1
+1623552460.308477 : Rank 0 : comp_send : epoch 6 : iter 6 : to 1 : out2
+1623552460.308516 : Rank 0 : _send : epoch 6 : iter 7 : to 1 : 40000000.00 bytes : out0
+1623552460.312665 : Rank 0 : _send : epoch 6 : iter 7 : to 1 : 40000000.00 bytes : out1
+1623552460.316414 : Rank 0 : _send : epoch 6 : iter 7 : to 1 : 40000000.00 bytes : out2
+1623552460.345671 : Rank 0 : comp_send : epoch 6 : iter 7 : to 1 : out0
+1623552460.364164 : Rank 0 : comp_send : epoch 6 : iter 7 : to 1 : out1
+1623552460.382107 : Rank 0 : comp_send : epoch 6 : iter 7 : to 1 : out2
+1623552460.382154 : Rank 0 : _send : epoch 6 : iter 8 : to 1 : 40000000.00 bytes : out0
+1623552460.386355 : Rank 0 : _send : epoch 6 : iter 8 : to 1 : 40000000.00 bytes : out1
+1623552460.390222 : Rank 0 : _send : epoch 6 : iter 8 : to 1 : 40000000.00 bytes : out2
+1623552460.414288 : Rank 0 : comp_send : epoch 6 : iter 8 : to 1 : out0
+1623552460.427629 : Rank 0 : comp_send : epoch 6 : iter 8 : to 1 : out1
+1623552460.441039 : Rank 0 : comp_send : epoch 6 : iter 8 : to 1 : out2
+1623552460.441082 : Rank 0 : _send : epoch 6 : iter 9 : to 1 : 40000000.00 bytes : out0
+1623552460.444961 : Rank 0 : _send : epoch 6 : iter 9 : to 1 : 40000000.00 bytes : out1
+1623552460.448586 : Rank 0 : _send : epoch 6 : iter 9 : to 1 : 40000000.00 bytes : out2
+1623552460.479862 : Rank 0 : comp_send : epoch 6 : iter 9 : to 1 : out0
+1623552460.498140 : Rank 0 : comp_send : epoch 6 : iter 9 : to 1 : out1
+1623552460.513188 : Rank 0 : comp_send : epoch 6 : iter 9 : to 1 : out2
+1623552460.513230 : Rank 0 : _send : epoch 6 : iter 10 : to 1 : 40000000.00 bytes : out0
+1623552460.517048 : Rank 0 : _send : epoch 6 : iter 10 : to 1 : 40000000.00 bytes : out1
+1623552460.520936 : Rank 0 : _send : epoch 6 : iter 10 : to 1 : 40000000.00 bytes : out2
+1623552460.548317 : Rank 0 : comp_send : epoch 6 : iter 10 : to 1 : out0
+1623552460.561373 : Rank 0 : comp_send : epoch 6 : iter 10 : to 1 : out1
+1623552460.574721 : Rank 0 : comp_send : epoch 6 : iter 10 : to 1 : out2
+1623552460.574756 : Rank 0 : _send : epoch 6 : iter 11 : to 1 : 40000000.00 bytes : out0
+1623552460.578573 : Rank 0 : _send : epoch 6 : iter 11 : to 1 : 40000000.00 bytes : out1
+1623552460.582202 : Rank 0 : _send : epoch 6 : iter 11 : to 1 : 40000000.00 bytes : out2
+1623552460.614497 : Rank 0 : comp_send : epoch 6 : iter 11 : to 1 : out0
+1623552460.632899 : Rank 0 : comp_send : epoch 6 : iter 11 : to 1 : out1
+1623552460.651109 : Rank 0 : comp_send : epoch 6 : iter 11 : to 1 : out2
+1623552460.651144 : Rank 0 : _send : epoch 6 : iter 12 : to 1 : 40000000.00 bytes : out0
+1623552460.655211 : Rank 0 : _send : epoch 6 : iter 12 : to 1 : 40000000.00 bytes : out1
+1623552460.659075 : Rank 0 : _send : epoch 6 : iter 12 : to 1 : 40000000.00 bytes : out2
+1623552460.687407 : Rank 0 : comp_send : epoch 6 : iter 12 : to 1 : out0
+1623552460.701813 : Rank 0 : comp_send : epoch 6 : iter 12 : to 1 : out1
+1623552460.714986 : Rank 0 : comp_send : epoch 6 : iter 12 : to 1 : out2
+1623552460.715023 : Rank 0 : _send : epoch 6 : iter 13 : to 1 : 40000000.00 bytes : out0
+1623552460.718920 : Rank 0 : _send : epoch 6 : iter 13 : to 1 : 40000000.00 bytes : out1
+1623552460.722805 : Rank 0 : _send : epoch 6 : iter 13 : to 1 : 40000000.00 bytes : out2
+1623552460.752635 : Rank 0 : comp_send : epoch 6 : iter 13 : to 1 : out0
+1623552460.767209 : Rank 0 : comp_send : epoch 6 : iter 13 : to 1 : out1
+1623552460.782040 : Rank 0 : comp_send : epoch 6 : iter 13 : to 1 : out2
+1623552460.782077 : Rank 0 : _send : epoch 6 : iter 14 : to 1 : 40000000.00 bytes : out0
+1623552460.785926 : Rank 0 : _send : epoch 6 : iter 14 : to 1 : 40000000.00 bytes : out1
+1623552460.789643 : Rank 0 : _send : epoch 6 : iter 14 : to 1 : 40000000.00 bytes : out2
+1623552460.827996 : Rank 0 : comp_send : epoch 6 : iter 14 : to 1 : out0
+1623552460.845661 : Rank 0 : comp_send : epoch 6 : iter 14 : to 1 : out1
+1623552460.861723 : Rank 0 : comp_send : epoch 6 : iter 14 : to 1 : out2
+1623552460.861754 : Rank 0 : _send : epoch 6 : iter 15 : to 1 : 40000000.00 bytes : out0
+1623552460.865734 : Rank 0 : _send : epoch 6 : iter 15 : to 1 : 40000000.00 bytes : out1
+1623552460.869430 : Rank 0 : _send : epoch 6 : iter 15 : to 1 : 40000000.00 bytes : out2
+1623552460.903543 : Rank 0 : comp_send : epoch 6 : iter 15 : to 1 : out0
+1623552460.919691 : Rank 0 : comp_send : epoch 6 : iter 15 : to 1 : out1
+1623552460.935623 : Rank 0 : comp_send : epoch 6 : iter 15 : to 1 : out2
+1623552460.935652 : Rank 0 : _send : epoch 6 : iter 16 : to 1 : 40000000.00 bytes : out0
+1623552460.939641 : Rank 0 : _send : epoch 6 : iter 16 : to 1 : 40000000.00 bytes : out1
+1623552460.943422 : Rank 0 : _send : epoch 6 : iter 16 : to 1 : 40000000.00 bytes : out2
+1623552460.971236 : Rank 0 : comp_send : epoch 6 : iter 16 : to 1 : out0
+1623552460.984464 : Rank 0 : comp_send : epoch 6 : iter 16 : to 1 : out1
+1623552460.997862 : Rank 0 : comp_send : epoch 6 : iter 16 : to 1 : out2
+1623552460.997943 : Rank 0 : _send : epoch 6 : iter 17 : to 1 : 40000000.00 bytes : out0
+1623552461.002017 : Rank 0 : _send : epoch 6 : iter 17 : to 1 : 40000000.00 bytes : out1
+1623552461.005687 : Rank 0 : _send : epoch 6 : iter 17 : to 1 : 40000000.00 bytes : out2
+1623552461.041842 : Rank 0 : comp_send : epoch 6 : iter 17 : to 1 : out0
+1623552461.059384 : Rank 0 : comp_send : epoch 6 : iter 17 : to 1 : out1
+1623552461.075105 : Rank 0 : comp_send : epoch 6 : iter 17 : to 1 : out2
+1623552461.075137 : Rank 0 : _send : epoch 6 : iter 18 : to 1 : 40000000.00 bytes : out0
+1623552461.079055 : Rank 0 : _send : epoch 6 : iter 18 : to 1 : 40000000.00 bytes : out1
+1623552461.082768 : Rank 0 : _send : epoch 6 : iter 18 : to 1 : 40000000.00 bytes : out2
+1623552461.109784 : Rank 0 : comp_send : epoch 6 : iter 18 : to 1 : out0
+1623552461.126001 : Rank 0 : comp_send : epoch 6 : iter 18 : to 1 : out1
+1623552461.140745 : Rank 0 : comp_send : epoch 6 : iter 18 : to 1 : out2
+1623552461.140786 : Rank 0 : _send : epoch 6 : iter 19 : to 1 : 40000000.00 bytes : out0
+1623552461.144702 : Rank 0 : _send : epoch 6 : iter 19 : to 1 : 40000000.00 bytes : out1
+1623552461.148547 : Rank 0 : _send : epoch 6 : iter 19 : to 1 : 40000000.00 bytes : out2
+1623552461.179654 : Rank 0 : comp_send : epoch 6 : iter 19 : to 1 : out0
+1623552461.196703 : Rank 0 : comp_send : epoch 6 : iter 19 : to 1 : out1
+1623552461.212327 : Rank 0 : comp_send : epoch 6 : iter 19 : to 1 : out2
+Send ranks:  {'out0': [1], 'out1': [1], 'out2': [1]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+1623552481.909791 : Rank 0 : _send : epoch 7 : iter 0 : to 1 : 400000000.00 bytes : out0
+1623552482.098349 : Rank 0 : _send : epoch 7 : iter 0 : to 1 : 400000000.00 bytes : out1
+1623552482.327587 : Rank 0 : _send : epoch 7 : iter 0 : to 1 : 400000000.00 bytes : out2
+1623552482.555568 : Rank 0 : comp_send : epoch 7 : iter 0 : to 1 : out0
+1623552482.555617 : Rank 0 : comp_send : epoch 7 : iter 0 : to 1 : out1
+1623552482.779182 : Rank 0 : comp_send : epoch 7 : iter 0 : to 1 : out2
+1623552482.779220 : Rank 0 : _send : epoch 7 : iter 1 : to 1 : 400000000.00 bytes : out0
+1623552482.817341 : Rank 0 : _send : epoch 7 : iter 1 : to 1 : 400000000.00 bytes : out1
+1623552482.854422 : Rank 0 : _send : epoch 7 : iter 1 : to 1 : 400000000.00 bytes : out2
+1623552483.100249 : Rank 0 : comp_send : epoch 7 : iter 1 : to 1 : out0
+1623552483.233325 : Rank 0 : comp_send : epoch 7 : iter 1 : to 1 : out1
+1623552483.365789 : Rank 0 : comp_send : epoch 7 : iter 1 : to 1 : out2
+1623552483.365815 : Rank 0 : _send : epoch 7 : iter 2 : to 1 : 400000000.00 bytes : out0
+1623552483.403814 : Rank 0 : _send : epoch 7 : iter 2 : to 1 : 400000000.00 bytes : out1
+1623552483.441324 : Rank 0 : _send : epoch 7 : iter 2 : to 1 : 400000000.00 bytes : out2
+1623552483.667232 : Rank 0 : comp_send : epoch 7 : iter 2 : to 1 : out0
+1623552483.801330 : Rank 0 : comp_send : epoch 7 : iter 2 : to 1 : out1
+1623552483.934344 : Rank 0 : comp_send : epoch 7 : iter 2 : to 1 : out2
+1623552483.934412 : Rank 0 : _send : epoch 7 : iter 3 : to 1 : 400000000.00 bytes : out0
+1623552483.972163 : Rank 0 : _send : epoch 7 : iter 3 : to 1 : 400000000.00 bytes : out1
+1623552484.009651 : Rank 0 : _send : epoch 7 : iter 3 : to 1 : 400000000.00 bytes : out2
+1623552484.194784 : Rank 0 : comp_send : epoch 7 : iter 3 : to 1 : out0
+1623552484.298537 : Rank 0 : comp_send : epoch 7 : iter 3 : to 1 : out1
+1623552484.399034 : Rank 0 : comp_send : epoch 7 : iter 3 : to 1 : out2
+1623552484.399071 : Rank 0 : _send : epoch 7 : iter 4 : to 1 : 400000000.00 bytes : out0
+1623552484.436764 : Rank 0 : _send : epoch 7 : iter 4 : to 1 : 400000000.00 bytes : out1
+1623552484.473701 : Rank 0 : _send : epoch 7 : iter 4 : to 1 : 400000000.00 bytes : out2
+1623552484.683910 : Rank 0 : comp_send : epoch 7 : iter 4 : to 1 : out0
+1623552484.786271 : Rank 0 : comp_send : epoch 7 : iter 4 : to 1 : out1
+1623552484.887109 : Rank 0 : comp_send : epoch 7 : iter 4 : to 1 : out2
+1623552484.887149 : Rank 0 : _send : epoch 7 : iter 5 : to 1 : 400000000.00 bytes : out0
+1623552484.924725 : Rank 0 : _send : epoch 7 : iter 5 : to 1 : 400000000.00 bytes : out1
+1623552484.961917 : Rank 0 : _send : epoch 7 : iter 5 : to 1 : 400000000.00 bytes : out2
+1623552485.191368 : Rank 0 : comp_send : epoch 7 : iter 5 : to 1 : out0
+1623552485.344406 : Rank 0 : comp_send : epoch 7 : iter 5 : to 1 : out1
+1623552485.497456 : Rank 0 : comp_send : epoch 7 : iter 5 : to 1 : out2
+1623552485.497525 : Rank 0 : _send : epoch 7 : iter 6 : to 1 : 400000000.00 bytes : out0
+1623552485.535419 : Rank 0 : _send : epoch 7 : iter 6 : to 1 : 400000000.00 bytes : out1
+1623552485.572567 : Rank 0 : _send : epoch 7 : iter 6 : to 1 : 400000000.00 bytes : out2
+1623552485.781372 : Rank 0 : comp_send : epoch 7 : iter 6 : to 1 : out0
+1623552485.883805 : Rank 0 : comp_send : epoch 7 : iter 6 : to 1 : out1
+1623552485.984738 : Rank 0 : comp_send : epoch 7 : iter 6 : to 1 : out2
+1623552485.984843 : Rank 0 : _send : epoch 7 : iter 7 : to 1 : 400000000.00 bytes : out0
+1623552486.022508 : Rank 0 : _send : epoch 7 : iter 7 : to 1 : 400000000.00 bytes : out1
+1623552486.059861 : Rank 0 : _send : epoch 7 : iter 7 : to 1 : 400000000.00 bytes : out2
+1623552486.247973 : Rank 0 : comp_send : epoch 7 : iter 7 : to 1 : out0
+1623552486.351267 : Rank 0 : comp_send : epoch 7 : iter 7 : to 1 : out1
+1623552486.479831 : Rank 0 : comp_send : epoch 7 : iter 7 : to 1 : out2
+1623552486.479900 : Rank 0 : _send : epoch 7 : iter 8 : to 1 : 400000000.00 bytes : out0
+1623552486.518104 : Rank 0 : _send : epoch 7 : iter 8 : to 1 : 400000000.00 bytes : out1
+1623552486.555162 : Rank 0 : _send : epoch 7 : iter 8 : to 1 : 400000000.00 bytes : out2
+1623552486.778972 : Rank 0 : comp_send : epoch 7 : iter 8 : to 1 : out0
+1623552486.885731 : Rank 0 : comp_send : epoch 7 : iter 8 : to 1 : out1
+1623552487.009240 : Rank 0 : comp_send : epoch 7 : iter 8 : to 1 : out2
+1623552487.009311 : Rank 0 : _send : epoch 7 : iter 9 : to 1 : 400000000.00 bytes : out0
+1623552487.047043 : Rank 0 : _send : epoch 7 : iter 9 : to 1 : 400000000.00 bytes : out1
+1623552487.084412 : Rank 0 : _send : epoch 7 : iter 9 : to 1 : 400000000.00 bytes : out2
+1623552487.305636 : Rank 0 : comp_send : epoch 7 : iter 9 : to 1 : out0
+1623552487.411628 : Rank 0 : comp_send : epoch 7 : iter 9 : to 1 : out1
+1623552487.532531 : Rank 0 : comp_send : epoch 7 : iter 9 : to 1 : out2
+1623552487.532604 : Rank 0 : _send : epoch 7 : iter 10 : to 1 : 400000000.00 bytes : out0
+1623552487.570557 : Rank 0 : _send : epoch 7 : iter 10 : to 1 : 400000000.00 bytes : out1
+1623552487.607616 : Rank 0 : _send : epoch 7 : iter 10 : to 1 : 400000000.00 bytes : out2
+1623552487.837385 : Rank 0 : comp_send : epoch 7 : iter 10 : to 1 : out0
+1623552487.976980 : Rank 0 : comp_send : epoch 7 : iter 10 : to 1 : out1
+1623552488.111009 : Rank 0 : comp_send : epoch 7 : iter 10 : to 1 : out2
+1623552488.111079 : Rank 0 : _send : epoch 7 : iter 11 : to 1 : 400000000.00 bytes : out0
+1623552488.148610 : Rank 0 : _send : epoch 7 : iter 11 : to 1 : 400000000.00 bytes : out1
+1623552488.185204 : Rank 0 : _send : epoch 7 : iter 11 : to 1 : 400000000.00 bytes : out2
+1623552488.418515 : Rank 0 : comp_send : epoch 7 : iter 11 : to 1 : out0
+1623552488.554884 : Rank 0 : comp_send : epoch 7 : iter 11 : to 1 : out1
+1623552488.690815 : Rank 0 : comp_send : epoch 7 : iter 11 : to 1 : out2
+1623552488.690881 : Rank 0 : _send : epoch 7 : iter 12 : to 1 : 400000000.00 bytes : out0
+1623552488.728883 : Rank 0 : _send : epoch 7 : iter 12 : to 1 : 400000000.00 bytes : out1
+1623552488.766209 : Rank 0 : _send : epoch 7 : iter 12 : to 1 : 400000000.00 bytes : out2
+1623552488.989242 : Rank 0 : comp_send : epoch 7 : iter 12 : to 1 : out0
+1623552489.125450 : Rank 0 : comp_send : epoch 7 : iter 12 : to 1 : out1
+1623552489.265422 : Rank 0 : comp_send : epoch 7 : iter 12 : to 1 : out2
+1623552489.265486 : Rank 0 : _send : epoch 7 : iter 13 : to 1 : 400000000.00 bytes : out0
+1623552489.303521 : Rank 0 : _send : epoch 7 : iter 13 : to 1 : 400000000.00 bytes : out1
+1623552489.340908 : Rank 0 : _send : epoch 7 : iter 13 : to 1 : 400000000.00 bytes : out2
+1623552489.581850 : Rank 0 : comp_send : epoch 7 : iter 13 : to 1 : out0
+1623552489.748040 : Rank 0 : comp_send : epoch 7 : iter 13 : to 1 : out1
+1623552489.911925 : Rank 0 : comp_send : epoch 7 : iter 13 : to 1 : out2
+1623552489.911962 : Rank 0 : _send : epoch 7 : iter 14 : to 1 : 400000000.00 bytes : out0
+1623552489.949417 : Rank 0 : _send : epoch 7 : iter 14 : to 1 : 400000000.00 bytes : out1
+1623552489.986801 : Rank 0 : _send : epoch 7 : iter 14 : to 1 : 400000000.00 bytes : out2
+1623552490.231717 : Rank 0 : comp_send : epoch 7 : iter 14 : to 1 : out0
+1623552490.365716 : Rank 0 : comp_send : epoch 7 : iter 14 : to 1 : out1
+1623552490.498825 : Rank 0 : comp_send : epoch 7 : iter 14 : to 1 : out2
+1623552490.498852 : Rank 0 : _send : epoch 7 : iter 15 : to 1 : 400000000.00 bytes : out0
+1623552490.536312 : Rank 0 : _send : epoch 7 : iter 15 : to 1 : 400000000.00 bytes : out1
+1623552490.573530 : Rank 0 : _send : epoch 7 : iter 15 : to 1 : 400000000.00 bytes : out2
+1623552490.789081 : Rank 0 : comp_send : epoch 7 : iter 15 : to 1 : out0
+1623552490.894389 : Rank 0 : comp_send : epoch 7 : iter 15 : to 1 : out1
+1623552490.997784 : Rank 0 : comp_send : epoch 7 : iter 15 : to 1 : out2
+1623552490.997884 : Rank 0 : _send : epoch 7 : iter 16 : to 1 : 400000000.00 bytes : out0
+1623552491.035846 : Rank 0 : _send : epoch 7 : iter 16 : to 1 : 400000000.00 bytes : out1
+1623552491.073302 : Rank 0 : _send : epoch 7 : iter 16 : to 1 : 400000000.00 bytes : out2
+1623552491.287610 : Rank 0 : comp_send : epoch 7 : iter 16 : to 1 : out0
+1623552491.460719 : Rank 0 : comp_send : epoch 7 : iter 16 : to 1 : out1
+1623552491.631757 : Rank 0 : comp_send : epoch 7 : iter 16 : to 1 : out2
+1623552491.631891 : Rank 0 : _send : epoch 7 : iter 17 : to 1 : 400000000.00 bytes : out0
+1623552491.669683 : Rank 0 : _send : epoch 7 : iter 17 : to 1 : 400000000.00 bytes : out1
+1623552491.706518 : Rank 0 : _send : epoch 7 : iter 17 : to 1 : 400000000.00 bytes : out2
+1623552491.956587 : Rank 0 : comp_send : epoch 7 : iter 17 : to 1 : out0
+1623552492.123913 : Rank 0 : comp_send : epoch 7 : iter 17 : to 1 : out1
+1623552492.287674 : Rank 0 : comp_send : epoch 7 : iter 17 : to 1 : out2
+1623552492.287741 : Rank 0 : _send : epoch 7 : iter 18 : to 1 : 400000000.00 bytes : out0
+1623552492.325242 : Rank 0 : _send : epoch 7 : iter 18 : to 1 : 400000000.00 bytes : out1
+1623552492.361641 : Rank 0 : _send : epoch 7 : iter 18 : to 1 : 400000000.00 bytes : out2
+1623552492.580715 : Rank 0 : comp_send : epoch 7 : iter 18 : to 1 : out0
+1623552492.737320 : Rank 0 : comp_send : epoch 7 : iter 18 : to 1 : out1
+1623552492.892321 : Rank 0 : comp_send : epoch 7 : iter 18 : to 1 : out2
+1623552492.892389 : Rank 0 : _send : epoch 7 : iter 19 : to 1 : 400000000.00 bytes : out0
+1623552492.930735 : Rank 0 : _send : epoch 7 : iter 19 : to 1 : 400000000.00 bytes : out1
+1623552492.968011 : Rank 0 : _send : epoch 7 : iter 19 : to 1 : 400000000.00 bytes : out2
+1623552493.180496 : Rank 0 : comp_send : epoch 7 : iter 19 : to 1 : out0
+1623552493.282991 : Rank 0 : comp_send : epoch 7 : iter 19 : to 1 : out1
+1623552493.384043 : Rank 0 : comp_send : epoch 7 : iter 19 : to 1 : out2
+Send ranks:  {}
+Receive ranks:  {'out0': [0], 'out1': [0], 'out2': [0]}
+Setting up process groups for broadcasts...
+1623552482.325596 : Rank 1 : _recv : epoch 7 : iter 0 : from 0 : out0
+1623552482.552027 : Rank 1 : _recv : epoch 7 : iter 0 : from 0 : out1
+1623552482.779147 : Rank 1 : _recv : epoch 7 : iter 0 : from 0 : out2
+1623552483.100223 : Rank 1 : _recv : epoch 7 : iter 1 : from 0 : out0
+1623552483.233330 : Rank 1 : _recv : epoch 7 : iter 1 : from 0 : out1
+1623552483.365790 : Rank 1 : _recv : epoch 7 : iter 1 : from 0 : out2
+1623552483.667180 : Rank 1 : _recv : epoch 7 : iter 2 : from 0 : out0
+1623552483.801320 : Rank 1 : _recv : epoch 7 : iter 2 : from 0 : out1
+1623552483.934344 : Rank 1 : _recv : epoch 7 : iter 2 : from 0 : out2
+1623552484.204117 : Rank 1 : _recv : epoch 7 : iter 3 : from 0 : out0
+1623552484.298543 : Rank 1 : _recv : epoch 7 : iter 3 : from 0 : out1
+1623552484.399042 : Rank 1 : _recv : epoch 7 : iter 3 : from 0 : out2
+1623552484.683889 : Rank 1 : _recv : epoch 7 : iter 4 : from 0 : out0
+1623552484.786281 : Rank 1 : _recv : epoch 7 : iter 4 : from 0 : out1
+1623552484.887107 : Rank 1 : _recv : epoch 7 : iter 4 : from 0 : out2
+1623552485.191332 : Rank 1 : _recv : epoch 7 : iter 5 : from 0 : out0
+1623552485.344362 : Rank 1 : _recv : epoch 7 : iter 5 : from 0 : out1
+1623552485.497459 : Rank 1 : _recv : epoch 7 : iter 5 : from 0 : out2
+1623552485.781337 : Rank 1 : _recv : epoch 7 : iter 6 : from 0 : out0
+1623552485.883804 : Rank 1 : _recv : epoch 7 : iter 6 : from 0 : out1
+1623552485.984694 : Rank 1 : _recv : epoch 7 : iter 6 : from 0 : out2
+1623552486.255728 : Rank 1 : _recv : epoch 7 : iter 7 : from 0 : out0
+1623552486.351270 : Rank 1 : _recv : epoch 7 : iter 7 : from 0 : out1
+1623552486.479845 : Rank 1 : _recv : epoch 7 : iter 7 : from 0 : out2
+1623552486.790570 : Rank 1 : _recv : epoch 7 : iter 8 : from 0 : out0
+1623552486.885726 : Rank 1 : _recv : epoch 7 : iter 8 : from 0 : out1
+1623552487.009221 : Rank 1 : _recv : epoch 7 : iter 8 : from 0 : out2
+1623552487.305614 : Rank 1 : _recv : epoch 7 : iter 9 : from 0 : out0
+1623552487.411637 : Rank 1 : _recv : epoch 7 : iter 9 : from 0 : out1
+1623552487.532514 : Rank 1 : _recv : epoch 7 : iter 9 : from 0 : out2
+1623552487.837323 : Rank 1 : _recv : epoch 7 : iter 10 : from 0 : out0
+1623552487.976972 : Rank 1 : _recv : epoch 7 : iter 10 : from 0 : out1
+1623552488.111007 : Rank 1 : _recv : epoch 7 : iter 10 : from 0 : out2
+1623552488.418470 : Rank 1 : _recv : epoch 7 : iter 11 : from 0 : out0
+1623552488.554877 : Rank 1 : _recv : epoch 7 : iter 11 : from 0 : out1
+1623552488.690809 : Rank 1 : _recv : epoch 7 : iter 11 : from 0 : out2
+1623552488.989208 : Rank 1 : _recv : epoch 7 : iter 12 : from 0 : out0
+1623552489.125443 : Rank 1 : _recv : epoch 7 : iter 12 : from 0 : out1
+1623552489.265415 : Rank 1 : _recv : epoch 7 : iter 12 : from 0 : out2
+1623552489.581813 : Rank 1 : _recv : epoch 7 : iter 13 : from 0 : out0
+1623552489.748005 : Rank 1 : _recv : epoch 7 : iter 13 : from 0 : out1
+1623552489.911887 : Rank 1 : _recv : epoch 7 : iter 13 : from 0 : out2
+1623552490.231683 : Rank 1 : _recv : epoch 7 : iter 14 : from 0 : out0
+1623552490.365722 : Rank 1 : _recv : epoch 7 : iter 14 : from 0 : out1
+1623552490.498823 : Rank 1 : _recv : epoch 7 : iter 14 : from 0 : out2
+1623552490.789050 : Rank 1 : _recv : epoch 7 : iter 15 : from 0 : out0
+1623552490.894381 : Rank 1 : _recv : epoch 7 : iter 15 : from 0 : out1
+1623552490.997719 : Rank 1 : _recv : epoch 7 : iter 15 : from 0 : out2
+1623552491.287555 : Rank 1 : _recv : epoch 7 : iter 16 : from 0 : out0
+1623552491.460696 : Rank 1 : _recv : epoch 7 : iter 16 : from 0 : out1
+1623552491.631760 : Rank 1 : _recv : epoch 7 : iter 16 : from 0 : out2
+1623552491.956541 : Rank 1 : _recv : epoch 7 : iter 17 : from 0 : out0
+1623552492.123892 : Rank 1 : _recv : epoch 7 : iter 17 : from 0 : out1
+1623552492.287635 : Rank 1 : _recv : epoch 7 : iter 17 : from 0 : out2
+1623552492.580689 : Rank 1 : _recv : epoch 7 : iter 18 : from 0 : out0
+1623552492.737303 : Rank 1 : _recv : epoch 7 : iter 18 : from 0 : out1
+1623552492.892324 : Rank 1 : _recv : epoch 7 : iter 18 : from 0 : out2
+1623552493.180470 : Rank 1 : _recv : epoch 7 : iter 19 : from 0 : out0
+1623552493.282990 : Rank 1 : _recv : epoch 7 : iter 19 : from 0 : out1
+1623552493.384027 : Rank 1 : _recv : epoch 7 : iter 19 : from 0 : out2
+Time to receive 1200.0 MB: 0.574 seconds
+Throughput: 2.092 GB/s

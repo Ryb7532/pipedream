@@ -1,0 +1,92 @@
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 392, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/models/resnet50/gpus=2_4_theory/stage0.py", line 115, in forward
+    out34 = self.layer34(out33)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self.padding, self.dilation, self.groups)
+Traceback (most recent call last):
+RuntimeError: CUDA out of memory. Tried to allocate 98.00 MiB (GPU 2; 15.90 GiB total capacity; 15.02 GiB already allocated; 17.38 MiB free; 221.18 MiB cached)
+  File "main_with_runtime.py", line 627, in <module>
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    main()
+  File "main_with_runtime.py", line 332, in main
+    main()
+  File "main_with_runtime.py", line 332, in main
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 392, in train
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 392, in train
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+Traceback (most recent call last):
+  File "main_with_runtime.py", line 627, in <module>
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    main()
+  File "main_with_runtime.py", line 332, in main
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    train(train_loader, r, optimizer, epoch)
+  File "main_with_runtime.py", line 392, in train
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/models/resnet50/gpus=2_4_theory/stage0.py", line 115, in forward
+    out34 = self.layer34(out33)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/models/resnet50/gpus=2_4_theory/stage0.py", line 107, in forward
+    r.run_forward()
+  File "../runtime.py", line 523, in run_forward
+    out25 = out25 + out17
+RuntimeError: CUDA out of memory. Tried to allocate 98.00 MiB (GPU 1; 15.90 GiB total capacity; 14.87 GiB already allocated; 29.38 MiB free; 315.93 MiB cached)
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self._run_forward(tensors)
+  File "../runtime.py", line 571, in _run_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 98.00 MiB (GPU 0; 15.90 GiB total capacity; 15.03 GiB already allocated; 3.38 MiB free; 222.93 MiB cached)
+    for input_name in input_names])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 368, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/pipedream/sendandrecv/image_classification/models/resnet50/gpus=2_4_theory/stage0.py", line 115, in forward
+    out34 = self.layer34(out33)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 507, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/6/17B13541/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 98.00 MiB (GPU 3; 15.90 GiB total capacity; 15.02 GiB already allocated; 17.38 MiB free; 221.18 MiB cached)

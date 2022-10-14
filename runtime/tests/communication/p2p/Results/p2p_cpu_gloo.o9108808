@@ -1,0 +1,40 @@
+Local rank: 2
+Time to receive 4e-05 MB: 0.000 seconds
+Throughput: 0.000 GB/s
+Time to receive 0.0004 MB: 0.000 seconds
+Throughput: 0.005 GB/s
+Time to receive 0.004 MB: 0.000 seconds
+Throughput: 0.046 GB/s
+Time to receive 0.04 MB: 0.000 seconds
+Throughput: 0.342 GB/s
+Time to receive 0.4 MB: 0.000 seconds
+Throughput: 1.266 GB/s
+Time to receive 4.0 MB: 0.002 seconds
+Throughput: 1.923 GB/s
+Time to receive 40.0 MB: 0.030 seconds
+Throughput: 1.354 GB/s
+Time to receive 400.0 MB: 0.289 seconds
+Throughput: 1.384 GB/s
+Time to receive 3200.0 MB: 2.373 seconds
+Throughput: 1.349 GB/s
+Local rank: 0
+run in Node:0
+run in Node:1
+Local rank: 0
+Local rank: 2
+Time to receive 4e-05 MB: 0.000 seconds
+Throughput: 0.000 GB/s
+Time to receive 0.0004 MB: 0.000 seconds
+Throughput: 0.004 GB/s
+Time to receive 0.004 MB: 0.000 seconds
+Throughput: 0.039 GB/s
+Time to receive 0.04 MB: 0.000 seconds
+Throughput: 0.276 GB/s
+Time to receive 0.4 MB: 0.000 seconds
+Throughput: 0.938 GB/s
+Time to receive 4.0 MB: 0.003 seconds
+Throughput: 1.485 GB/s
+Time to receive 40.0 MB: 0.033 seconds
+Throughput: 1.216 GB/s
+Time to receive 400.0 MB: 0.330 seconds
+Throughput: 1.213 GB/s

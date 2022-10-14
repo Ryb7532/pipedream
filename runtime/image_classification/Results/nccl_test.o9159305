@@ -1,0 +1,322 @@
+mpirun -x LD_LIBRARY_PATH -x PATH -n 1 -npernode 1 --bind-to none ./cpp/alexnet_1_4_theory_hybrid 10.0.0.73
+./python.sh -m launch --nnodes 1 --node_rank 0 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend nccl -m models.alexnet.gpus=1_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=1_4_theory/hybrid_conf.json  --num_ranks_in_server 4 --master_addr 10.0.0.73
+Invoking python3 -m launch --nnodes 1 --node_rank 0 --nproc_per_node 4 main_with_runtime.py -s --distributed_backend nccl -m models.alexnet.gpus=1_4_theory --epochs 6 -b 256 --config_path models/alexnet/gpus=1_4_theory/hybrid_conf.json --num_ranks_in_server 4 --master_addr 10.0.0.73
+1622005592.955574 : Rank 3 : start 
+1622005592.956384 : Rank 2 : start 
+1622005592.956575 : Rank 1 : start 
+1622005592.956726 : Rank 0 : start 
+Finished initializing process group; backend: nccl, rank: 3, world_size: 4
+Finished initializing process group; backend: nccl, rank: 2, world_size: 4
+Finished initializing process group; backend: nccl, rank: 1, world_size: 4
+Finished initializing process group; backend: nccl, rank: 0, world_size: 4
+Send ranks:  {'out0': [3], 'target': [3]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [3], 'target': [3]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+Send ranks:  {'out0': [3], 'target': [3]}
+Receive ranks:  {}
+Setting up process groups for broadcasts...
+r1i2n0:31278:31278 [0] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.73<0> [1]ib1:10.0.0.74<0> [2]ib2:10.0.0.75<0> [3]ib3:10.0.0.76<0>
+r1i2n0:31278:31278 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i2n0:31278:31278 [0] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.73<0>
+NCCL version 2.4.2+cuda9.2
+r1i2n0:31279:31279 [1] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.73<0> [1]ib1:10.0.0.74<0> [2]ib2:10.0.0.75<0> [3]ib3:10.0.0.76<0>
+r1i2n0:31279:31279 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i2n0:31280:31280 [2] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.73<0> [1]ib1:10.0.0.74<0> [2]ib2:10.0.0.75<0> [3]ib3:10.0.0.76<0>
+r1i2n0:31280:31280 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i2n0:31280:31280 [2] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.73<0>
+r1i2n0:31279:31279 [1] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.73<0>
+Send ranks:  {}
+Receive ranks:  {'out0': [0, 1, 2], 'target': [0, 1, 2]}
+Setting up process groups for broadcasts...
+r1i2n0:31281:31281 [3] NCCL INFO NET/Socket : Using [0]ib0:10.0.0.73<0> [1]ib1:10.0.0.74<0> [2]ib2:10.0.0.75<0> [3]ib3:10.0.0.76<0>
+r1i2n0:31281:31281 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+r1i2n0:31281:31281 [3] NCCL INFO NET/IB : Using [0]hfi1_2:1/IB [1]hfi1_0:1/IB [2]hfi1_3:1/IB [3]hfi1_1:1/IB ; OOB ib0:10.0.0.73<0>
+r1i2n0:31280:31573 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r1i2n0:31280:31573 [2] NCCL INFO comm 0x2aabd4001ae0 rank 2 nranks 4 cudaDev 2 nvmlDev 2
+r1i2n0:31279:31574 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r1i2n0:31279:31574 [1] NCCL INFO comm 0x2aabd4001ae0 rank 1 nranks 4 cudaDev 1 nvmlDev 1
+r1i2n0:31281:31575 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31575 [3] NCCL INFO comm 0x2aabc4001ae0 rank 3 nranks 4 cudaDev 3 nvmlDev 3
+r1i2n0:31278:31572 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r1i2n0:31278:31572 [0] NCCL INFO comm 0x2aabdc001ae0 rank 0 nranks 4 cudaDev 0 nvmlDev 0
+r1i2n0:31278:31572 [0] NCCL INFO Channel 00 :    0   1   3   2
+r1i2n0:31278:31572 [0] NCCL INFO Channel 01 :    0   2   1   3
+r1i2n0:31278:31572 [0] NCCL INFO Channel 02 :    0   2   3   1
+r1i2n0:31278:31572 [0] NCCL INFO Channel 03 :    0   3   1   2
+r1i2n0:31278:31572 [0] NCCL INFO Channel 04 :    0   1   3   2
+r1i2n0:31278:31572 [0] NCCL INFO Channel 05 :    0   2   1   3
+r1i2n0:31278:31572 [0] NCCL INFO Channel 06 :    0   2   3   1
+r1i2n0:31278:31572 [0] NCCL INFO Channel 07 :    0   3   1   2
+r1i2n0:31281:31575 [3] NCCL INFO Ring 00 : 3[3] -> 2[2] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 00 : 2[2] -> 0[0] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 00 : 1[1] -> 3[3] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 00 : 0[0] -> 1[1] via P2P/IPC
+r1i2n0:31281:31575 [3] NCCL INFO Ring 01 : 3[3] -> 0[0] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 01 : 2[2] -> 1[1] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 01 : 1[1] -> 3[3] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 01 : 0[0] -> 2[2] via P2P/IPC
+r1i2n0:31281:31575 [3] NCCL INFO Ring 02 : 3[3] -> 1[1] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 02 : 2[2] -> 3[3] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 02 : 1[1] -> 0[0] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 02 : 0[0] -> 2[2] via P2P/IPC
+r1i2n0:31281:31575 [3] NCCL INFO Ring 03 : 3[3] -> 1[1] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 03 : 2[2] -> 0[0] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 03 : 1[1] -> 2[2] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 03 : 0[0] -> 3[3] via P2P/IPC
+r1i2n0:31281:31575 [3] NCCL INFO Ring 04 : 3[3] -> 2[2] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 04 : 2[2] -> 0[0] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 04 : 1[1] -> 3[3] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 04 : 0[0] -> 1[1] via P2P/IPC
+r1i2n0:31281:31575 [3] NCCL INFO Ring 05 : 3[3] -> 0[0] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 05 : 2[2] -> 1[1] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 05 : 1[1] -> 3[3] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 05 : 0[0] -> 2[2] via P2P/IPC
+r1i2n0:31281:31575 [3] NCCL INFO Ring 06 : 3[3] -> 1[1] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 06 : 2[2] -> 3[3] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 06 : 1[1] -> 0[0] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 06 : 0[0] -> 2[2] via P2P/IPC
+r1i2n0:31281:31575 [3] NCCL INFO Ring 07 : 3[3] -> 1[1] via P2P/IPC
+r1i2n0:31280:31573 [2] NCCL INFO Ring 07 : 2[2] -> 0[0] via P2P/IPC
+r1i2n0:31279:31574 [1] NCCL INFO Ring 07 : 1[1] -> 2[2] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Ring 07 : 0[0] -> 3[3] via P2P/IPC
+r1i2n0:31278:31572 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31575 [3] NCCL INFO comm 0x2aabc4001ae0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31280:31573 [2] NCCL INFO comm 0x2aabd4001ae0 rank 2 nranks 4 cudaDev 2 nvmlDev 2 - Init COMPLETE
+r1i2n0:31279:31574 [1] NCCL INFO comm 0x2aabd4001ae0 rank 1 nranks 4 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r1i2n0:31278:31572 [0] NCCL INFO comm 0x2aabdc001ae0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r1i2n0:31278:31278 [0] NCCL INFO Launch mode Parallel
+r1i2n0:31278:31577 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r1i2n0:31278:31577 [0] NCCL INFO comm 0x2aabd80014c0 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r1i2n0:31281:31578 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31578 [3] NCCL INFO comm 0x2aabc4022090 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31278:31577 [0] NCCL INFO Channel 00 :    0   1
+r1i2n0:31278:31577 [0] NCCL INFO Channel 01 :    0   1
+r1i2n0:31278:31577 [0] NCCL INFO Ring 00 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31281:31578 [3] NCCL INFO Ring 00 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31577 [0] NCCL INFO Ring 01 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31281:31578 [3] NCCL INFO Ring 01 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31577 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31578 [3] NCCL INFO comm 0x2aabc4022090 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31278:31577 [0] NCCL INFO comm 0x2aabd80014c0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r1i2n0:31278:31278 [0] NCCL INFO Launch mode Parallel
+r1i2n0:31281:31581 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31581 [3] NCCL INFO comm 0x2aabc402d180 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31278:31580 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r1i2n0:31278:31580 [0] NCCL INFO comm 0x2aabdc021c10 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r1i2n0:31278:31580 [0] NCCL INFO Channel 00 :    0   1
+r1i2n0:31278:31580 [0] NCCL INFO Channel 01 :    0   1
+r1i2n0:31281:31581 [3] NCCL INFO Ring 00 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31580 [0] NCCL INFO Ring 00 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31281:31581 [3] NCCL INFO Ring 01 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31580 [0] NCCL INFO Ring 01 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31278:31580 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31581 [3] NCCL INFO comm 0x2aabc402d180 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31278:31580 [0] NCCL INFO comm 0x2aabdc021c10 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r1i2n0:31278:31278 [0] NCCL INFO Launch mode Parallel
+r1i2n0:31281:31584 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31584 [3] NCCL INFO comm 0x2aabc4038720 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31278:31583 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r1i2n0:31278:31583 [0] NCCL INFO comm 0x2aabd800c8f0 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r1i2n0:31278:31583 [0] NCCL INFO Channel 00 :    0   1
+r1i2n0:31278:31583 [0] NCCL INFO Channel 01 :    0   1
+r1i2n0:31281:31584 [3] NCCL INFO Ring 00 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31583 [0] NCCL INFO Ring 00 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31281:31584 [3] NCCL INFO Ring 01 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31583 [0] NCCL INFO Ring 01 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31278:31583 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31584 [3] NCCL INFO comm 0x2aabc4038720 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31278:31583 [0] NCCL INFO comm 0x2aabd800c8f0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r1i2n0:31278:31278 [0] NCCL INFO Launch mode Parallel
+r1i2n0:31278:31586 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r1i2n0:31278:31586 [0] NCCL INFO comm 0x2aabdc02cb70 rank 0 nranks 2 cudaDev 0 nvmlDev 0
+r1i2n0:31281:31587 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31587 [3] NCCL INFO comm 0x2aabc4043cb0 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31278:31586 [0] NCCL INFO Channel 00 :    0   1
+r1i2n0:31278:31586 [0] NCCL INFO Channel 01 :    0   1
+r1i2n0:31281:31587 [3] NCCL INFO Ring 00 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31586 [0] NCCL INFO Ring 00 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31281:31587 [3] NCCL INFO Ring 01 : 1[3] -> 0[0] via P2P/IPC
+r1i2n0:31278:31586 [0] NCCL INFO Ring 01 : 0[0] -> 1[3] via P2P/IPC
+r1i2n0:31278:31586 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31587 [3] NCCL INFO comm 0x2aabc4043cb0 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31278:31586 [0] NCCL INFO comm 0x2aabdc02cb70 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r1i2n0:31278:31278 [0] NCCL INFO Launch mode Parallel
+NCCL version 2.4.2+cuda9.2
+r1i2n0:31281:31590 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31590 [3] NCCL INFO comm 0x2aabc404fa90 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31279:31589 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r1i2n0:31279:31589 [1] NCCL INFO comm 0x2aabd80014c0 rank 0 nranks 2 cudaDev 1 nvmlDev 1
+r1i2n0:31279:31589 [1] NCCL INFO Channel 00 :    0   1
+r1i2n0:31279:31589 [1] NCCL INFO Channel 01 :    0   1
+r1i2n0:31279:31589 [1] NCCL INFO Channel 02 :    0   1
+r1i2n0:31279:31589 [1] NCCL INFO Channel 03 :    0   1
+r1i2n0:31281:31590 [3] NCCL INFO Ring 00 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31589 [1] NCCL INFO Ring 00 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31590 [3] NCCL INFO Ring 01 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31589 [1] NCCL INFO Ring 01 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31590 [3] NCCL INFO Ring 02 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31589 [1] NCCL INFO Ring 02 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31590 [3] NCCL INFO Ring 03 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31589 [1] NCCL INFO Ring 03 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31279:31589 [1] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31590 [3] NCCL INFO comm 0x2aabc404fa90 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31279:31589 [1] NCCL INFO comm 0x2aabd80014c0 rank 0 nranks 2 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r1i2n0:31279:31279 [1] NCCL INFO Launch mode Parallel
+r1i2n0:31281:31593 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31593 [3] NCCL INFO comm 0x2aabc4060b60 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31279:31592 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r1i2n0:31279:31592 [1] NCCL INFO comm 0x2aabd4021ca0 rank 0 nranks 2 cudaDev 1 nvmlDev 1
+r1i2n0:31279:31592 [1] NCCL INFO Channel 00 :    0   1
+r1i2n0:31279:31592 [1] NCCL INFO Channel 01 :    0   1
+r1i2n0:31279:31592 [1] NCCL INFO Channel 02 :    0   1
+r1i2n0:31279:31592 [1] NCCL INFO Channel 03 :    0   1
+r1i2n0:31281:31593 [3] NCCL INFO Ring 00 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31592 [1] NCCL INFO Ring 00 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31593 [3] NCCL INFO Ring 01 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31592 [1] NCCL INFO Ring 01 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31593 [3] NCCL INFO Ring 02 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31592 [1] NCCL INFO Ring 02 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31593 [3] NCCL INFO Ring 03 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31592 [1] NCCL INFO Ring 03 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31279:31592 [1] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31593 [3] NCCL INFO comm 0x2aabc4060b60 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31279:31592 [1] NCCL INFO comm 0x2aabd4021ca0 rank 0 nranks 2 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r1i2n0:31279:31279 [1] NCCL INFO Launch mode Parallel
+r1i2n0:31281:31597 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31597 [3] NCCL INFO comm 0x2aabc4071ea0 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31279:31596 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r1i2n0:31279:31596 [1] NCCL INFO comm 0x2aabd80126f0 rank 0 nranks 2 cudaDev 1 nvmlDev 1
+r1i2n0:31279:31596 [1] NCCL INFO Channel 00 :    0   1
+r1i2n0:31279:31596 [1] NCCL INFO Channel 01 :    0   1
+r1i2n0:31279:31596 [1] NCCL INFO Channel 02 :    0   1
+r1i2n0:31279:31596 [1] NCCL INFO Channel 03 :    0   1
+r1i2n0:31281:31597 [3] NCCL INFO Ring 00 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31596 [1] NCCL INFO Ring 00 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31597 [3] NCCL INFO Ring 01 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31596 [1] NCCL INFO Ring 01 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31597 [3] NCCL INFO Ring 02 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31596 [1] NCCL INFO Ring 02 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31597 [3] NCCL INFO Ring 03 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31596 [1] NCCL INFO Ring 03 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31279:31596 [1] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31597 [3] NCCL INFO comm 0x2aabc4071ea0 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31279:31596 [1] NCCL INFO comm 0x2aabd80126f0 rank 0 nranks 2 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r1i2n0:31279:31279 [1] NCCL INFO Launch mode Parallel
+r1i2n0:31281:31600 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31600 [3] NCCL INFO comm 0x2aabc40832c0 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31279:31599 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r1i2n0:31279:31599 [1] NCCL INFO comm 0x2aabd4033240 rank 0 nranks 2 cudaDev 1 nvmlDev 1
+r1i2n0:31279:31599 [1] NCCL INFO Channel 00 :    0   1
+r1i2n0:31279:31599 [1] NCCL INFO Channel 01 :    0   1
+r1i2n0:31279:31599 [1] NCCL INFO Channel 02 :    0   1
+r1i2n0:31279:31599 [1] NCCL INFO Channel 03 :    0   1
+r1i2n0:31281:31600 [3] NCCL INFO Ring 00 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31599 [1] NCCL INFO Ring 00 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31600 [3] NCCL INFO Ring 01 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31599 [1] NCCL INFO Ring 01 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31600 [3] NCCL INFO Ring 02 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31599 [1] NCCL INFO Ring 02 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31279:31599 [1] NCCL INFO Ring 03 : 0[1] -> 1[3] via P2P/IPC
+r1i2n0:31281:31600 [3] NCCL INFO Ring 03 : 1[3] -> 0[1] via P2P/IPC
+r1i2n0:31279:31599 [1] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31279:31599 [1] NCCL INFO comm 0x2aabd4033240 rank 0 nranks 2 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r1i2n0:31281:31600 [3] NCCL INFO comm 0x2aabc40832c0 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31279:31279 [1] NCCL INFO Launch mode Parallel
+NCCL version 2.4.2+cuda9.2
+r1i2n0:31281:31603 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31603 [3] NCCL INFO comm 0x2aabc4094c10 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31280:31602 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r1i2n0:31280:31602 [2] NCCL INFO comm 0x2aabd80014c0 rank 0 nranks 2 cudaDev 2 nvmlDev 2
+r1i2n0:31280:31602 [2] NCCL INFO Channel 00 :    0   1
+r1i2n0:31280:31602 [2] NCCL INFO Channel 01 :    0   1
+r1i2n0:31281:31603 [3] NCCL INFO Ring 00 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31602 [2] NCCL INFO Ring 00 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31281:31603 [3] NCCL INFO Ring 01 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31602 [2] NCCL INFO Ring 01 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31280:31602 [2] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31603 [3] NCCL INFO comm 0x2aabc4094c10 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31280:31602 [2] NCCL INFO comm 0x2aabd80014c0 rank 0 nranks 2 cudaDev 2 nvmlDev 2 - Init COMPLETE
+r1i2n0:31280:31280 [2] NCCL INFO Launch mode Parallel
+r1i2n0:31280:31605 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r1i2n0:31280:31605 [2] NCCL INFO comm 0x2aabd4021ca0 rank 0 nranks 2 cudaDev 2 nvmlDev 2
+r1i2n0:31281:31606 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31606 [3] NCCL INFO comm 0x2aabc40a0010 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31280:31605 [2] NCCL INFO Channel 00 :    0   1
+r1i2n0:31280:31605 [2] NCCL INFO Channel 01 :    0   1
+r1i2n0:31281:31606 [3] NCCL INFO Ring 00 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31605 [2] NCCL INFO Ring 00 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31281:31606 [3] NCCL INFO Ring 01 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31605 [2] NCCL INFO Ring 01 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31280:31605 [2] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31606 [3] NCCL INFO comm 0x2aabc40a0010 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31280:31605 [2] NCCL INFO comm 0x2aabd4021ca0 rank 0 nranks 2 cudaDev 2 nvmlDev 2 - Init COMPLETE
+r1i2n0:31280:31280 [2] NCCL INFO Launch mode Parallel
+r1i2n0:31280:31608 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r1i2n0:31280:31608 [2] NCCL INFO comm 0x2aabd800c8f0 rank 0 nranks 2 cudaDev 2 nvmlDev 2
+r1i2n0:31281:31609 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31609 [3] NCCL INFO comm 0x2aabc40ab590 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31278:31611 [0] NCCL INFO Setting affinity for GPU 0 to 03ff,f0003fff
+r1i2n0:31279:31612 [1] NCCL INFO Setting affinity for GPU 1 to 03ff,f0003fff
+r1i2n0:31278:31611 [0] NCCL INFO comm 0x2aabd8017c60 rank 0 nranks 3 cudaDev 0 nvmlDev 0
+r1i2n0:31279:31612 [1] NCCL INFO comm 0x2aabd4044470 rank 1 nranks 3 cudaDev 1 nvmlDev 1
+r1i2n0:31280:31608 [2] NCCL INFO Channel 00 :    0   1
+r1i2n0:31280:31608 [2] NCCL INFO Channel 01 :    0   1
+r1i2n0:31281:31609 [3] NCCL INFO Ring 00 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31608 [2] NCCL INFO Ring 00 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31281:31609 [3] NCCL INFO Ring 01 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31608 [2] NCCL INFO Ring 01 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31280:31608 [2] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31609 [3] NCCL INFO comm 0x2aabc40ab590 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31280:31608 [2] NCCL INFO comm 0x2aabd800c8f0 rank 0 nranks 2 cudaDev 2 nvmlDev 2 - Init COMPLETE
+r1i2n0:31280:31280 [2] NCCL INFO Launch mode Parallel
+r1i2n0:31280:31614 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r1i2n0:31280:31614 [2] NCCL INFO comm 0x2aabd402cc00 rank 0 nranks 2 cudaDev 2 nvmlDev 2
+r1i2n0:31281:31615 [3] NCCL INFO Setting affinity for GPU 3 to fffc00,0fffc000
+r1i2n0:31281:31615 [3] NCCL INFO comm 0x2aabc40b6b20 rank 1 nranks 2 cudaDev 3 nvmlDev 3
+r1i2n0:31280:31614 [2] NCCL INFO Channel 00 :    0   1
+r1i2n0:31280:31614 [2] NCCL INFO Channel 01 :    0   1
+r1i2n0:31281:31615 [3] NCCL INFO Ring 00 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31614 [2] NCCL INFO Ring 00 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31281:31615 [3] NCCL INFO Ring 01 : 1[3] -> 0[2] via P2P/IPC
+r1i2n0:31280:31614 [2] NCCL INFO Ring 01 : 0[2] -> 1[3] via P2P/IPC
+r1i2n0:31280:31614 [2] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31281:31615 [3] NCCL INFO comm 0x2aabc40b6b20 rank 1 nranks 2 cudaDev 3 nvmlDev 3 - Init COMPLETE
+r1i2n0:31280:31614 [2] NCCL INFO comm 0x2aabd402cc00 rank 0 nranks 2 cudaDev 2 nvmlDev 2 - Init COMPLETE
+r1i2n0:31280:31280 [2] NCCL INFO Launch mode Parallel
+Initialize_time (Rank 3 ): 9.286156 seconds
+1622005602.241778 : Rank 3 : _epoch : epoch 0
+r1i2n0:31280:31616 [2] NCCL INFO Setting affinity for GPU 2 to fffc00,0fffc000
+r1i2n0:31280:31616 [2] NCCL INFO comm 0x2aabd4038a50 rank 2 nranks 3 cudaDev 2 nvmlDev 2
+r1i2n0:31278:31611 [0] NCCL INFO Channel 00 :    0   1   2
+r1i2n0:31278:31611 [0] NCCL INFO Channel 01 :    0   2   1
+r1i2n0:31278:31611 [0] NCCL INFO Channel 02 :    0   1   2
+r1i2n0:31278:31611 [0] NCCL INFO Channel 03 :    0   2   1
+r1i2n0:31279:31612 [1] NCCL INFO Ring 00 : 1[1] -> 2[2] via P2P/IPC
+r1i2n0:31280:31616 [2] NCCL INFO Ring 00 : 2[2] -> 0[0] via P2P/IPC
+r1i2n0:31278:31611 [0] NCCL INFO Ring 00 : 0[0] -> 1[1] via P2P/IPC
+r1i2n0:31279:31612 [1] NCCL INFO Ring 01 : 1[1] -> 0[0] via P2P/IPC
+r1i2n0:31280:31616 [2] NCCL INFO Ring 01 : 2[2] -> 1[1] via P2P/IPC
+r1i2n0:31278:31611 [0] NCCL INFO Ring 01 : 0[0] -> 2[2] via P2P/IPC
+r1i2n0:31279:31612 [1] NCCL INFO Ring 02 : 1[1] -> 2[2] via P2P/IPC
+r1i2n0:31280:31616 [2] NCCL INFO Ring 02 : 2[2] -> 0[0] via P2P/IPC
+r1i2n0:31278:31611 [0] NCCL INFO Ring 02 : 0[0] -> 1[1] via P2P/IPC
+r1i2n0:31279:31612 [1] NCCL INFO Ring 03 : 1[1] -> 0[0] via P2P/IPC
+r1i2n0:31280:31616 [2] NCCL INFO Ring 03 : 2[2] -> 1[1] via P2P/IPC
+r1i2n0:31278:31611 [0] NCCL INFO Ring 03 : 0[0] -> 2[2] via P2P/IPC
+r1i2n0:31278:31611 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+r1i2n0:31279:31612 [1] NCCL INFO comm 0x2aabd4044470 rank 1 nranks 3 cudaDev 1 nvmlDev 1 - Init COMPLETE
+r1i2n0:31280:31616 [2] NCCL INFO comm 0x2aabd4038a50 rank 2 nranks 3 cudaDev 2 nvmlDev 2 - Init COMPLETE
+Replicating stage: ranks=3, module_size=741632.000
+r1i2n0:31278:31611 [0] NCCL INFO comm 0x2aabd8017c60 rank 0 nranks 3 cudaDev 0 nvmlDev 0 - Init COMPLETE
+r1i2n0:31278:31278 [0] NCCL INFO Launch mode Parallel
+Replicating stage: ranks=3, module_size=741632.000
+Replicating stage: ranks=3, module_size=741632.000
+Initialize_time (Rank 1 ): 9.357947 seconds
+1622005602.314555 : Rank 1 : _epoch : epoch 0
+Initialize_time (Rank 2 ): 9.358645 seconds
+1622005602.315060 : Rank 2 : _epoch : epoch 0
+Initialize_time (Rank 0 ): 9.358958 seconds
+1622005602.315717 : Rank 0 : _epoch : epoch 0

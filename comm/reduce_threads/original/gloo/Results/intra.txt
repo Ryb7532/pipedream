@@ -1,0 +1,16 @@
+Time to receive 0.00012 MB: 0.057 seconds
+Throughput: 0.000 GB/s
+Time to receive 0.0012 MB: 0.001 seconds
+Throughput: 0.002 GB/s
+Time to receive 0.012 MB: 0.001 seconds
+Throughput: 0.023 GB/s
+Time to receive 0.12 MB: 0.001 seconds
+Throughput: 0.222 GB/s
+Time to receive 1.2 MB: 0.001 seconds
+Throughput: 1.706 GB/s
+Time to receive 12.0 MB: 0.005 seconds
+Throughput: 2.422 GB/s
+Time to receive 120.0 MB: 0.045 seconds
+Throughput: 2.679 GB/s
+Time to receive 1200.0 MB: 0.406 seconds
+Throughput: 2.957 GB/s
